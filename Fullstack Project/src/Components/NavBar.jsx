@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./style.css";
+import { useState } from "react";
+import "./Component Styles/navbar.css";
 import logo from "../assets/newlifelogowhite.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
@@ -20,7 +20,7 @@ function NavBar() {
       <div className="navbar-middle">
         <a href="/">Home</a>
         <a href="/about">About</a>
-        <a href="/services">Services</a>
+        <a href="/services">Ministries</a>
         <a href="/contact">Events</a>
         <a href="/faq">Give</a>
       </div>

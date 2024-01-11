@@ -1,12 +1,15 @@
-import { useState } from "react";
-import Hero from "./Components/Hero";
-import Footer from "./Components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from "./Pages/Main";
+import Login from "./Pages/Login";
 function App() {
   return (
     <>
- 
-      <Hero />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

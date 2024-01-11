@@ -1,24 +1,23 @@
-import React, { useState } from "react";
-import "./footerstyle.css";
+
+import "./Component Styles/footer.css"
 import logo from "../assets/newlifelogowhite.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram, faemai } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
-    <footer class="footer">
-      <div class="start-learning">
-        <div class="footer-start">
-          <div class="texts">
-            <h2 class="section-title">Make a Difference Today</h2>
-            <h3 class="section-sub-heading">
+    <footer className="footer">
+      <div className="start-learning">
+        <div className="footer-start">
+          <div className="texts">
+            <h2 className="section-title">Make a Difference Today</h2>
+            <h3 className="section-sub-heading">
               <span>Volunteer for our</span> <strong>Charity Program</strong>
               <span> and </span> <strong>Change Lives</strong>
             </h3>
           </div>
-          <a href="#" class="button">
-            <span class="label">Join the Charity Program</span>
+          <a href="#" className="button">
+            <span className="label">Join the Charity Program</span>
           </a>
         </div>
       </div>
@@ -34,10 +33,12 @@ function Footer() {
         <div className="footer-links">
           <a href="">HOME</a>
           <a href="">ABOUT US</a>
-          <a href="">SERVICES</a>
+          <a href="">MINISTRY</a>
           <a href="">VOLUNTEER</a>
+          <a href="">EVENTS</a>
           <a href="">GIVE</a>
           <a href="">FAQS</a>
+          <a href="">ADMIN</a>
         </div>
        
         <div className="footer-copyright">
