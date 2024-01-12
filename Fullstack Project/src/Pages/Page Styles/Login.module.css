@@ -1,14 +1,25 @@
- 
+/* Login.module.css */
 .login-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background-color: #fff; /* White background */
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+.logo {
+  width: 100px; /* Adjust the width of your logo */
+  margin-bottom: 20px;
 }
 
 .login-title {
   color: #000; /* Black text color */
+  margin-bottom: 20px;
+}
+
+.login-form {
+  width: 300px; /* Adjust the width of your form */
 }
 
 .login-input-group {
@@ -21,7 +32,6 @@ label {
   color: #000; /* Black text color */
 }
 
-.email-form, .password-form 
 input {
   width: 100%;
   padding: 8px;
@@ -29,7 +39,7 @@ input {
   border: 1px solid #000; /* Black border */
 }
 
-.sign-button {
+button {
   background-color: #000; /* Black button background */
   color: #fff; /* White button text color */
   padding: 10px 15px;

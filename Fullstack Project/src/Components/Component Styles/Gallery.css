@@ -1,0 +1,90 @@
+/* Gallery.css */
+
+ 
+ 
+ 
+  .image-container {
+    width: 900px;
+    margin: 20px 0;
+    text-align: center;
+    margin: 0 auto; /* Center horizontally within container */
+    position: relative; /* Allow absolute positioning of buttons */
+  }
+
+  .image-content { /* Container for image and text, excluding buttons */
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center buttons */
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 4em;
+  }
+  
+  .left-arrow-btn {
+    left: 1px; /* Position left button */
+  }
+  
+  .right-arrow-btn {
+    right: 1px; /* Position right button */
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+  }
+  
+  .carousel-indicator {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-indicator span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  
+  .carousel-indicator span.active {
+    background-color: #555;
+  }
+
+ 
+ 
+  
+    .carousel-indicator {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .image-container {
+      width: 600px;
+    }
+
+     
+
+  }
+  
+  @media (max-width: 480px) {
+    .image-container {
+      width: 300px;
+    }
+    .carousel-indicator {
+      display: none;  
+    }
+
+    
+  }
