@@ -1,5 +1,5 @@
-
-import "./Component Styles/footer.css"
+import { Link } from "react-router-dom";
+import "./Component Styles/footer.css";
 import logo from "../assets/newlifelogowhite.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -38,9 +38,9 @@ function Footer() {
           <a href="">EVENTS</a>
           <a href="">GIVE</a>
           <a href="">FAQS</a>
-          <a href="">ADMIN</a>
+          <Link to="/login">ADMIN</Link>
         </div>
-       
+
         <div className="footer-copyright">
           <p>&copy; 2021 New Life. All Rights Reserved</p>
         </div>
