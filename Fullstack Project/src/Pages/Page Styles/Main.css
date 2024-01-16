@@ -261,6 +261,8 @@ body {
 }
 
 .hero-container-about-section-description-map-container {
+  position: relative;
+  overflow: hidden;
   width: 400px;
 }
 
@@ -287,15 +289,14 @@ body {
 
 
   .hero-container-about-section-description-map-container {
+    width: 100%; /* Use full width on mobile */
+    height: 300px; /* Set a specific height for the map on mobile */
     margin-top: 0;
-    text-align: center;
-
   }
 
   .hero-container-about-section-description-text-container {
     text-align: center;
-    width: 100%;
-    /* Use full width on mobile */
+    width: 100%; /* Use full width on mobile */
   }
 
   .hero-container-about-section-description-text-container {

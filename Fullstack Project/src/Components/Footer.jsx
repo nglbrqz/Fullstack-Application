@@ -5,59 +5,87 @@ import logo from "../assets/newlifelogowhite.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-function Footer({ topRef }) {
+function Footer({ HomeRef, AboutRef, FaqRef }) {
   const handleLogoClick = () => {
-    // Scroll to the top of the parent component
-    topRef.current.scrollIntoView({ behavior: "smooth" });
+    HomeRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleAboutClick = () => {
+    AboutRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleFaqClick = () => {
+    FaqRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   Footer.propTypes = {
-    topRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+    HomeRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+    AboutRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+    FaqRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   };
-  
 
   return (
-    <footer className="footer">
-      <div className="footer-content-container">
-        <div className="footer-logo-container" onClick={handleLogoClick}>
-          <img src={logo} alt="" />
-        </div>
-        <div className="footer-social-icons">
-          <a
-            href="https://www.facebook.com/your-facebook-page"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
-          </a>
-          <a
-            href="https://www.instagram.com/your-instagram-account"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} className="instagram-icon" />
-          </a>
-        </div>
-        <div className="footer-links">
-          <a href="#">ABOUT US</a>
-          <a href="#">MINISTRY</a>
-          <a href="#">VOLUNTEER</a>
-          <a href="#">EVENTS</a>
-          <a href="#">GIVE</a>
-          <a href="#">FAQS</a>
-          <Link to="/login">ADMIN</Link>
+    <>
+      <div className="link">
+        <div className="start-learning">
+          <div className="charity-box-card-container ">
+            <div className="charity-box-card-container-texts">
+              <h2 className="charity-box-card-container-section-title">
+                Make a Difference Today
+              </h2>
+              <h3 className="charity-box-card-container-section-sub-heading">
+                <span>Volunteer for our</span> <strong>Charity Program</strong>
+                <span> and </span> <strong>Change Lives</strong>
+              </h3>
+            </div>
+            <button href="#" className="charity-box-card-button">
+              Join the Charity Program
+            </button>
+          </div>
         </div>
 
-        <div className="footer-copyright">
-          <p>&copy; 2021 New Life. All Rights Reserved</p>
-        </div>
+        <footer className="footer">
+          <div className="footer-content-container">
+            <div className="footer-logo-container" onClick={handleLogoClick}>
+              <img src={logo} alt="" />
+            </div>
+            <div className="footer-social-icons">
+              <a
+                href="https://www.facebook.com/your-facebook-page"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
+              </a>
+              <a
+                href="https://www.instagram.com/your-instagram-account"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="instagram-icon"
+                />
+              </a>
+            </div>
+            <div className="footer-links">
+              <a onClick={handleAboutClick}>ABOUT US</a>
+              <a href="#">MINISTRY</a>
+              <Link to="/volunteer">VOLUNTEER</Link>
+              <Link to="/events">EVENTS</Link>
+              <Link to="/donate">GIVE</Link>
+              <a onClick={handleFaqClick}>FAQS</a>
+              <Link to="/login">ADMIN</Link>
+            </div>
+
+            <div className="footer-copyright">
+              <p>&copy; 2021 New Life. All Rights Reserved</p>
+            </div>
+          </div>
+        </footer>
       </div>
-    </footer>
-
-    
+    </>
   );
-
-  
 }
 
 export default Footer;

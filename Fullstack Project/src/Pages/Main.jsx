@@ -10,13 +10,16 @@ import FAQ from "../Components/FAQ";
 import EventGallery from "../Components/EventGallery";
 import MinistryCard from "../Components/MinistryCard";
 import ministriesData from "../JSON Data/ministries.json";
+
 function Main() {
   // This is used for refering to the parent component by both nav and footer components
-  const topRef = useRef();
+  const HomeRef = useRef();
+  const AboutRef = useRef();
+  const FaqRef = useRef();
 
   return (
     <>
-      <div ref={topRef} className="hero-main-container">
+      <div ref={HomeRef} className="hero-main-container">
         <div className="hero-header-container">
           <NavBar style={{ zIndex: "1" }} />
           <video
@@ -48,7 +51,7 @@ function Main() {
           <div className="video-placeholder"></div>
         </div>
 
-        <div className="hero-container-about-section">
+        <div ref={AboutRef} className="hero-container-about-section">
           <div className="hero-container-about-section-image-wrapper">
             <hr className="hero-container-about-section-image-wrapper-top-line" />
             <div className="hero-container-about-section-image-container">
@@ -251,12 +254,12 @@ function Main() {
           <EventGallery />
         </div>
 
-        <div className="hero-container-faq-section">
+        <div ref={FaqRef} className="hero-container-faq-section">
           <FAQ />
         </div>
 
         <div className="hero-container-footer-container">
-          <Footer topRef={topRef} />
+          <Footer HomeRef={HomeRef} AboutRef={AboutRef} FaqRef={FaqRef} />
         </div>
       </div>
     </>
