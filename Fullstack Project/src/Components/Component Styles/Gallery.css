@@ -1,90 +1,162 @@
-/* Gallery.css */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Lato&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,800;0,900;1,100;1,200;1,700;1,900&family=Poppins&family=Roboto+Condensed:wght@400;500&family=Roboto:ital,wght@0,500;0,900;1,400&display=swap");
 
+.gallery-header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffff;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-header-container h1 {
+  font-size: 5.3rem;
+  margin-bottom: -15px;
+}
+
+.gallery-header-container hr {
+  width: 25%;
+  /* Adjust as needed */
+  margin: 0 auto;
+  /* Center the line horizontally */
+  color: #5ec3ab;
+}
+
+.gallery-header-container h3 {
+  color: #5ec3ab;
+  font-size: 2.1rem;
+}
+
+@media (max-width: 768px) {
+  .gallery-header-container h1 {
+    font-size: 3.3rem;
+  }
+
+  .gallery-header-container h3 {
+    font-size: 1.1rem;
+  }
+}
+
+.gallery-container {
+  color: #ffff;
+}
+
+.image-container {
+  width: 1200px;
+  margin: 20px 0;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.image-content {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.image-content h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-weight: 100;
+  font-size: 3.2em;
+  width: 500px;
+  line-height: 1.1em;
+}
+
+.arrow-btn {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center */
+  font-size: 80px;
+  width: 40px;
+  background-color: transparent;
+
+}
+
+.arrow-btn:hover {
+  background-color: transparent;
+  opacity: 0.4;  
+  transition: opacity 0.1s ease-in-out;
  
- 
- 
+ }
+
+.left-arrow-btn {
+  left: 160px;
+}
+
+.right-arrow-btn {
+  right: 160px; 
+}
+
+.image-content p {
+  /* Container for image and text, excluding buttons */
+  min-height: 80px;
+}
+
+
+
+.image-container img {
+  max-width: 800px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2em;
+}
+
+.carousel-indicator {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-indicator span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.carousel-indicator span.active {
+  background-color: #555;
+}
+
+.carousel-indicator {
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
   .image-container {
-    width: 900px;
-    margin: 20px 0;
-    text-align: center;
-    margin: 0 auto; /* Center horizontally within container */
-    position: relative; /* Allow absolute positioning of buttons */
+    width: 500px;
   }
 
-  .image-content { /* Container for image and text, excluding buttons */
-    display: inline-block;
-    text-align: center;
+  .image-content h3 {
+    top: 40%;
   }
-  
-  .arrow-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); /* Vertically center buttons */
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 4em;
-  }
-  
+
   .left-arrow-btn {
-    left: 1px; /* Position left button */
+    left: -15px;
   }
-  
+
   .right-arrow-btn {
-    right: 1px; /* Position right button */
+    right: -10px;
   }
-  
-  .image-container img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2em;
-  }
-  
+
   .carousel-indicator {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
+    display: none;
   }
-  
-  .carousel-indicator span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ddd;
-    margin: 0 4px;
-    cursor: pointer;
-  }
-  
-  .carousel-indicator span.active {
-    background-color: #555;
-  }
-
- 
- 
-  
-    .carousel-indicator {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  @media (max-width: 768px) {
-    .image-container {
-      width: 600px;
-    }
-
-     
-
-  }
-  
-  @media (max-width: 480px) {
-    .image-container {
-      width: 300px;
-    }
-    .carousel-indicator {
-      display: none;  
-    }
-
-    
-  }
+}

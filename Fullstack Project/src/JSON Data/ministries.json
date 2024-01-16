@@ -1,0 +1,48 @@
+ [
+    {
+      "ministryid": "1",
+      "category": "Pastoral Care",
+      "imageUrl": "https://source.unsplash.com/600x400/?creative",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit..."
+      ],
+      "pastor": {
+        "name": "John Doe",
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+        "quote": "Si vis pacem, para bellum",
+        "pastorImage": "https://source.unsplash.com/600x400/?pastor1"
+      }
+    },
+    {
+      "ministryid": "2",
+      "category": "Outreach",
+      "imageUrl": "https://source.unsplash.com/600x400/?technology",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit..."
+      ],
+      "pastor": {
+        "name": "Jane Smith",
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+        "quote": "Innovation distinguishes between a leader and a follower",
+        "pastorImage": "https://source.unsplash.com/600x400/?pastor2"
+      }
+    },
+    {
+      "ministryid": "3",
+      "category": "Kids & Junior YOuth",
+      "imageUrl": "https://source.unsplash.com/600x400/?community",
+      "description": [
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit..."
+      ],
+      "pastor": {
+        "name": "Sam Williams",
+        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
+        "quote": "The best way to find yourself is to lose yourself in the service of others",
+        "pastorImage": "https://source.unsplash.com/600x400/?pastor3"
+      }
+    }
+  ]
+  

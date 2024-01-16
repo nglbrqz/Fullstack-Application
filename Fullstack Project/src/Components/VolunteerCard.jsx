@@ -15,8 +15,8 @@ const VolunteerCard = ({ imageUrl, details }) => {
 
   return (
     <div className="volunteer-card">
-      <img src={imageUrl} alt="Volunteer Placeholder" className="card-image" />
-      <button onClick={handleButtonClick} className="card-button">
+      <img src={imageUrl} alt="Volunteer Placeholder" className="volunteer-card-image " />
+      <button onClick={handleButtonClick} className="volunteer-card-button">
         JOIN US
       </button>
 

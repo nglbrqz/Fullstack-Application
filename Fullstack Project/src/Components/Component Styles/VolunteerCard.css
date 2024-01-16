@@ -8,14 +8,14 @@
     /* Set the flex direction to column */
 }
 
-.card-image {
+.volunteer-card-image {
     flex: 1;
     /* Make the image flex-grow to take up available space */
     width: 100%;
     object-fit: cover;
 }
 
-.card-button {
+.volunteer-card-button {
     background-color: #222;
     border-radius: 4px;
     border-style: none;
