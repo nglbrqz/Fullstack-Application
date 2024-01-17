@@ -1,10 +1,7 @@
 import { useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import "../Pages/Page Styles/Main.css";
+  import "../Pages/Page Styles/Main.css";
 import NavBar from "../Components/navBar";
-import PromoVideo from "../assets/promovid.mp4";
-import Footer from "../Components/Footer";
+ import Footer from "../Components/Footer";
 import Gallery from "../Components/AccomplishmentGallery";
 import FAQ from "../Components/FAQ";
 import EventGallery from "../Components/EventGallery";
@@ -19,30 +16,16 @@ function Main() {
 
   return (
     <>
-      <div ref={HomeRef} className="hero-main-container">
-        <div className="hero-header-container">
-          <NavBar style={{ zIndex: "1" }} />
-          <video
-            id="backgroundVideo"
-            autoPlay
-            loop
-            muted
-            controls
-            disablePictureInPicture
-          >
-            <source src={PromoVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="overlay"></div>
-
+     
+        <div ref={HomeRef} className="hero-header-container">
+          <NavBar  />
+          
+          
+ 
           <div className="header-text-container">
             <h1 className="hero-title">MAKING JESUS KNOWN</h1>
           </div>
-          <div className=""></div>
-          <div className="social-icons">
-            <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
-            <FontAwesomeIcon icon={faInstagram} className="instagram-icon" />
-          </div>
+          
         </div>
 
         <div className="hero-container-welcome-section">
@@ -261,7 +244,7 @@ function Main() {
         <div className="hero-container-footer-container">
           <Footer HomeRef={HomeRef} AboutRef={AboutRef} FaqRef={FaqRef} />
         </div>
-      </div>
+      
     </>
   );
 }

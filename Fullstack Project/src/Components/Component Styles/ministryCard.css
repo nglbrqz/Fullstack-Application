@@ -3,7 +3,8 @@
   position: absolute;
   left: -10px;
   top: -20px;
-  width: 290px;
+  width: 100%; /* Use 100% width to make it responsive */
+  max-width: 290px; /* Set a maximum width for responsiveness */
   height: 42px;
   background-color: #5ec3ab;
   padding: 4px;
@@ -22,8 +23,9 @@
 }
 
 .ministry-card {
-  width: 390px;
-  height: 300px;
+  width: 100%; /* Use 100% width to make it responsive */
+  max-width: 390px; /* Set a maximum width for responsiveness */
+  height: auto; /* Allow the height to adjust based on content */
   border: 1px solid #000000;
   margin: 10px;
   display: flex;
@@ -34,10 +36,10 @@
 
 .ministry-card-image {
   flex: 1;
-  /* Make the image flex-grow to take up available space */
   width: 100%;
   object-fit: cover;
 }
+
 
 .ministry-card-button {
   background-color: #437b78;
