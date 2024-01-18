@@ -1,7 +1,7 @@
-import "../Pages/Page Styles/Login.module.css"
-import  { useState } from "react";
-
- 
+import "../Pages/Page Styles/Login.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/newlifelogowhite.png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -11,36 +11,46 @@ function Login() {
     event.preventDefault();
     // Handle login logic here (e.g., send a request to your backend)
     console.log("Email:", email, "Password:", password);
+    // Navigate to the dashboard
   };
 
   return (
-    <div className="login-container">
-      <h2 className="login-title">Log in</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="login-input-group">
-          <label htmlFor="email">Email:</label>
+    <div className="login-main-cont">
+      <div className="login-container">
+        <img src={logo} alt="Logo" className="nav-logo" id="nav-logo" />
 
-          <input className="email-form"
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+        <h2 className="login-title">Admin Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="login-input-group">
+            <input
+              className="email-form"
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+            />
+          </div>
 
-        <div className="login-input-group">
-          <label htmlFor="password">Password:</label>
+          <div className="login-input-group">
+            <input
+              className="login-password-form"
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+            />
+          </div>
 
-          <input className="password-form"
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-
-        <button className="sign-button" type="submit">Log in</button>
-      </form>
+          {/* Use Link to navigate to the dashboard */}
+          <Link to="/dashboard">
+            <button className="login-sign-button" type="submit">
+              Log in
+            </button>
+          </Link>
+        </form>
+      </div>
     </div>
   );
 }
