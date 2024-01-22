@@ -74,7 +74,7 @@ function Footer({ HomeRef, AboutRef, FaqRef }) {
             <div className="footer-links">
             <Link to="/"><a onClick={handleAboutClick}>ABOUT US</a></Link>
             <Link to="/joinus"><a>MINISTRY</a></Link>
-              <Link to="/joinus">VOLUNTEER</Link>
+              <Link to="/registration">VOLUNTEER</Link>
               <Link to="/events">EVENTS</Link>
               <Link to="/donate">GIVE</Link>
               <Link to="/"> <a onClick={handleFaqClick}>FAQS</a></Link>

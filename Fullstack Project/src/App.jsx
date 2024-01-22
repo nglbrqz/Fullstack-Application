@@ -5,6 +5,7 @@ import Dashboard from "./Pages/Dashboard"
 import Donation from "./Pages/Donation"
 import PrayerService from "./Pages/PrayerService";
 import JoinUs from "./Pages/JoinUs";
+import Registration from "./Pages/Registration";
 function App() {
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/prayer" element={<PrayerService />} /> 
           <Route path="/dashboard" element={<Dashboard />} /> 
           <Route path="/joinus" element={<JoinUs />} /> 
+          <Route path="/registration" element={<Registration />} /> 
         </Routes>
       </BrowserRouter>
     </>
