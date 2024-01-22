@@ -107,8 +107,7 @@
 }
 
 .image-content p {
-  /* Container for image and text, excluding buttons */
-  min-height: 80px;
+   min-height: 80px;
 }
 
 

@@ -18,7 +18,7 @@ function Main() {
     <>
      
         <div ref={HomeRef} className="hero-header-container">
-          <NavBar  />
+          <NavBar  AboutRef={AboutRef}/>
           
           
  

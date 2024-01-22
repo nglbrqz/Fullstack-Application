@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+
 import "./Component Styles/footer.css";
 import logo from "../assets/newlifelogowhite.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -38,16 +39,18 @@ function Footer({ HomeRef, AboutRef, FaqRef }) {
                 <span> and </span> <strong>Change Lives</strong>
               </h3>
             </div>
-            <button href="#" className="charity-box-card-button">
-              Join the Charity Program
-            </button>
+            <Link to="/donate">
+              <button href="#" className="charity-box-card-button">
+                Join the Charity Program
+              </button>{" "}
+            </Link>
           </div>
         </div>
 
         <footer className="footer">
           <div className="footer-content-container">
             <div className="footer-logo-container" onClick={handleLogoClick}>
-              <img src={logo} alt="" />
+            <Link to="/"><img src={logo} alt="" />  </Link>
             </div>
             <div className="footer-social-icons">
               <a
@@ -69,12 +72,12 @@ function Footer({ HomeRef, AboutRef, FaqRef }) {
               </a>
             </div>
             <div className="footer-links">
-              <a onClick={handleAboutClick}>ABOUT US</a>
-              <a href="#">MINISTRY</a>
-              <Link to="/volunteer">VOLUNTEER</Link>
+            <Link to="/"><a onClick={handleAboutClick}>ABOUT US</a></Link>
+            <Link to="/joinus"><a>MINISTRY</a></Link>
+              <Link to="/joinus">VOLUNTEER</Link>
               <Link to="/events">EVENTS</Link>
               <Link to="/donate">GIVE</Link>
-              <a onClick={handleFaqClick}>FAQS</a>
+              <Link to="/"> <a onClick={handleFaqClick}>FAQS</a></Link>
               <Link to="/login">ADMIN</Link>
             </div>
 
