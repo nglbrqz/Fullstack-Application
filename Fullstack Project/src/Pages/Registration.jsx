@@ -61,7 +61,7 @@ const Registration = () => {
           </div>
           <div className="registration-aligned-fields">
             <label for="contact">CONTACT NO:</label>
-            <input type="text" name="contact" placeholder="Enter Contact Number..." class="other-style" required/>
+            <input type="text" name="contact" placeholder="Enter Contact Number... " class="other-style" required/>
           </div>
         </form>
       </div>
