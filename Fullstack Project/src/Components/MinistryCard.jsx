@@ -35,7 +35,7 @@ const MinistryCard = ({ data }) => {
         <div className="ministry-category-modal-overlay" onClick={closeModal}>
           <div
             className="ministry-category-modal-content"
-            onClick={stopPropagation} // Stop propagation on modal content
+            onClick={stopPropagation} 
           >
             <div className="ministry-category-modal-header">
               <div

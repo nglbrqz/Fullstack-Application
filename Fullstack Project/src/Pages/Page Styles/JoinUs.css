@@ -62,13 +62,16 @@
 }
 
 
-.join-us-ministry-section, .join-us-volunteer-section {
+.join-us-ministry-section,
+.join-us-connect-group-section,
+.join-us-volunteer-section {
     height: auto;
     padding: 50px;
 }
 
 
-.ministry-wrapper,  .connect-group-wrapper  {
+.ministry-wrapper,
+.connect-group-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -79,12 +82,14 @@
 .volunteer-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem; /* Adjust the gap as needed */
-  }
+    gap: 1rem;
+    /* Adjust the gap as needed */
+}
 
-  .volunteer-wrapper .volunteer-card {
-    width: 100%; /* Adjust the width as needed */
-  }
+.volunteer-wrapper .volunteer-card {
+    width: 100%;
+    /* Adjust the width as needed */
+}
 
 
 @media screen and (max-width: 768px) {
@@ -95,8 +100,8 @@
 
 
     .ministry-wrapper {
-         flex-direction: column;
-         gap: 20px;
+        flex-direction: column;
+        gap: 20px;
     }
 
 }

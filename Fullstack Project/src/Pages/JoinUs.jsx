@@ -3,6 +3,7 @@ import NavBar from "../Components/navBar";
 import Footer from "../Components/Footer";
 import MinistryCard from "../Components/MinistryCard";
 import ministriesData from "../JSON Data/ministries.json";
+import volunteerData from "../JSON Data/volunteer.json";
 import VolunteerCard from "../Components/VolunteerCard";
 const JoinUs = () => {
   return (
@@ -35,12 +36,13 @@ const JoinUs = () => {
 
       <div className="join-us-volunteer-section">
         <div className="volunteer-title-container">
-          <h1>MINISTRIES</h1>
+          <h1>Volunteers</h1>
         </div>
 
         <div className="volunteer-wrapper">
-          <VolunteerCard className="volunteer-card" />
-     
+        {volunteerData.map((volunteer) => (
+        <VolunteerCard key={volunteer.id} volunteer={volunteer} />
+      ))}     
         </div>
       </div>
 
