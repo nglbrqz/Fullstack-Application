@@ -1,93 +1,265 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Lato&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,800;0,900;1,100;1,200;1,700;1,900&family=Poppins&family=Roboto+Condensed:wght@400;500&family=Roboto:ital,wght@0,500;0,900;1,400&display=swap');
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    color: rgb(0, 0, 0);
-    padding-left: 40px;
-    padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.nav-logo {
+  width: 130px;
+  height: auto;
+}
+
+.navbar-left {
+  width: 190px;
+}
+
+.navbar-middle {
+  display: flex;
+  gap: 2.6rem;
+  font-size: 1.1em;
+  color: #ffffff;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.navbar-middle a,
+.dropbtn {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+   text-align: center;
+}
+ 
+
+@media (max-width: 768px) {
+  .navbar-middle {
+    flex-direction: column;
+    gap: 1rem; /* Adjust the gap for small screens */
   }
 
-  /* Logo styles */
-.logo {
-    width: 90px;
-    /* Adjust the width as needed */
-    height: auto;
+  .navbar-middle a,
+  .dropbtn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; /* Adjust the padding for small screens */
   }
-  
-  .navbar-left {
-    width: 190px;
-  }
-  
-  /* Navigation links styles */
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
   .navbar-middle {
-    display: flex;
-    gap: 2.6rem;
-    font-size: 1.1em;
-    color: #ffffff;
-    text-transform: uppercase;
+    gap: 1.5rem; /* Adjust the gap for medium-sized screens */
   }
-  
-  .navbar-middle a {
-    text-decoration: none;
-    color: #ffffff;
-  
+}
+
+@media (min-width: 1201px) {
+  .navbar-middle {
+    gap: 2.6rem; /* Default gap for larger screens */
   }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    width: 190px;
+}
+
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 190px;
+}
+
+.toggle-icon {
+  cursor: pointer;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.nav-social-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-donate-button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .navbar-donate-button {
+    width: 100%; /* Full width for smaller screens */
+    padding: 0.25em 0.75em; /* Adjust padding for smaller screens */
   }
-  
-  .toggle-icon {
-    cursor: pointer;
-  
+}
+
+.navbar-donate-button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.nav-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-donate-button {
+    padding: 0.25em 0.75em;
   }
-  
-  .moon {
-    color: #ffffff;
-    /* Set the color for the moon icon */
+
+  .navbar {
+    display: none;
   }
-  
-  .sun {
-    color: #ffffff;
-    /* Set the color for the sun icon */
+
+  .mobile-menu-icon {
+    display: block;
   }
-  
-  
-  
-  .button-54 {
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 30px;
-    color: #000;
-    cursor: pointer;
-    border: 3px solid;
-    padding: 0.25em 0.5em;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+
+  .nav-overlay {
+    display: block;
   }
-  
-  .button-54:active {
-    box-shadow: 0px 0px 0px 0px;
-    top: 5px;
-    left: 5px;
-  }
-  
-  @media (min-width: 768px) {
-    .button-54 {
-      padding: 0.25em 0.75em;
-    }
-  }
-  
-  
+}
+
+.nav-overlay {
+  display: block;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-size: 1.3em;
+}
+
+.nav-overlay-closebtn,
+.mobile-menu-icon {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 20px;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.navbar-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+.navbar-modal-content a {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.navbar-modal-button {
+  margin-bottom: 20px;
+}
+
+.overlay-content a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.nav-overlay  .dropdown{
+  margin-bottom: 10px;
+}
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropbtn {
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.nav-dropdown-content,
+.nav-submenu-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: left;
+  list-style-type: none;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.nav-dropdown-content a,
+.nav-submenu-content a {
+  color: #000;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-dropdown-content a:hover,
+.nav-submenu-content a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .nav-dropdown-content,
+.nav-submenu:hover .nav-submenu-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-overlay .nav-dropdown {
+  position: relative;
+}
+
+.nav-overlay .nav-dropdown-content {
+  width: auto;
+  position: relative;
+  top: 0;
+}
+
+.nav-overlay .nav-dropdown-content a:hover {
+  background-color: #777;
+}

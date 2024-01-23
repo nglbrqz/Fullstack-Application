@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Lato&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,800;0,900;1,100;1,200;1,700;1,900&family=Poppins&family=Roboto+Condensed:wght@400;500&family=Roboto:ital,wght@0,500;0,900;1,400&display=swap');
+
+.event-gallery-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.event-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.event-image-content {
+    position: relative;
+    /* Change from absolute to relative */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.event-image-container h2 {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    margin: 0;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 8.5em;
+    font-family: "Anton", sans-serif;
+
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Adjust the alpha value for the darkness */
+    z-index: 0;
+  }
+
+.event-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-gallery-carousel-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.event-gallery-carousel-indicator span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000000;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.event-gallery-carousel-indicator span.active {
+    background-color: #ffffff;
+}
+
+.carousel-indicator {
+    transition: transform 0.3s ease-in-out;
+}
+
+.link-button {
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin-top: 15px;
+    display: flex;
+    background-color: transparent;
+    border: 3px rgb(255, 255, 255) solid;
+    width: 190px;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+     font-size: 1.5em;
+     color: #ffffff;
+}
+
+.link-button:hover {
+   background-color: #000000;
+   border: #000000;
+}
+
+
+@media screen and (max-width: 768px) {
+    .event-image-container h2 {
+        font-size: 6em;
+        left: 20px;
+    }
+    
+    .link-button {
+        bottom: 50px;
+    }
+}
+
+/* Media Query for Mobile devices */
+@media screen and (max-width: 480px) {
+    .event-image-container h2 {
+        font-size: 4em;
+        left: 10px;
+    }
+    
+    .link-button {
+        bottom: 70px;
+        width: 150px;
+    }
+}

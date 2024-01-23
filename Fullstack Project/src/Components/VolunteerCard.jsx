@@ -15,10 +15,8 @@ const VolunteerCard = ({ imageUrl, details }) => {
 
   return (
     <div className="volunteer-card">
-      <img src={imageUrl} alt="Volunteer Placeholder" className="card-image" />
-      <button onClick={handleButtonClick} className="card-button">
-        JOIN US
-      </button>
+      <img onClick={handleButtonClick} src={imageUrl}  className="volunteer-card-image " />
+  
 
       {showModal && (
         <div className="volunteer-category-modal-overlay" onClick={closeModal}>
