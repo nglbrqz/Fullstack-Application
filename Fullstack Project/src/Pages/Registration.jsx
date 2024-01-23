@@ -10,7 +10,7 @@ const Registration = () => {
       </div>
 
       <div className="registration-form-container">
-        
+        <h1>Hello</h1>
       </div>
 
      
