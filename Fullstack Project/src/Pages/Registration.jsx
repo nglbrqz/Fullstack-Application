@@ -63,6 +63,8 @@ const Registration = () => {
             <label for="contact">CONTACT NO:</label>
             <input type="text" name="contact" placeholder="Enter Contact Number... " class="other-style" required/>
           </div>
+
+          {/*Here nalang yung submission buttons kemerut, inaantay ko nalnag yung update ng layout, nasabi ko naren ke trishia about it :> */}
         </form>
       </div>
 
