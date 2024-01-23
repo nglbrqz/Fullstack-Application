@@ -1,16 +1,14 @@
 import "../Pages/Page Styles/JoinUs.css";
 import NavBar from "../Components/navBar";
 import Footer from "../Components/Footer";
-
+import MinistryCard from "../Components/MinistryCard";
+import ministriesData from "../JSON Data/ministries.json";
+import VolunteerCard from "../Components/VolunteerCard";
 const JoinUs = () => {
   return (
     <>
       <div className="join-us-header-container">
         <NavBar />
-
-        <div className="join-us-text-container">
-          <h1 className="join-us-title">PRAYER REQUEST</h1>
-        </div>
       </div>
 
       <div className="join-us-main-section">
@@ -29,26 +27,29 @@ const JoinUs = () => {
         </div>
 
         <div className="ministry-wrapper">
-
+          {ministriesData.map((ministry) => (
+            <MinistryCard key={ministry.ministryid} data={ministry} />
+          ))}
         </div>
       </div>
+
       <div className="join-us-volunteer-section">
-      <div className="ministry-title-container">
+        <div className="volunteer-title-container">
           <h1>MINISTRIES</h1>
         </div>
 
-        <div className="ministry-wrapper">
-            
+        <div className="volunteer-wrapper">
+          <VolunteerCard className="volunteer-card" />
+     
         </div>
       </div>
-      <div className="join-us-connect-group">
-      <div className="ministry-title-container">
+
+      <div className="join-us-connect-group-section">
+        <div className="ministry-title-container">
           <h1>MINISTRIES</h1>
         </div>
 
-        <div className="ministry-wrapper">
-            
-        </div>
+        <div className="connect-group-wrapper"></div>
       </div>
 
       <div className="prayer-footer-container">
