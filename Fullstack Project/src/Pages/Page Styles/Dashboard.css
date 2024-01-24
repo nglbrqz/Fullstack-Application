@@ -43,12 +43,19 @@
     padding: 10px 60px 10px 20px;
   }
   
+  .side-panel-menu ul li:hover,
   .side-panel-menu a:hover {
-    color: #ff9900; /* Change color on hover as needed */
-    background-color: black;
+    color: #ff9900;
+    background-color: #1e1c1c;
   }
 
-  /* Logout and Settings buttons */
+  .side-panel-menu ul li.selected,
+  .side-panel-menu ul li.selected a {
+    color: #ff9900;
+    background-color: black ;
+  }
+
+/* Logout and Settings buttons */
 .bottom-buttons {
   display: flex;
   flex-direction: column;
@@ -75,11 +82,6 @@
 .bottom-buttons a:hover {
   opacity: 0.5;
 }
-
-
-
-
-
 
   /* Navigation Bar Styles */
   .top-nav {

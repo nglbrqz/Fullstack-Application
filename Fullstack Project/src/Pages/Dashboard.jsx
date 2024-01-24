@@ -1,4 +1,5 @@
  import  "../Pages/Page Styles/Dashboard.css";
+ import { useState } from "react";
 
 const DashboardNavBar = () => {
   return (
@@ -23,6 +24,14 @@ const DashboardNavBar = () => {
 };
 
 const SidePanel = () => {
+  // State to track the selected item
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  // Function to handle item click
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
+  
   return (
     <div className="side-panel">
       <div className = "menu">
@@ -32,9 +41,15 @@ const SidePanel = () => {
         </div>
         <div className="side-panel-menu">
           <ul>
-            <li><a href="#">EVENTS</a></li>
-            <li><a href="#">ATTENDEES</a></li>
-            <li><a href="#">GALLERY</a></li>
+            <li className={selectedItem === 'EVENTS' ? 'selected' : ''} onClick={() => handleItemClick('EVENTS')}>
+              <a href="#">EVENTS</a>
+            </li>
+            <li className={selectedItem === 'ATTENDEES' ? 'selected' : ''} onClick={() => handleItemClick('ATTENDEES')}>
+              <a href="#">ATTENDEES</a>
+            </li>
+            <li className={selectedItem === 'GALLERY' ? 'selected' : ''} onClick={() => handleItemClick('GALLERY')}>
+              <a href="#">GALLERY</a>
+            </li>
           </ul>
         </div>
       </div>
