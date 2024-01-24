@@ -6,7 +6,7 @@ const Registration = () => {
   return (
     <>
       <div className="registration-navbar-container">
-        <NavBar/>
+      <NavBar colorScheme="dark"/>
       </div>
       
       <div className="registration-form-container">

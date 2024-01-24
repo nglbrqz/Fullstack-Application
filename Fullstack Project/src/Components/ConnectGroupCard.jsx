@@ -1,4 +1,5 @@
  import { useState } from "react";
+ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import "./Component Styles/ConnectGroupCard.css"; // Import the stylesheet
@@ -74,9 +75,9 @@ const ConnectGroupCard = ({ connectgroup }) => {
               </div>
             </div>
             <div className="connect-group-category-button-wrapper">
-              <button className="connect-group-button">
-                <span className="connect-group-button-span">Join</span>
-              </button>
+            <Link to="/registration"><button className="connect-group-button">
+               <span className="connect-group-button-span">Join</span>
+              </button></Link>
             </div>
           </div>
         </div>

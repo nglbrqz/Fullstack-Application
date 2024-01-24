@@ -1,4 +1,4 @@
-// VolunteerCard.js
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import "./Component Styles/VolunteerCard.css"; // Import the stylesheet
@@ -58,9 +58,9 @@ const VolunteerCard = ({ volunteer }) => {
                 </div>
               </div>
               <div className="volunteer-category-button-wrapper">
-                <button className="volunteer-button">
+              <Link to="/registration"><button className="volunteer-button">
                   <span className="volunteer-button-span">Join</span>
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
