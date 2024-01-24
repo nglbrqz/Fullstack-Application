@@ -80,17 +80,17 @@ function NavBar({ AboutRef, colorScheme }) {
               <ul className="nav-dropdown-content">
                 <Link to="/joinus">
                   <li>
-                    <a href="/service1">Ministry</a>
+                    <a  >Ministry</a>
                   </li>
                 </Link>
                 <Link to="/joinus">
                   <li>
-                    <a href="/service2">Volunteer</a>
+                    <a >Volunteer</a>
                   </li>
                 </Link>
                 <Link to="/joinus">
                   <li>
-                    <a href="/service3">Connect Groups</a>
+                    <a >Connect Groups</a>
                   </li>
                 </Link>
               </ul>
