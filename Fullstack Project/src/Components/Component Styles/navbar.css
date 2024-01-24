@@ -4,8 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(0, 0, 0);
-  padding-left: 40px;
+   padding-left: 40px;
   padding-right: 40px;
 }
 
@@ -18,20 +17,24 @@
   width: 190px;
 }
 
+.navbar-left img{
+  width: 140px;
+  height: auto;
+  margin-top: 30px;
+}
+
 .navbar-middle {
   display: flex;
   gap: 2.6rem;
   font-size: 1.1em;
-  color: #ffffff;
-  text-transform: uppercase;
+    text-transform: uppercase;
   align-items: center;
 }
 
 .navbar-middle a,
 .dropbtn {
   text-decoration: none;
-  color: #ffffff;
-  display: inline-block;
+   display: inline-block;
    text-align: center;
 }
  

@@ -28,7 +28,7 @@ const MinistryCard = ({ data }) => {
         className="ministry-card-image"
       />
       <button onClick={handleButtonClick} className="ministry-card-button">
-        JOIN US
+        VIEW INFO
       </button>
 
       {showModal && (

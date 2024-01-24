@@ -24,8 +24,7 @@ const VolunteerCard = ({ volunteer }) => {
         <img
           onClick={handleButtonClick}
           src="{volunteer.imageUrl}"
-          alt="Volunteer Placeholder"
-          className="volunteer-card-image"
+           className="volunteer-card-image"
         />
 
         {showModal && (
