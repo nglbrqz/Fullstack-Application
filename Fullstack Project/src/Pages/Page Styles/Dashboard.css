@@ -13,7 +13,6 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid #595959;
-    margin-bottom: 25px;
     padding: 20px 15px 15px 15px;
   }
 
@@ -32,15 +31,14 @@
   }
   
   .side-panel-menu li {
-    margin-bottom: 10px;
-    padding: 15px 0;
+    padding: 16px 0;
   }
   
   .side-panel-menu a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    padding: 0px 60px 10px 20px;
+    padding: 16px 100px 16px 15px;
   }
   
   .side-panel-menu ul li:hover,
@@ -91,7 +89,7 @@
     background-color: #141414;
     color: #fff;
     padding: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 3.5px solid #808080;
     height: 100%;
     max-height: 70px;
     width: 100%;
@@ -100,7 +98,10 @@
   .top-nav .left {
     display: flex;
     align-items: center;
-    margin-left: 1%;
+    margin-left: 2%;
+    color: #dfdfdf;
+    font-size: 22px;
+    font-weight: bold;
   }
 
   .top-nav .right {
