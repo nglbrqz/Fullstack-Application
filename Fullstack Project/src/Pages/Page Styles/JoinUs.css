@@ -1,102 +1,178 @@
-.join-us-header-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/sitecoverimages/donations.jpg') center center/cover no-repeat;
-}
-
-.NavBar,
-.join-us-text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.join-us-text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    width: 860px;
-    font-weight: 600;
-    text-align: center;
-    font-size: 90px;
-    line-height: 1.8em;
-    text-transform: uppercase;
-    max-width: 100%;
-    /* Ensure the text does not overflow its container */
-    padding: 0 20px;
-    /* Add padding to prevent text from sticking to the edges */
-
-}
-
-.join-us-main-section {
-    padding: 50px;
-    height: auto;
-}
-
-.main-section-wrapper {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-section-title h1 {
-    font-size: 150px;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1em;
-}
-
-.main-section-image-container {
-    width: 1080px;
-    height: 500px;
-    border: 2px solid black;
-    box-shadow: 20px 20px #437B78;
-    ;
-
-}
+ .join-us-header-container .NavBar {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: black;
+ }
 
 
-.join-us-ministry-section, .join-us-volunteer-section {
-    height: auto;
-    padding: 50px;
-}
+
+ .join-us-main-section {
+     padding: 50px;
+     height: auto;
+ }
+
+ .main-section-wrapper {
+     display: flex;
+     gap: 50px;
+     align-items: center;
+     justify-content: center;
+ }
 
 
-.ministry-wrapper,  .connect-group-wrapper  {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-}
+ .main-section-image-container {
+     width: 1080px;
+     height: 500px;
+     border: 2px solid black;
+     box-shadow: 20px 20px #437B78;
 
-.volunteer-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem; /* Adjust the gap as needed */
-  }
-
-  .volunteer-wrapper .volunteer-card {
-    width: 100%; /* Adjust the width as needed */
-  }
+ }
 
 
-@media screen and (max-width: 768px) {
+ .join-us-ministry-section,
+ .join-us-connect-group-section,
+ .join-us-volunteer-section {
+     height: auto;
+     padding: 50px;
+ }
 
-    .main-section-wrapper {
-        flex-direction: column;
-    }
+
+ .ministry-wrapper {
+     display: flex;
+     flex-direction: row;
+
+     align-items: center;
+     justify-content: center;
+ }
+
+ .volunteer-wrapper {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ .connect-group-wrapper {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     row-gap: 30px;
+     column-gap: 30px;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .connect-group-wrapper .card {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .volunteer-wrapper .volunteer-card {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
 
 
-    .ministry-wrapper {
+ .ministry-title-container,
+ .volunteer-title-container,
+ .connect-group-title-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     padding: 50px;
+ }
+
+ .ministry-title-container h1,
+ .volunteer-title-container h1,
+ .connect-group-title-container h1,
+ .main-section-title h1 {
+     color: #5EC3AB;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 600;
+     font-size: 90px;
+     text-transform: uppercase;
+
+ }
+
+ .main-section-title {
+     text-align: center;
+ }
+
+ .volunteer-title-container {
+     text-align: right;
+ }
+
+ .connect-group-title-container {
+     text-align: left;
+ }
+
+
+ @media screen and (max-width: 768px) {
+
+     .main-section-wrapper {
+         flex-direction: column;
+     }
+
+
+     .ministry-wrapper {
          flex-direction: column;
          gap: 20px;
-    }
+     }
 
+     .ministry-title-container h1,
+     .volunteer-title-container h1,
+     .connect-group-title-container h1 {
+         font-size: 50px;
+
+     }
+
+     .ministry-title-container,
+     .volunteer-title-container,
+     .connect-group-title-container {
+
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         padding: 50px;
+     }
+
+     .volunteer-wrapper{
+         display: flex;
+         flex-direction: column;
+     }
+.connect-group-wrapper{
+     grid-template-columns: repeat(1, 1fr);
 }
+ 
+
+ }
+
+ @media screen and (max-width: 1024px) {
+     .volunteer-wrapper {
+         grid-template-columns: repeat(2, 1fr);
+     }
+
+     .volunteer-title-container,
+     .connect-group-title-container {
+         text-align: center;
+     }
+
+
+     .main-section-image-container {
+         max-width: 100%;
+         /* Adjust this value as needed */
+         height: auto;
+         border: 2px solid black;
+         box-shadow: 20px 20px #437B78;
+
+     }
+
+
+ }

@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import "./Component Styles/navbar.css";
-import logo from "../assets/newlifelogowhite.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import whitelogo from "../assets/whitelogo.png";
+import blacklogo from "../assets/blacklogo.png";
 
-function NavBar({ AboutRef }) {
+function NavBar({ AboutRef, colorScheme }) {
   const handleAboutClick = () => {
     AboutRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   NavBar.propTypes = {
+    colorScheme: PropTypes.oneOf(["light", "dark"]).isRequired,
     AboutRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   };
 
@@ -43,71 +45,99 @@ function NavBar({ AboutRef }) {
     };
   }, [overlayWidth]);
 
+  const textColor = colorScheme === "dark" ? "black" : "white";
+  const logoPath = colorScheme === "dark" ? blacklogo : whitelogo;
+
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar" style={{ color: textColor }}>
         <div className="navbar-left">
           <Link to="/">
-            <img src={logo} alt="Logo" className="nav-logo" id="nav-logo" />
-          </Link>{" "}
+            <img src={logoPath} alt="Your Logo" className="navbar-logo" />{" "}
+          </Link>
         </div>
-
-        <div className="navbar-middle">
+        <div className="navbar-middle" style={{ color: textColor }}>
           <Link to="/">
-            <a onClick={handleAboutClick}>About</a>{" "}
+            <a style={{ color: textColor }} onClick={handleAboutClick}>
+              About
+            </a>{" "}
           </Link>
           <Link to="/">
-            <a href="/events">Events</a>{" "}
+            <a style={{ color: textColor }} href="/events">
+              Events
+            </a>{" "}
           </Link>
 
           <div className="dropdown">
-            <span className="nav-dropbtn" onClick={toggleJoinDropdown}>
+            <span
+              style={{ color: textColor }}
+              className="nav-dropbtn"
+              onClick={toggleJoinDropdown}
+            >
               Join &#9662;
             </span>
             {joinDropdownOpen && (
               <ul className="nav-dropdown-content">
-                <li>
-                  <a href="/service1">Service 1</a>
-                </li>
-                <li>
-                  <a href="/service2">Service 2</a>
-                </li>
-                <li>
-                  <a href="/service3">Service 3</a>
-                </li>
+                <Link to="/joinus">
+                  <li>
+                    <a  >Ministry</a>
+                  </li>
+                </Link>
+                <Link to="/joinus">
+                  <li>
+                    <a >Volunteer</a>
+                  </li>
+                </Link>
+                <Link to="/joinus">
+                  <li>
+                    <a >Connect Groups</a>
+                  </li>
+                </Link>
               </ul>
             )}
           </div>
 
           {/* Services Dropdown */}
           <div className="dropdown">
-            <span className="nav-dropbtn" onClick={toggleServicesDropdown}>
+            <span
+              style={{ color: textColor }}
+              className="nav-dropbtn"
+              onClick={toggleServicesDropdown}
+            >
               Services &#9662;
             </span>
             {servicesDropdownOpen && (
               <ul className="nav-dropdown-content">
                 <li>
-                <Link to="prayer"><a>Prayer Services</a></Link>
+                  <Link to="prayer">
+                    <a>Prayer Services</a>
+                  </Link>
                 </li>
-                 
               </ul>
             )}
           </div>
         </div>
-
         <div className="navbar-right">
           <Link to="/donate">
             <button className="navbar-donate-button">Donate</button>
           </Link>
-          <div className="nav-social-icons">
-            <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
-            <FontAwesomeIcon icon={faInstagram} className="instagram-icon" />
+          <div className="nav-social-icons" style={{ color: textColor }}>
+            <FontAwesomeIcon
+              style={{ color: textColor }}
+              icon={faFacebook}
+              className="facebook-icon"
+            />
+            <FontAwesomeIcon
+              style={{ color: textColor }}
+              icon={faInstagram}
+              className="instagram-icon"
+            />
           </div>
         </div>
       </nav>
 
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon icon={faBars} style={{ color: textColor }} />
       </div>
 
       <div
@@ -121,7 +151,7 @@ function NavBar({ AboutRef }) {
         <div className="overlay-content">
           <Link to="/">
             <img
-              src={logo}
+              src={whitelogo}
               alt="Logo"
               className="nav-logo"
               id="modal-nav-logo"
@@ -129,10 +159,12 @@ function NavBar({ AboutRef }) {
           </Link>
           <div className="navbar-modal-content">
             <Link to="/">
-              <a onClick={[handleAboutClick, toggleMobileMenu] }>About</a>{" "}
+              <a onClick={[handleAboutClick, toggleMobileMenu]}>About</a>{" "}
             </Link>
             <Link to="/">
-              <a href="/events" onClick={toggleMobileMenu}>Events</a>{" "}
+              <a href="/events" onClick={toggleMobileMenu}>
+                Events
+              </a>{" "}
             </Link>
           </div>
 
@@ -146,7 +178,6 @@ function NavBar({ AboutRef }) {
                 <li>
                   <a href="/service1">Prayer Service</a>
                 </li>
-                 
               </ul>
             )}
           </div>
@@ -159,16 +190,23 @@ function NavBar({ AboutRef }) {
             {servicesDropdownOpen && (
               <ul className="nav-dropdown-content">
                 <li>
-                <Link to="prayer"><a>Prayer Services</a></Link>
-
+                  <Link to="prayer">
+                    <a>Prayer Services</a>
+                  </Link>
                 </li>
-                 
               </ul>
             )}
           </div>
 
           <div className="navbar-modal-button">
-          <Link to="/donate"><button className="navbar-donate-button" onClick={toggleMobileMenu}>Donate</button> </Link>
+            <Link to="/donate">
+              <button
+                className="navbar-donate-button"
+                onClick={toggleMobileMenu}
+              >
+                Donate
+              </button>{" "}
+            </Link>
           </div>
           <div className="nav-social-icons">
             <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />

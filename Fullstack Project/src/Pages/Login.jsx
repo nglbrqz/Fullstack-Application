@@ -14,6 +14,10 @@ function Login() {
     // Navigate to the dashboard
   };
 
+  // I have the updated code for this portion on my local clone branch :v 
+  // will not update until there's a parent folder for all this
+  // para malagay ko yung login api folder pag pwede na owo)b
+
   return (
     <div className="login-main-cont">
       <div className="login-container">

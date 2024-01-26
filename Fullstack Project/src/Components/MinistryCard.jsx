@@ -28,14 +28,14 @@ const MinistryCard = ({ data }) => {
         className="ministry-card-image"
       />
       <button onClick={handleButtonClick} className="ministry-card-button">
-        JOIN US
+        VIEW INFO
       </button>
 
       {showModal && (
         <div className="ministry-category-modal-overlay" onClick={closeModal}>
           <div
             className="ministry-category-modal-content"
-            onClick={stopPropagation} // Stop propagation on modal content
+            onClick={stopPropagation} 
           >
             <div className="ministry-category-modal-header">
               <div

@@ -3,13 +3,16 @@ import NavBar from "../Components/navBar";
 import Footer from "../Components/Footer";
 import MinistryCard from "../Components/MinistryCard";
 import ministriesData from "../JSON Data/ministries.json";
+import volunteerData from "../JSON Data/volunteer.json";
+import connectgroupData from "../JSON Data/connectgroup.json";
 import VolunteerCard from "../Components/VolunteerCard";
+import ConnectGroupCard from "../Components/ConnectGroupCard"
 const JoinUs = () => {
   return (
     <>
       <div className="join-us-header-container">
-        <NavBar />
-      </div>
+      <NavBar colorScheme="dark"/>
+            </div>
 
       <div className="join-us-main-section">
         <div className="main-section-wrapper">
@@ -35,21 +38,29 @@ const JoinUs = () => {
 
       <div className="join-us-volunteer-section">
         <div className="volunteer-title-container">
-          <h1>MINISTRIES</h1>
+          <h1>Volunteers</h1>
         </div>
 
         <div className="volunteer-wrapper">
-          <VolunteerCard className="volunteer-card" />
-     
+        {volunteerData.map((volunteer) => (
+        <VolunteerCard key={volunteer.id} volunteer={volunteer} />
+      ))}     
         </div>
       </div>
 
       <div className="join-us-connect-group-section">
-        <div className="ministry-title-container">
+        <div className="connect-group-title-container">
           <h1>MINISTRIES</h1>
         </div>
 
-        <div className="connect-group-wrapper"></div>
+        <div className="connect-group-wrapper">
+        {connectgroupData.map((connectgroup) => (
+        <ConnectGroupCard key={connectgroup.id} connectgroup={connectgroup} />
+      ))} 
+
+              
+
+        </div>
       </div>
 
       <div className="prayer-footer-container">
