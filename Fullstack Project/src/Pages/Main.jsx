@@ -66,7 +66,7 @@ function Main() {
 
               <div className="hero-container-about-section-description-text-container">
                 <p className="hero-container-about-section-text">
-                  Hello Hello Hello
+                  Hello Hello Hello Philippines
                 
                 </p>
                 <p className="hero-container-about-section-text">
