@@ -1,30 +1,31 @@
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 
+
+// THIS FILE IS RESPONSIBLE FOR HANDLING CRUD OPERATIONS
+
 const test = (req, res) => {
   res.json("test is good :3");
 };
 
+//REGISTRATION OF ADMIN ACCOUNT
 const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
-    //Check if name was entered
-    if (!name) {
+     if (!name) {
       return res.json({
         error: "Name is Required",
       });
     }
 
-    //Check if pass is good
-    if (!password || password.length < 6) {
+     if (!password || password.length < 6) {
       return res.json({
         error: "Password is required and should be 6 characters long",
       });
     }
 
-    //Check email
-    const exist = await User.findOne({ email });
+     const exist = await User.findOne({ email });
     if (exist) {
       return res.json({
         error: "Email already been used",
@@ -43,6 +44,7 @@ const registerUser = async (req, res) => {
   }
 };
 
+//LOGIN OF ADMIN ACCOUNT
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;

@@ -1,8 +1,6 @@
 import "../Pages/Page Styles/JoinUs.css";
 import NavBar from "../Components/navBar";
 import Footer from "../Components/Footer";
-import MinistryCard from "../Components/MinistryCard";
-import ministriesData from "../JSON Data/ministries.json";
 import volunteerData from "../JSON Data/volunteer.json";
 import connectgroupData from "../JSON Data/connectgroup.json";
 import VolunteerCard from "../Components/VolunteerCard";
@@ -24,17 +22,7 @@ const JoinUs = () => {
           </div>
         </div>
       </div>
-      <div className="join-us-ministry-section">
-        <div className="ministry-title-container">
-          <h1>MINISTRIES</h1>
-        </div>
-
-        <div className="ministry-wrapper">
-          {ministriesData.map((ministry) => (
-            <MinistryCard key={ministry.ministryid} data={ministry} />
-          ))}
-        </div>
-      </div>
+       
 
       <div className="join-us-volunteer-section">
         <div className="volunteer-title-container">
