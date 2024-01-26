@@ -1,7 +1,7 @@
 import { useRef } from "react";
-  import "../Pages/Page Styles/Main.css";
+import "../Pages/Page Styles/Main.css";
 import NavBar from "../Components/NavBar";
- import Footer from "../Components/Footer";
+import Footer from "../Components/Footer";
 import Gallery from "../Components/AccomplishmentGallery";
 import FAQ from "../Components/FAQ";
 import EventGallery from "../Components/EventGallery";
