@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./Component Styles/faq.css";
 
 const FAQ = () => {
@@ -10,7 +10,9 @@ const FAQ = () => {
 
   return (
     <>
-      <h1>Frequently Asked Questions</h1>
+      <div className="faq-titles">
+        <h1>Frequently Asked Questions</h1>
+      </div>
       <div className="faq-container">
         {FAQData.map((faq, index) => (
           <div
@@ -87,7 +89,6 @@ const FAQData = [
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.",
   },
-  
 ];
 
 export default FAQ;

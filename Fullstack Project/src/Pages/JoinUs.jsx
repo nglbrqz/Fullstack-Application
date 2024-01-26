@@ -50,7 +50,7 @@ const JoinUs = () => {
 
       <div className="join-us-connect-group-section">
         <div className="connect-group-title-container">
-          <h1>MINISTRIES</h1>
+          <h1>Connect Group</h1>
         </div>
 
         <div className="connect-group-wrapper">

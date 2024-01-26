@@ -109,7 +109,7 @@ function NavBar({ AboutRef, colorScheme }) {
             {servicesDropdownOpen && (
               <ul className="nav-dropdown-content">
                 <li>
-                  <Link to="prayer">
+                  <Link to="/prayer">
                     <a>Prayer Services</a>
                   </Link>
                 </li>

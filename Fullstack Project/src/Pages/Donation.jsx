@@ -12,7 +12,7 @@ const Donation = () => {
         <NavBar />
 
         <div className="donation-text-container">
-          <h1 className="donation-title">DONATIONS</h1>
+          <h1 className="donation-title">DONAsssTIONS</h1>
         </div>
       </div>
 
