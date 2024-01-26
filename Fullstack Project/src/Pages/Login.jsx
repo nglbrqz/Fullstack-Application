@@ -2,21 +2,49 @@ import "../Pages/Page Styles/Login.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/newlifelogowhite.png";
+import axios from 'axios';
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  /* untouched part kanina in case I mess this up
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle login logic here (e.g., send a request to your backend)
     console.log("Email:", email, "Password:", password);
     // Navigate to the dashboard
   };
+*/
 
-  // I have the updated code for this portion on my local clone branch :v 
-  // will not update until there's a parent folder for all this
-  // para malagay ko yung login api folder pag pwede na owo)b
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  try {
+    const response = await axios.get('http://localhost:5173/api/nlswdb/GetCredentials');
+    
+    console.log('Response:', response.data); //remove this when code is fixed
+
+    const adminCredentials = response.data;
+
+    const validAdmin = adminCredentials.find(
+      (Admin) => Admin.AdminEmail === email && Admin.AdminPass === password
+    );
+
+    if (validAdmin) {
+      // Redirect to admin dashboard if credentials are valid
+      // window.location.href = '/Dashboard';
+      <Link to="/dashboard"></Link>
+    } else {
+      // Display toast for invalid credentials
+      alert('Invalid username or password!');
+    }
+  } catch (error) {
+    console.error('Error fetching admin credentials:', error);
+    // Handle other errors as needed
+  }
+  //console.log("Email:", email, "Password:", password);
+};
 
   return (
     <div className="login-main-cont">
@@ -48,11 +76,11 @@ function Login() {
           </div>
 
           {/* Use Link to navigate to the dashboard */}
-          <Link to="/dashboard">
+          {/* <Link to="/dashboard"> */}
             <button className="login-sign-button" type="submit">
               Log in
             </button>
-          </Link>
+          {/* </Link> */}
         </form>
       </div>
     </div>
