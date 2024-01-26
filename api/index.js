@@ -21,6 +21,9 @@ app.listen(5038,()=>{
 
 
 app.listen(5173, () => {
+    console.log("Server is running on port 5173");
+    console.log("Attempting to connect to MongoDB...");
+
     Mongoclient.connect(CONNECTION_STRING,(error,client) => {
         if (error) {
             console.error("Mongo DB Connection Error:", error);
@@ -49,6 +52,7 @@ app.get('/api/nlswdb/GetCredentials', (request, response) => {
 app.get('/api/nlswdb/GetCredentials',(request,response)=>{
     database.collection("nlswdb-login").find({}).toArray((error,result)=>{
         response.send(result);
+        
     });
 })
 
