@@ -66,10 +66,7 @@ function Main() {
 
               <div className="hero-container-about-section-description-text-container">
                 <p className="hero-container-about-section-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  soluta exercitationem, officiis architecto eaque quo quas
-                  explicabo porro natus. Aliquid autem asperiores eligendi
-                  repellat quaerat modi consectetur id non provident?
+                  Hello
                 </p>
                 <p className="hero-container-about-section-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
@@ -242,7 +239,7 @@ function Main() {
         </div>
 
         <div className="hero-container-footer-container">
-          <Footer HomeRef={HomeRef} AboutRef={AboutRef} FaqRef={FaqRef} />
+          <Footer HomeRef={HomeRef} AboutRef={AboutRef} FaqRef={FaqRef} ShowCard="show" />
         </div>
       
     </>
