@@ -1,8 +1,9 @@
 import "../Pages/Page Styles/Login.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/newlifelogowhite.png";
+// import logo from "../assets/newlifelogowhite.png";
 import axios from 'axios';
+import logo from "../assets/siteimages/sitelogo/whitelogo.png";
 
 function Login() {
   const [email, setEmail] = useState("");

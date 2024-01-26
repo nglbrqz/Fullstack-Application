@@ -24,6 +24,12 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.faq-titles{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 .faq-title{
   margin: 0 35px 0 0;
 }

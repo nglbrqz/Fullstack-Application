@@ -242,7 +242,7 @@ function Main() {
         </div>
 
         <div className="hero-container-footer-container">
-          <Footer HomeRef={HomeRef} AboutRef={AboutRef} FaqRef={FaqRef} />
+          <Footer HomeRef={HomeRef} AboutRef={AboutRef} FaqRef={FaqRef} ShowCard="show" />
         </div>
       
     </>

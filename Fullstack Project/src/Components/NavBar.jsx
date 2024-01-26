@@ -5,8 +5,8 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import whitelogo from "../assets/whitelogo.png";
-import blacklogo from "../assets/blacklogo.png";
+import whitelogo from "../assets/siteimages/sitelogo/whitelogo.png";
+import blacklogo from "../assets/siteimages/sitelogo/blacklogo.png";
 
 function NavBar({ AboutRef, colorScheme }) {
   const handleAboutClick = () => {
@@ -109,7 +109,7 @@ function NavBar({ AboutRef, colorScheme }) {
             {servicesDropdownOpen && (
               <ul className="nav-dropdown-content">
                 <li>
-                  <Link to="prayer">
+                  <Link to="/prayer">
                     <a>Prayer Services</a>
                   </Link>
                 </li>

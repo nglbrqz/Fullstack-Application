@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import "./Component Styles/footer.css";
-import logo from "../assets/newlifelogowhite.png";
+import logo from "../assets/siteimages/sitelogo/whitelogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-function Footer({ HomeRef, AboutRef, FaqRef }) {
+function Footer({ HomeRef, AboutRef, FaqRef, ShowCard }) {
   const handleLogoClick = () => {
     HomeRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -19,7 +19,12 @@ function Footer({ HomeRef, AboutRef, FaqRef }) {
     FaqRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const ShowCharityCard = ShowCard === "show" ? "block" : "none";
+ 
+
   Footer.propTypes = {
+    ShowCard: PropTypes.oneOf(["block", "none"]).isRequired,
+
     HomeRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
     AboutRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
     FaqRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
@@ -27,8 +32,8 @@ function Footer({ HomeRef, AboutRef, FaqRef }) {
 
   return (
     <>
-      <div className="link">
-        <div className="start-learning">
+      <div className="link" >
+        <div className="start-learning" style={{ display: ShowCharityCard }}>
           <div className="charity-box-card-container ">
             <div className="charity-box-card-container-texts">
               <h2 className="charity-box-card-container-section-title">
