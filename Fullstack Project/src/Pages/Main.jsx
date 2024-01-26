@@ -1,6 +1,6 @@
 import { useRef } from "react";
   import "../Pages/Page Styles/Main.css";
-import NavBar from "../Components/navBar";
+import NavBar from "../Components/NavBar";
  import Footer from "../Components/Footer";
 import Gallery from "../Components/AccomplishmentGallery";
 import FAQ from "../Components/FAQ";
@@ -66,7 +66,10 @@ function Main() {
 
               <div className="hero-container-about-section-description-text-container">
                 <p className="hero-container-about-section-text">
-                  Hello
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                  soluta exercitationem, officiis architecto eaque quo quas
+                  explicabo porro natus. Aliquid autem asperiores eligendi
+                  repellat quaerat modi consectetur id non provident?
                 </p>
                 <p className="hero-container-about-section-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
