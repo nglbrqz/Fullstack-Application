@@ -66,10 +66,8 @@ function Main() {
 
               <div className="hero-container-about-section-description-text-container">
                 <p className="hero-container-about-section-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  soluta exercitationem, officiis architecto eaque quo quas
-                  explicabo porro natus. Aliquid autem asperiores eligendi
-                  repellat quaerat modi consectetur id non provident?
+                  Hello Hello Hello
+                
                 </p>
                 <p className="hero-container-about-section-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
