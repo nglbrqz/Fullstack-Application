@@ -75,9 +75,9 @@ const ConnectGroupCard = ({ connectgroup }) => {
               </div>
             </div>
             <div className="connect-group-category-button-wrapper">
-            <Link to="/registration"><button className="connect-group-button">
-               <span className="connect-group-button-span">Join</span>
-              </button></Link>
+            <Link to="/registrationconnectgroup"><button className="volunteer-button">
+                  <span className="volunteer-button-span">Join</span>
+                </button></Link>
             </div>
           </div>
         </div>

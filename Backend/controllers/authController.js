@@ -1,5 +1,5 @@
-const User = require("../models/user");
 const jwt = require("jsonwebtoken");
+const User = require("../models/user");
 
 
 // THIS FILE IS RESPONSIBLE FOR HANDLING CRUD OPERATIONS

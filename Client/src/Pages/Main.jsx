@@ -7,6 +7,7 @@ import FAQ from "../Components/FAQ";
 import EventGallery from "../Components/EventGallery";
 import MinistryCard from "../Components/MinistryCard";
 import ministriesData from "../JSON Data/ministries.json";
+import CoreValues from "../Components/CoreValues"
 
 function Main() {
   // This is used for refering to the parent component by both nav and footer components
@@ -213,7 +214,7 @@ function Main() {
 
         {/*Place the component here luisa*/}
         <div className="hero-container-core-values-container">
-          
+          <CoreValues/>
         </div>
 
         <div className="hero-container-gallery-container">

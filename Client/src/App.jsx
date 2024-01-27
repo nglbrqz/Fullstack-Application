@@ -6,6 +6,7 @@ import Donation from "./Pages/Donation"
 import PrayerService from "./Pages/PrayerService";
 import JoinUs from "./Pages/JoinUs";
 import Registration from "./Pages/Registration";
+import RegistrationConnectGroup from "./Pages/RegisterConnectGroup"
 import RegisterAdmin from "./Pages/RegisterAdmin";
 import {Toaster} from 'react-hot-toast';
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} /> 
           <Route path="/joinus" element={<JoinUs />} /> 
           <Route path="/registration" element={<Registration />} />
+          <Route path="/registrationconnectgroup" element={<RegistrationConnectGroup />} />
           <Route path="/registeradmin" element={<RegisterAdmin />} /> 
 
         </Routes>
