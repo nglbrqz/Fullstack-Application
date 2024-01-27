@@ -211,6 +211,11 @@ function Main() {
           </div>
         </div>
 
+        {/*Place the component here luisa*/}
+        <div className="hero-container-core-values-container">
+          
+        </div>
+
         <div className="hero-container-gallery-container">
           <Gallery />
         </div>
