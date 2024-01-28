@@ -2,24 +2,64 @@ import  { useState } from "react";
 import "../Pages/Page Styles/PrayerServices.css";
 import NavBar from "../Components/navBar";
 import Footer from "../Components/Footer";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const PrayerService = () => {
   // State for handling input values
-  const [name, setName] = useState("");
-  const [date, setDate] = useState("");
-  const [prayerText, setPrayerText] = useState("");
-
-   const handleSubmit = (e) => {
-    e.preventDefault();
-
-     if (!name || !date || !prayerText) {
-      alert("Please fill in all required fields");
-      return;
-    }
  
-    alert(`Form submitted!\nName: ${name}\nDate: ${date}\nPrayer: ${prayerText}`);
+
+  const [prayerReqData, setPrayerReqData] = useState({
+    name: '',
+    date: getCurrentDate(), // Set initial date to the current date
+    prayerText: '',
+  });
+
+  function getCurrentDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const { name, date, prayerText } = prayerReqData;
+  
+    try {
+      const response = await axios.post('/prayerreq', {
+        name,
+        date,
+        prayerText,
+      });
+  
+      const responseData = response.data; // Rename to avoid conflict
+  
+      if (responseData.error) {
+        toast.error(responseData.error);
+      } else {
+        // Update only the relevant part of the state
+        setPrayerReqData((prevData) => ({
+          ...prevData,
+          message: 'Prayer Request successfully created!',
+        }));
+        toast.success('Prayer Request successfully created!');
+  
+        setPrayerReqData({
+          name: '',
+          date: getCurrentDate(), // Set date to the current date after submission
+          prayerText: '',
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
+
+ 
   return (
     <>
       <div className="prayer-header-container">
@@ -39,9 +79,9 @@ const PrayerService = () => {
                 <input
                   type="text"
                   id="prayerclientname"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
+                  value={prayerReqData.name}
+                  onChange={(e) => setPrayerReqData({ ...prayerReqData, name: e.target.value })}
+                  />
               </div>
 
               <div className="prayer-input-container">
@@ -50,8 +90,9 @@ const PrayerService = () => {
                   placeholder="Date:"
                   type="date"
                   id="prayerclientdate"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
+                  value={prayerReqData.date}
+                  onChange={(e) => setPrayerReqData({ ...prayerReqData, date: e.target.value })}
+                  disabled 
                 />
               </div>
             </div>
@@ -60,8 +101,8 @@ const PrayerService = () => {
               <textarea
                 placeholder="Enter Prayer..."
                 id="prayerText"
-                value={prayerText}
-                onChange={(e) => setPrayerText(e.target.value)}
+                value={prayerReqData.prayerText}
+                onChange={(e) => setPrayerReqData({ ...prayerReqData, prayerText: e.target.value })}
               />
             </div>
 

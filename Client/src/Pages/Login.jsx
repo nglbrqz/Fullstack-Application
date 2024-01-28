@@ -20,17 +20,18 @@ function Login() {
     const { email, password } = data;
 
     try {
-      const { data } = await axios.post('/login', {
+      const response = await axios.post('/login', {
         email,
         password,
       });
-      if (data.error) {
-        toast.error(data.error);
+
+      if (response.data.error) {
+        toast.error(response.data.error);
       } else {
-       
-        setData('User Made YEY!')
-        toast.success('User Made YEY!');
-                navigate("/dashboard");
+        const token = response.data.token; // Assuming your server returns a token
+        localStorage.setItem('token', token);
+        toast.success('Login successful');
+        navigate("/dashboard");
       }
     } catch (error) {
       console.error("Login failed:", error);

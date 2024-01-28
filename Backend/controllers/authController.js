@@ -1,12 +1,13 @@
-const jwt = require("jsonwebtoken");
 const User = require("../models/user");
-
+const jwt = require("jsonwebtoken");
 
 // THIS FILE IS RESPONSIBLE FOR HANDLING CRUD OPERATIONS
 
 const test = (req, res) => {
   res.json("test is good :3");
 };
+
+
 
 //REGISTRATION OF ADMIN ACCOUNT
 const registerUser = async (req, res) => {
@@ -58,15 +59,31 @@ const loginUser = async (req, res) => {
       return res.json({ error: "Incorrect password" });
     }
 
-    return res.json({ success: "Login successful" });
+    // Use the secret key from the environment variable
+    const secretKey = process.env.JWT_SECRET;
+
+    // Check if the secret key is available
+    if (!secretKey) {
+      console.error("JWT secret key not configured");
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+
+    // Generate a JWT token
+    const token = jwt.sign({ userId: user._id }, secretKey, {
+      expiresIn: "1h", // Set the expiration time as needed
+    });
+
+    return res.json({ success: "Login successful", token });
   } catch (error) {
     console.error("Login error:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
+
 module.exports = {
   test,
   registerUser,
   loginUser,
+  
 };
