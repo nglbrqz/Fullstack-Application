@@ -20,6 +20,11 @@ const Registration = () => {
         <form action="#" method="post">
           <div className="registration-form-title">
             <h1>REGISTRATION</h1>
+            <h2>EVENT</h2>
+          </div>
+          <div className="registration-aligned-fields">
+            <label htmlFor="event">EVENT:</label>
+            <div className="registration-event-name ">Unknown{/*Here yung name ng events */}</div>
           </div>
           <div className="registration-aligned-fields">
             <label htmlFor="name">NAME:</label>
@@ -30,23 +35,13 @@ const Registration = () => {
             <input type="text" name="age" placeholder="Enter Age..." required />
           </div>
           <div className="registration-aligned-fields">
-            <label htmlFor="sex">SEX</label>
+            <label htmlFor="sex">SEX:</label>
             <select id="sex" name="sex" defaultValue="" required>
               <option value="" disabled hidden>
                 Select Gender
               </option>
               <option value="male">Male</option>
               <option value="female">Female</option>
-            </select>
-          </div>
-          <div className="registration-aligned-fields">
-            <label htmlFor="event">EVENT:</label>
-            <select id="event" name="event" defaultValue="" required>
-              <option value="" disabled hidden>
-                Select Event
-              </option>
-              <option value="event1">Event 1</option>
-              <option value="event2">Event 2</option>
             </select>
           </div>
           <div className="registration-aligned-fields">
@@ -63,7 +58,7 @@ const Registration = () => {
               <br />
               <p>If volunteer only*</p>
             </label>
-            <select id="assignment" name="assignment" defaultValue="" className="other-style" required>
+            <select id="assignment" name="assignment" defaultValue="" className="other-style">
               <option value="" disabled hidden></option>
               <option value="usher">Usher</option>
               <option value="media">Media and Creatives</option>
@@ -80,8 +75,15 @@ const Registration = () => {
             <label htmlFor="contact">CONTACT NO:</label>
             <input type="text" name="contact" placeholder="Enter Contact Number..." className="other-style" required />
           </div>
-
-          {/* Submission buttons go here, waiting for the layout update */}
+          <div className="registration-button-container">
+            <button type="reset" className="registration-button">
+              <span className="registration-button-span">Reset</span>
+            </button>
+            <button type="submit" className="registration-button">
+                <span className="registration-button-span">Submit</span>
+            </button>
+          </div>
+          
         </form>
       </div>
 
