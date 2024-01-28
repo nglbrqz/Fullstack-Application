@@ -1,5 +1,5 @@
 .registration-form-container {
-    max-width: 590px;
+    max-width: 650px;
     margin: 30px auto;
     background-color: #fff;
     padding: 20px 60px;
@@ -9,15 +9,32 @@
 }
 
 .registration-form-title {
-    font-size: 35px;
+    margin-top: 40px;
     margin-bottom: 20px;
     text-align: center;
 }
 
+.registration-form-title h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.registration-form-title h2 {
+   margin-top: -15px;
+   font-size: 30px;
+   font-weight: lighter;
+}
+
 label {
-    
     display: block;
     font-size: 20px;
+}
+
+.registration-event-name {
+    font-size: 20px;
+    width: 83%;
+    padding-right: 20px;
+    margin-bottom: 30px;
 }
 
 input {
@@ -62,11 +79,14 @@ p {
     .registration-form-container {
         padding: 20px 60px;
     }
-    .registration-form-title {
-        font-size: 28px;
+    .registration-form-title h1{
+        font-size: 57px;
+    }
+    .registration-form-title h2{
+        font-size: 30px;
     }
 
-    input, select {
+    input, select, .registration-event-name {
         width: 79%;
     }
 
@@ -78,3 +98,43 @@ p {
         width: 55%;
     }
 }
+
+.registration-button-container {
+    display: flex; /* or display: grid; */
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-button {
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    width: 150px; /* Adjusted width for responsiveness */
+    margin-right: 10px;
+  }
+  
+  .registration-button-span {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  button:hover .registration-button-span {
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .registration-button-span {
+    transform: translateY(0);
+  }
+  
