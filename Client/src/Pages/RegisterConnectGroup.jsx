@@ -5,11 +5,6 @@ import Footer from "../Components/Footer";
  
  
 const RegistrationConnectGroup = () => {
-
- 
-
-
-
   return (
     <>
       <div className="registration-navbar-container">
