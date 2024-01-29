@@ -1,4 +1,6 @@
 const prayerRequestModel = require("../models/prayerreq");
+const {hashString} = require("../helper/iphash")
+
 async function prayerRequest(req, res) {
     try {
       const { name, date, prayerText } = req.body;

@@ -1,67 +1,70 @@
-/* Add your styling for the side panel here */
-  .side-panel {
-    width: 200px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    height: 100vh;
-    top: 70px; /* to ensure that navbar will not be covered*/
-  }
-  
- .dashboard-logo{
-  width: 100px;
+.side-panel {
+  width: 300px;
+  background-color: #000000;
+  color: #fff;
+  position: fixed;
+  height: 100vh;
+  padding: 30px;
+
+
+  top: 0;
+  left: 0;
+}
+
+.dashboard-admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-logo-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-logo {
+  width: 190px;
   height: auto;
- }
+  margin-bottom: 20px;
+}
 
-  /* Navigation Bar Styles */
-  .top-nav {
-    display: flex;
-    justify-content:space-around;
-    gap: 1290px;
-    align-items: center;
-    background-color: #141414;
-    color: #fff;
-    padding: 10px;
-     height: 100%;
-    max-height: 70px;
-    width: 100%;
-  }
+.dashboard-admin-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.dashboard-menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
 
 
-  .nav-button-container {
-    margin: 0;
-  }
+.dashboard-menu-item {
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  cursor: pointer;
+}
 
-  .nav-button-container ul{
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-  }
+.dashboard-menu-item:hover {
+  opacity: 0.6;
+  transition: 0.25s;
+}
 
-  .nav-button-container li {
-    margin-right: 15px;
-  }
+#dashboard-logout {
+  color: rgb(118, 11, 11);
+}
 
-  .nav-button-container a {
-    text-decoration: none;
-  }
-  
-  .nav-logo {
-    width: 20px;
-    height: 20px;
-  }
+.dashboard-container {
+  margin-left: 300px;
+  padding: 20px;
+}
 
-  .nav-button-container a:hover{
-    opacity: 0.5;
-  }
-
-  /* main-contenr*/
-  .dashboard-container {
-    flex-direction: column;
-  }
-
-  .main-content{
-    flex-grow: 1;
-    margin-left: 200px;
-  }
-  
+.main-content {
+  padding: 20px;
+  border-radius: 8px;
+}
