@@ -1,13 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
-const jwt = require("jsonwebtoken"); // Don't forget to import jwt
+const jwt = require("jsonwebtoken");
+
 const {
   test,
   registerUser,
   loginUser,
+  isAuthenticatedMiddleware,
 } = require("../controllers/authController");
 const { prayerRequest } = require("../controllers/prayerReqController");
+
+const secretKey = process.env.JWT_SECRET;
 
 // MIDDLEWARE FOR CONNECTING THE ENDPOINTS BETWEEN FRONT END AND BACK END
 router.use(
@@ -17,37 +21,15 @@ router.use(
   })
 );
 
-const isAuthenticatedMiddleware = (req, res, next) => {
-  const token = req.headers.authorization;
-
-  if (!token) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-
-  // Use the secret key from the environment variable
-  const secretKey = process.env.JWT_SECRET;
-
-  if (!secretKey) {
-    return res.status(500).json({ error: "JWT secret key not configured" });
-  }
-
-  jwt.verify(token.split(" ")[1], secretKey, (err, decoded) => {
-    if (err) {
-      return res.status(401).json({ error: "Unauthorized" });
-    }
-
-    req.userId = decoded.userId;
-    next();
-  });
-};
-
 // ROUTES
 router.get("/", test);
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.post("/prayerreq", prayerRequest);
 
-// Use isAuthenticatedMiddleware for authentication
-router.get("/dashboard", isAuthenticatedMiddleware, (req, res) => {});
+router.get("/dashboard", isAuthenticatedMiddleware, (req, res) => {
+  const { name, email } = req.user; // Get user information from req.user
+  res.json({ name, email });
+});
 
 module.exports = router;

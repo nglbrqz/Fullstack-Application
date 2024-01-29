@@ -41,7 +41,7 @@ function Login() {
   return (
     <div className="login-main-cont">
       <div className="login-container">
-        <img src={logo} alt="Logo" className="nav-logo" id="nav-logo" />
+        <img src={logo} alt="Logo" className="login-logo"   />
 
         <h2 className="login-title">Admin Login</h2>
         <form onSubmit={handleSubmit}>

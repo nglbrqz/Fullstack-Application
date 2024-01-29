@@ -11,6 +11,8 @@ mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log('Database Connected'))
 .catch((err) => console.log('Database not Connected :(' , err))
 
+const secretKey = process.env.JWT_SECRET;
+
 
 const port = 8000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));

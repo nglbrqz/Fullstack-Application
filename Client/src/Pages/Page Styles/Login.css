@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+
+.login-logo{
+  width: 200px;
+  height: auto;
+}
+
 .login-container {
   display: flex;
   flex-direction: column;
@@ -16,9 +22,7 @@
   padding: 20px;
   background-color: transparent;
   height: 500px;
-border: 1.4px solid rgb(255, 255, 255);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: #fff;
+ 
 }
 
 .login-title {

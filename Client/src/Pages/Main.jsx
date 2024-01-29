@@ -159,6 +159,7 @@ function Main() {
 
         {/*CORE VALUES*/}
         <div className="hero-container-core-values-container">
+          <CoreValues/>
          </div>
 
         {/*About us */}

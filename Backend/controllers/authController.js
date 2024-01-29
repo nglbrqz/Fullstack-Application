@@ -70,6 +70,7 @@ const loginUser = async (req, res) => {
 
     // Generate a JWT token
     const token = jwt.sign({ userId: user._id }, secretKey, {
+      
       expiresIn: "1h", // Set the expiration time as needed
     });
 
@@ -81,9 +82,37 @@ const loginUser = async (req, res) => {
 };
 
 
+const isAuthenticatedMiddleware = (req, res, next) => {
+  const token = req.headers.authorization;
+  const secretKey = process.env.JWT_SECRET;
+
+  if (!token) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  jwt.verify(token.split(" ")[1], secretKey, async (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ error: "Unauthorized" });
+    }
+
+    try {
+      const user = await User.findById(decoded.userId); // Corrected line
+      if (!user) {
+        return res.status(401).json({ error: "Unauthorized" });
+      }
+
+      req.user = user; // Attach user information to the request
+      next();
+    } catch (error) {
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+  });
+};
+
+
 module.exports = {
   test,
   registerUser,
   loginUser,
-  
+  isAuthenticatedMiddleware,
 };
