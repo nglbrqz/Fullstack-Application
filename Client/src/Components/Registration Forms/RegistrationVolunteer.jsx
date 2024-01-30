@@ -1,15 +1,9 @@
-import "../Pages/Page Styles/Registration.css";
-import NavBar from "../Components/navBar";
-import Footer from "../Components/Footer";
+import "./Registration.css";
+import NavBar from "../navBar";
+import Footer from "../Footer";
 
  
- 
-const Registration = () => {
-
- 
-
-
-
+const RegistrationVolunteer = () => {
   return (
     <>
       <div className="registration-navbar-container">
@@ -20,11 +14,7 @@ const Registration = () => {
         <form action="#" method="post">
           <div className="registration-form-title">
             <h1>REGISTRATION</h1>
-            <h2>EVENT</h2>
-          </div>
-          <div className="registration-aligned-fields">
-            <label htmlFor="event">EVENT:</label>
-            <div className="registration-event-name ">Unknown{/*Here yung name ng events */}</div>
+            <h2>VOLUNTEER:{/*Here yung choosen field kids & Junior youth and yung 5 volunteers*/} </h2>
           </div>
           <div className="registration-aligned-fields">
             <label htmlFor="name">NAME:</label>
@@ -42,29 +32,6 @@ const Registration = () => {
               </option>
               <option value="male">Male</option>
               <option value="female">Female</option>
-            </select>
-          </div>
-          <div className="registration-aligned-fields">
-            <label htmlFor="participation">PARTICIPATION:</label>
-            <select id="participation" name="participation" defaultValue="" className="other-style" required>
-              <option value="" disabled hidden></option>
-              <option value="participant">Participant</option>
-              <option value="volunteer">Volunteer</option>
-            </select>
-          </div>
-          <div className="registration-aligned-fields">
-            <label htmlFor="assignment">
-              ASSIGNMENT:
-              <br />
-              <p>If volunteer only*</p>
-            </label>
-            <select id="assignment" name="assignment" defaultValue="" className="other-style">
-              <option value="" disabled hidden></option>
-              <option value="usher">Usher</option>
-              <option value="media">Media and Creatives</option>
-              <option value="music">Music and Production</option>
-              <option value="security">Security</option>
-              <option value="medical">Medical Team</option>
             </select>
           </div>
           <div className="registration-aligned-fields">
@@ -94,4 +61,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default RegistrationVolunteer;

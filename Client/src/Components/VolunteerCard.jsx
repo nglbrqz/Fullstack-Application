@@ -58,7 +58,7 @@ const VolunteerCard = ({ volunteer }) => {
                 </div>
               </div>
               <div className="volunteer-category-button-wrapper">
-              <Link to="/registration"><button className="volunteer-button">
+              <Link to="/registrationevent"><button className="volunteer-button">
                   <span className="volunteer-button-span">Join</span>
                 </button></Link>
               </div>

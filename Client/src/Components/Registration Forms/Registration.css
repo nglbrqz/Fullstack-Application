@@ -27,11 +27,11 @@
 
 label {
     display: block;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .registration-event-name {
-    font-size: 20px;
+    font-size: 23px;
     width: 83%;
     padding-right: 20px;
     margin-bottom: 30px;
@@ -62,7 +62,7 @@ select {
 }
 
 select.other-style {
-    width: 63%;
+    width: 55%;
 }
 
 p {
@@ -74,35 +74,12 @@ p {
     justify-content: space-between;
 }
 
-/* Responsive styles for smaller screens */
-@media only screen and (max-width: 768px) {
-    .registration-form-container {
-        padding: 20px 60px;
-    }
-    .registration-form-title h1{
-        font-size: 57px;
-    }
-    .registration-form-title h2{
-        font-size: 30px;
-    }
-
-    input, select, .registration-event-name {
-        width: 79%;
-    }
-
-    input.other-style {
-        width: 60%;
-    }
-
-    select.other-style {
-        width: 55%;
-    }
-}
-
+/*for the button*/
 .registration-button-container {
     display: flex; /* or display: grid; */
     justify-content: center;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 .registration-button {
@@ -138,3 +115,28 @@ p {
     transform: translateY(0);
   }
   
+  /* Responsive styles for smaller screens */
+@media only screen and (max-width: 768px) {
+    .registration-form-container {
+        padding: 20px 60px;
+    }
+    .registration-form-title h1{
+        font-size: 75px;
+    }
+    .registration-form-title h2{
+        font-size: 30px;
+    }
+
+    input, select, .registration-event-name {
+        width: 80%;
+    }
+
+    input.other-style {
+        width: 65%;
+    }
+
+    select.other-style {
+        width: 55%;
+    }
+
+}
