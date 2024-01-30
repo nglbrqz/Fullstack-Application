@@ -14,12 +14,14 @@
     
   }
 
-.prayerreq-filter {
-    width: 150px;
-    height: 60px;
-    padding: 10px;
-    font-size:20px;
-  }
+ .prayerreq-filter {
+  border: 1px solid black;
+  font-size: 11px;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: transparent;
+ }
 
 .prayerreq-table {
     margin: 20px;
@@ -95,5 +97,4 @@
     }
   }
 
-
-  
+ 

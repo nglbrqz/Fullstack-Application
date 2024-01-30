@@ -14,6 +14,7 @@ import "../Pages/Page Styles/Dashboard.css";
 import logo from "../assets/siteimages/sitelogo/whitelogo.png";
 
 import EventsContent from "./Dashboard Contents/EventsContent";
+import CreateEvent from "./Dashboard Contents/CreateEvents"
 import ConnectGroupsContent from "./Dashboard Contents/ConnectGroupsContent";
 import PrayerRequestContent from "./Dashboard Contents/PrayerRequestContent";
 import VolunteersContent from "./Dashboard Contents/VolunteersContent";
@@ -71,10 +72,17 @@ function Dashboard() {
           <div className="dashboard-menu-items">
             <div
               className="dashboard-menu-item"
-              onClick={() => handleMenuClick("events")}
+              onClick={() => handleMenuClick("viewevents")}
             >
               <FontAwesomeIcon icon={faCalendarAlt} />
               <p>Events</p>
+            </div>
+            <div
+              className="dashboard-menu-item"
+              onClick={() => handleMenuClick("createevent")}
+            >
+              <FontAwesomeIcon icon={faCalendarAlt} />
+              <p>Create Event</p>
             </div>
             <div
               className="dashboard-menu-item"
@@ -111,7 +119,8 @@ function Dashboard() {
 
       <div className="dashboard-container">
         <div className="main-content">
-          {selectedMenu === "events" && <EventsContent />}
+          {selectedMenu === "viewevents" && <EventsContent />}
+          {selectedMenu === "createevent" && <CreateEvent />}
           {selectedMenu === "volunteers" && <VolunteersContent />}
           {selectedMenu === "prayer" && <PrayerRequestContent />}
           {selectedMenu === "connectGroups" && <ConnectGroupsContent />}
