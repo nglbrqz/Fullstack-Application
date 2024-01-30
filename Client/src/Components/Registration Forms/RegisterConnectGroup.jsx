@@ -1,6 +1,6 @@
-import "../Pages/Page Styles/Registration.css";
-import NavBar from "../Components/navBar";
-import Footer from "../Components/Footer";
+import "./Registration.css";
+import NavBar from "../navBar";
+import Footer from "../Footer";
 
  
  
@@ -34,7 +34,8 @@ const RegistrationConnectGroup = () => {
               <option value="youth">Youth Connect</option>
               <option value="jubilant">Jubilant Connect</option>
               <option value="young-adults">Young Adults Connect</option>
-              <option value="couples">Couples Connect</option>
+              <option value="couples">Couples Connect</option>\
+              <option value="basketball">Basketball Connect</option>
             </select>
           </div>
           <div className="registration-aligned-fields">

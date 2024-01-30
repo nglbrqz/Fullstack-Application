@@ -6,8 +6,9 @@ import Dashboard from "./Pages/Dashboard";
 import Donation from "./Pages/Donation";
 import PrayerService from "./Pages/PrayerService";
 import JoinUs from "./Pages/JoinUs";
-import Registration from "./Pages/Registration";
-import RegistrationConnectGroup from "./Pages/RegisterConnectGroup";
+import RegistrationEvent from "./Components/Registration Forms/RegistrationEvent";
+import RegistrationConnectGroup from "./Components/Registration Forms/RegisterConnectGroup";
+import RegistrationVolunteer from "./Components/Registration Forms/RegistrationVolunteer";
 import RegisterAdmin from "./Pages/RegisterAdmin";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
@@ -69,11 +70,9 @@ function App() {
             }
           />
           <Route path="/joinus" element={<JoinUs />} />
-          <Route path="/registration" element={<Registration />} />
-          <Route
-            path="/registrationconnectgroup"
-            element={<RegistrationConnectGroup />}
-          />
+          <Route path="/registrationevent" element={<RegistrationEvent />} />
+          <Route path="/registrationconnectgroup" element={<RegistrationConnectGroup />} />
+          <Route path="/registrationvolunteer" element={<RegistrationVolunteer />} />
           <Route path="/registeradmin" element={<RegisterAdmin />} />
         </Routes>
       </BrowserRouter>
