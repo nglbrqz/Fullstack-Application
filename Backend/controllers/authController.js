@@ -3,9 +3,6 @@ const jwt = require("jsonwebtoken");
 
 // THIS FILE IS RESPONSIBLE FOR HANDLING CRUD OPERATIONS
 
-const test = (req, res) => {
-  res.json("test is good :3");
-};
 
 
 
@@ -111,7 +108,7 @@ const isAuthenticatedMiddleware = (req, res, next) => {
 
 
 module.exports = {
-  test,
+ 
   registerUser,
   loginUser,
   isAuthenticatedMiddleware,

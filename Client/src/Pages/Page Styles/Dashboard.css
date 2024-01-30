@@ -1,5 +1,5 @@
 .side-panel {
-  width: 300px;
+  width: 200px;
   background-color: #000000;
   color: #fff;
   position: fixed;
@@ -39,15 +39,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 
 .dashboard-menu-item {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   height: 40px;
   cursor: pointer;
+  align-items: center;
 }
 
 .dashboard-menu-item:hover {
@@ -55,12 +56,12 @@
   transition: 0.25s;
 }
 
-#dashboard-logout {
+#dashboard-logout, #delete-icon {
   color: rgb(118, 11, 11);
 }
 
 .dashboard-container {
-  margin-left: 300px;
+  margin-left: 200px;
   padding: 20px;
 }
 

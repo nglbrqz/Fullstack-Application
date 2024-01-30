@@ -29,7 +29,7 @@ const PrayerService = () => {
     const { name, date, prayerText } = prayerReqData;
   
     try {
-      const response = await axios.post('/prayerreq', {
+      const response = await axios.post('/prayerrequests/addprayerreq', {
         name,
         date,
         prayerText,
