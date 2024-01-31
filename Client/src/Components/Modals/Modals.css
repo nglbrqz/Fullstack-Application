@@ -91,10 +91,9 @@
             }
         }
 
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 768px) {
             .modal-video-container {
-                padding-bottom: 20px;
-                width: 90%;
+                padding-bottom: 20px;;
             }
             .modal-text-block {
                 width: 65%;
