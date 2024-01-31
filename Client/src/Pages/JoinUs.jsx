@@ -3,8 +3,10 @@ import NavBar from "../Components/navBar";
 import Footer from "../Components/Footer";
 import volunteerData from "../JSON Data/volunteer.json";
 import connectgroupData from "../JSON Data/connectgroup.json";
+import joinusministryData from "../JSON Data/joinusministries.json";
 import VolunteerCard from "../Components/VolunteerCard";
-import ConnectGroupCard from "../Components/ConnectGroupCard"
+import ConnectGroupCard from "../Components/ConnectGroupCard";
+import MinistryCard from "../Components/JoinUsMinistryCard";
 const JoinUs = () => {
   return (
     <>
@@ -22,9 +24,20 @@ const JoinUs = () => {
           </div>
         </div>
       </div>
-       
+      
+      <div className="join-us-ministry-section" href="#ministry">
+        <div className="ministry-title-container">
+          <h1>Ministries</h1>
+        </div>
 
-      <div className="join-us-volunteer-section">
+        <div className="ministry-wrapper">
+        {joinusministryData.map((joinusministrycard) => (
+        <MinistryCard key={joinusministrycard.id} joinusministrycard={joinusministrycard} />
+      ))}     
+        </div>
+      </div>
+
+      <div className="join-us-volunteer-section" href="#volunteer">
         <div className="volunteer-title-container">
           <h1>Volunteers</h1>
         </div>
@@ -36,7 +49,7 @@ const JoinUs = () => {
         </div>
       </div>
 
-      <div className="join-us-connect-group-section">
+      <div className="join-us-connect-group-section" href="#connect">
         <div className="connect-group-title-container">
           <h1>Connect Group</h1>
         </div>

@@ -1,0 +1,18 @@
+[
+    {
+        "joinusministryid": 1,
+        "videoUrl": "video.mkv",
+        "imageUrl": "https://example.com/image2.jpg",
+        "select": "outreach",
+        "title": "OUTREACH",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1."
+    },
+    {
+        "joinusministryid": 2,
+        "videoUrl": "video.mkv",
+        "imageUrl": "https://example.com/image2.jpg",
+        "select": "youth",
+        "title": "KIDS & JUNIOR YOUTH",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1."
+    }
+]

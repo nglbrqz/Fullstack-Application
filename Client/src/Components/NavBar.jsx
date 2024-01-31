@@ -78,12 +78,12 @@ function NavBar({ AboutRef, colorScheme }) {
             </span>
             {joinDropdownOpen && (
               <ul className="nav-dropdown-content">
-                <Link to="/joinus">
+                <Link to="/joinus#ministry"> {/*Aayusin ko pa tu RAR */}
                   <li>
                     <a  >Ministry</a>
                   </li>
                 </Link>
-                <Link to="/joinus">
+                <Link to="/joinus#volunteer">
                   <li>
                     <a >Volunteer</a>
                   </li>
