@@ -1,22 +1,13 @@
- import { useState } from "react";
- import { Link } from "react-router-dom";
+import { useState } from "react";
 import PropTypes from "prop-types";
-
-import "./Component Styles/ConnectGroupCard.css"; // Import the stylesheet
+import JoinUsModal from "./Modals/JoinUsModal.jsx";
+import "./Component Styles/ConnectGroupCard.css";
 
 const ConnectGroupCard = ({ connectgroup }) => {
   const [showModal, setShowModal] = useState(false);
 
-  function handleButtonClick() {
+  const handleButtonClick = () => {
     setShowModal(true);
-  }
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
-  const stopPropagation = (e) => {
-    e.stopPropagation();
   };
 
   return (
@@ -30,8 +21,10 @@ const ConnectGroupCard = ({ connectgroup }) => {
       </div>
       <div className="connect-group-card-info">
         <div className="connect-group-card-text">
-          <p className="connect-group-text-title">{connectgroup.title || "Default Title"}</p>
-         </div>
+          <p className="connect-group-text-title">
+            {connectgroup.title || "Default Title"}
+          </p>
+        </div>
         <div className="connect-group-card-icon">
           <svg
             viewBox="0 0 28 25"
@@ -44,43 +37,11 @@ const ConnectGroupCard = ({ connectgroup }) => {
       </div>
 
       {showModal && (
-        <div className="connect-group-category-modal-overlay" onClick={closeModal}>
-          <div
-            className="connect-group-category-modal-content"
-            onClick={stopPropagation}
-          >
-            <div className="connect-group-category-modal-header">
-              <div
-                className="connect-group-category-close-button"
-                onClick={closeModal}
-              >
-                X
-              </div>
-            </div>
-            <div className="connect-group-category-modal-wrapper">
-              <div className="connect-group-category-image-container">
-                <img
-                  className="connect-group-category-img"
-                  src={connectgroup.imageUrl || ""}
-                  alt="connect-group Placeholder"
-                />
-              </div>
-              <div className="connect-group-category-text-container">
-                <h1 className="connect-group-category-title">
-                  {connectgroup.title || "Default Category Title"}
-                </h1>
-                <p className="connect-group-category-description">
-                  {connectgroup.description || "Default Category Description"}
-                </p>
-              </div>
-            </div>
-            <div className="connect-group-category-button-wrapper">
-            <Link to="/registrationconnectgroup"><button className="volunteer-button">
-                  <span className="volunteer-button-span">Join</span>
-                </button></Link>
-            </div>
-          </div>
-        </div>
+        <JoinUsModal
+          joinusmodal={connectgroup}
+          closeModal={() => setShowModal(false)}
+          joinLink="/registrationconnectgroup"
+        />
       )}
     </div>
   );
