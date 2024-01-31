@@ -48,7 +48,7 @@ const PrayerRequestContent = () => {
           request._id === id ? { ...request, readStatus: true } : request
         )
       );
-     } catch (error) {
+    } catch (error) {
       console.error("Error marking prayer request as read:", error);
     }
   };
@@ -111,7 +111,7 @@ const PrayerRequestContent = () => {
       <div className="prayerreq-header">
         <h1>PRAYER REQUEST</h1>
         <select
-        className="prayerreq-filter"
+          className="prayerreq-filter"
           name="prayerreq-filter"
           onChange={(e) => handleFilterChange(e.target.value)}
         >
@@ -129,7 +129,7 @@ const PrayerRequestContent = () => {
               <th>Date Created</th>
               <th>Prayer Text</th>
               <th>Read Status</th>
-              <th>Story</th>
+              <th>View Story</th>
               <th>Delete</th>
             </tr>
           </thead>

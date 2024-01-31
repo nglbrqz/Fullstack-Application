@@ -9,6 +9,7 @@ import JoinUs from "./Pages/JoinUs";
 import RegistrationEvent from "./Components/Registration Forms/RegistrationEvent";
 import RegistrationConnectGroup from "./Components/Registration Forms/RegisterConnectGroup";
 import RegistrationVolunteer from "./Components/Registration Forms/RegistrationVolunteer";
+
 import RegisterAdmin from "./Pages/RegisterAdmin";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";

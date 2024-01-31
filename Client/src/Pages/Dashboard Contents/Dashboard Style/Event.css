@@ -1,0 +1,100 @@
+.church-event-wrapper,
+.outreach-event-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three equal-width columns */
+    gap: 16px;
+    /* Adjust the gap between items */
+}
+
+.event-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 60px;
+}
+
+
+.event-header-container h1 {
+    font-size: 73px;
+    text-transform: uppercase;
+}
+
+.event-header-add-event-button {
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+    height: 400px;
+}
+
+
+.event-header-add-event-button:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+}
+
+.event-header-add-event-button:active {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+    transform: scale(.96);
+}
+
+.event-category-header-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#church-events-heading,
+#outreach-events-heading {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+     background-color: #fff;
+     padding: 0 10px;
+ }
+
+#church-events-heading::before,
+#outreach-events-heading::before,
+#church-events-heading::after,
+#outreach-events-heading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+ }
+
+#church-events-heading::before,
+#outreach-events-heading::before {
+    right: 100%;
+    margin-right: 20px;
+ }
+
+#church-events-heading::after,
+#outreach-events-heading::after {
+    left: 100%;
+    margin-left: 20px;
+ }
