@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
- const { createEvent, uploadThumbnail, getEvents     } = require("../controllers/eventController");
+ const { createEvent, uploadThumbnail, getEvents, deleteEvent,} = require("../controllers/eventController");
 
 router.use(
   cors({
@@ -12,7 +12,8 @@ router.use(
  
 router.post("/createevent", createEvent);
 router.get("/getevents", getEvents);
- router.post("/uploadthumbnail", uploadThumbnail, (req, res) => {
+router.delete("/deleteeventid/:id", deleteEvent);
+router.post("/uploadthumbnail", uploadThumbnail, (req, res) => {
   
  
 });

@@ -152,8 +152,27 @@ const getEvents = async (req, res) => {
   }
 };
 
+
+
+async function deleteEvent (req, res) {
+  const requestId = req.params.id;
+
+  try {
+    // Find and delete the prayer request with the given ID
+    const deletedRequest = await EventModel.findByIdAndDelete(requestId);
+
+    if (!deletedRequest) {
+      return res.status(404).json({ error: "Prayer request not found" });
+    }
+
+    res.json({ message: "Prayer request deleted successfully", deletedRequest });
+  } catch (error) {
+    console.error("Error deleting prayer request:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+}
  
 module.exports = {
   createEvent,
-  uploadThumbnail, getEvents, 
+  uploadThumbnail, getEvents, deleteEvent,
 };

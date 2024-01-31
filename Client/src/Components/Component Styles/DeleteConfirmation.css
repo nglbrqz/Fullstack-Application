@@ -9,17 +9,18 @@
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+  z-index: 1000; /* Set a high z-index value */
 }
 
 .deleteconfirmationmodal.open {
   display: flex;
 }
-
 .deleteconfirmation-modal-content {
   background-color: white;
   padding: 50px;
-   border-radius: 8px;
+  border-radius: 8px;
   text-align: center;
+  z-index: 1001; /* Set a z-index value higher than the overlay */
 }
 
 .deleteconfirmation-modal-content p{

@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import EventCard from "../../Components/Dashboard Cards/EventCard";
 
+
 const EventsContent = () => {
   const [churchEvents, setChurchEvents] = useState([]);
   const [outreachEvents, setOutreachEvents] = useState([]);
+ 
 
   useEffect(() => {
     axios.get("/event/getevents")
@@ -60,6 +62,9 @@ const EventsContent = () => {
           ))}
         </div>
       </div>
+
+
+
     </>
   );
 };
