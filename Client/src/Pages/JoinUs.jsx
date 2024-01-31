@@ -25,7 +25,7 @@ const JoinUs = () => {
         </div>
       </div>
       
-      <div className="join-us-ministry-section" href="#ministry">
+      <div className="join-us-ministry-section" id="ministry">
         <div className="ministry-title-container">
           <h1>Ministries</h1>
         </div>
@@ -37,7 +37,7 @@ const JoinUs = () => {
         </div>
       </div>
 
-      <div className="join-us-volunteer-section" href="#volunteer">
+      <div className="join-us-volunteer-section" id="volunteer">
         <div className="volunteer-title-container">
           <h1>Volunteers</h1>
         </div>
@@ -49,7 +49,7 @@ const JoinUs = () => {
         </div>
       </div>
 
-      <div className="join-us-connect-group-section" href="#connect">
+      <div className="join-us-connect-group-section" id="connect">
         <div className="connect-group-title-container">
           <h1>Connect Group</h1>
         </div>
