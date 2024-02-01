@@ -1,10 +1,13 @@
+import React, { useEffect } from "react";
 import "./Registration.css";
 import NavBar from "../navBar";
 import Footer from "../Footer";
 
- 
- 
 const RegistrationConnectGroup = () => {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="registration-navbar-container">
@@ -15,7 +18,7 @@ const RegistrationConnectGroup = () => {
         <form action="#" method="post">
           <div className="registration-form-title">
             <h1>REGISTRATION</h1>
-            <h2>CONNECT GROUP</h2>
+            <h2>CONNECT GROUP:{/*Here yung chosen connect group name */}</h2>
           </div>
           <div className="registration-aligned-fields">
             <label htmlFor="name">NAME:</label>

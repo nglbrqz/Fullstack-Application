@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useState } from "react";
+import JoinUsModal from "./Modals/JoinUsModal.jsx";
 import "./Component Styles/VolunteerCard.css"; // Import the stylesheet
 
 const VolunteerCard = ({ volunteer }) => {
@@ -9,14 +9,6 @@ const VolunteerCard = ({ volunteer }) => {
   function handleButtonClick() {
     setShowModal(true);
   }
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
-  const stopPropagation = (e) => {
-    e.stopPropagation();
-  };
 
   return (
     <div className="volunteer-card">
@@ -28,43 +20,12 @@ const VolunteerCard = ({ volunteer }) => {
         />
 
         {showModal && (
-          <div
-            className="volunteer-category-modal-overlay"
-            onClick={closeModal}
-          >
-            <div
-              className="volunteer-category-modal-content"
-              onClick={stopPropagation}
-            >
-              <div className="ministry-category-modal-header">
-                <div
-                  className="ministry-category-close-button"
-                  onClick={closeModal}
-                >
-                  X
-                </div>
-              </div>
-              <div className="volunteer-category-modal-wrapper">
-                <div className="volunteer-category-image-container">
-                  <img
-                    className="volunteer-category-img"
-                    src={volunteer.imageUrl}
-                    alt="Volunteer Placeholder"
-                  />
-                </div>
-                <div className="volunteer-category-text-container">
-                  <h1 className="volunteer-category-title">{volunteer.title}</h1>
-                  <p className="volunteer-category-description">{volunteer.description}</p>
-                </div>
-              </div>
-              <div className="volunteer-category-button-wrapper">
-              <Link to="/registrationevent"><button className="volunteer-button">
-                  <span className="volunteer-button-span">Join</span>
-                </button></Link>
-              </div>
-            </div>
-          </div>
-        )}
+          <JoinUsModal
+          joinusmodal={volunteer}
+          closeModal={() => setShowModal(false)}
+          joinLink="/registrationvolunteer"
+        />
+      )}
       </div>
     </div>
   );

@@ -1,15 +1,19 @@
+import React, { useEffect } from "react";
 import "./Registration.css";
 import NavBar from "../navBar";
 import Footer from "../Footer";
 
- 
 const RegistrationEvent = () => {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
       <div className="registration-navbar-container">
         <NavBar colorScheme="dark" />
       </div>
-
       <div className="registration-form-container">
         <form action="#" method="post">
           <div className="registration-form-title">

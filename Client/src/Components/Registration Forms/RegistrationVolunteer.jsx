@@ -1,9 +1,13 @@
+import React, { useEffect } from "react";
 import "./Registration.css";
 import NavBar from "../navBar";
 import Footer from "../Footer";
-
  
 const RegistrationVolunteer = () => {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="registration-navbar-container">
