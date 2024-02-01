@@ -27,8 +27,7 @@ function Main() {
 
         {/*Welcome part */}
         <div className="hero-container-welcome-section">
-          <h1>Welcome </h1>
-          <h2>Lorem</h2>
+          <h1>Be a part of the New Life Southwoods Family</h1>
           <div className="video-placeholder"></div>
         </div>
 
@@ -183,7 +182,7 @@ function Main() {
           <div className="hero-container-about-section-description-container">
             <div className="hero-container-about-section-description-wrapper">
               <div className="hero-container-about-section-description-map-container">
-                <h1 className="hero-container-about-section-description-title"> Location</h1>
+               
                 <iframe
                   title="Google Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.650186562484!2d121.047726475101!3d14.331740786123406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d7ab97796a8f%3A0xbb590b90a63ac105!2sNew%20Life!5e0!3m2!1sen!2sph!4v1705091247844!5m2!1sen!2sph"
@@ -197,21 +196,16 @@ function Main() {
               </div>
 
               <div className="hero-container-about-section-description-text-container">
-                <p className="hero-container-about-section-text">
-                3rd Level, Southwoods Mall, Southwoods City 4024 Binan, Laguna, Philippines
-                </p>
-                <p className="hero-container-about-section-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  soluta exercitationem, officiis architecto eaque quo quas
-                  explicabo porro natus. Aliquid autem asperiores eligendi
-                  repellat quaerat modi consectetur id non provident?
-                </p>
-                <p className="hero-container-about-section-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  soluta exercitationem, officiis architecto eaque quo quas
-                  explicabo porro natus. Aliquid autem asperiores eligendi
-                  repellat quaerat modi consectetur id non provident?
-                </p>
+              <p className="hero-container-about-section-text"><b>Address:</b></p>
+              <p className="hero-container-about-section-text"> 3rd Level, Southwoods Mall, Southwoods City 4024 Binan, Laguna, Philippines </p>
+              <p className="hero-container-about-section-text"><b>Contact Us</b></p>
+              <p className="hero-container-about-section-text"><b>Email:</b> nlsouthwoods@gmail.com</p>
+              <p className="hero-container-about-section-text"><b>Phone Number: </b> 0945 136 8481 (for inquiries and pastoral care services)</p>
+              <p className="hero-container-about-section-text"><b>Main Social Media Accounts</b></p>
+              <p className="hero-container-about-section-text"><b>Facebook:</b> @Nlsouthwoods</p>
+              <p className="hero-container-about-section-text"><b>Instagram:</b> @newlifesouthwoods</p>
+              <p className="hero-container-about-section-text"><b>YouTube:</b> New Life Southwoods</p>
+
               </div>
             </div>
           </div>
