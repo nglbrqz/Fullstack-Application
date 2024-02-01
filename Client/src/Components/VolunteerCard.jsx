@@ -23,7 +23,7 @@ const VolunteerCard = ({ volunteer }) => {
           <JoinUsModal
           joinusmodal={volunteer}
           closeModal={() => setShowModal(false)}
-          joinLink="/registrationvolunteer"
+          joinLink="/registrationvolunteer/"
         />
       )}
       </div>
@@ -33,6 +33,7 @@ const VolunteerCard = ({ volunteer }) => {
 
 VolunteerCard.propTypes = {
   volunteer: PropTypes.shape({
+    VolunteerId: PropTypes.number.isRequired,
     imageUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,

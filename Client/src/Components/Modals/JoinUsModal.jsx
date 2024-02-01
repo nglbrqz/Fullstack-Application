@@ -16,7 +16,7 @@ const JoinUsModal = ({ joinusmodal, closeModal, joinLink }) => {
             <h2>{joinusmodal.title || "Default Category Title"}</h2>
             <p>{joinusmodal.description || "Default Category Description"}</p>
           </div>
-          <Link to={joinLink || "/default-join-page"}>
+          <Link to={joinLink+"?a="+joinusmodal.Volunteerid+"&b=" || "/default-join-page"}>
           <button className="modal-join-btn">Join Now</button>
         </Link>
         </div>
@@ -27,6 +27,7 @@ const JoinUsModal = ({ joinusmodal, closeModal, joinLink }) => {
 
 JoinUsModal.propTypes = {
   joinusmodal: PropTypes.shape({
+    Volunteerid: PropTypes.number,
     videoUrl: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
