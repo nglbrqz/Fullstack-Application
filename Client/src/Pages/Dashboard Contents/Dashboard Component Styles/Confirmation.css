@@ -1,5 +1,5 @@
 /* Add this to your styles or create a new CSS file */
-.deleteconfirmationmodal {
+.confirmationmodal {
   display: none;
   position: fixed;
   top: 0;
@@ -12,10 +12,10 @@
   z-index: 1000; /* Set a high z-index value */
 }
 
-.deleteconfirmationmodal.open {
+.confirmationmodal.open {
   display: flex;
 }
-.deleteconfirmation-modal-content {
+.confirmation-modal-content {
   background-color: white;
   padding: 50px;
   border-radius: 8px;
@@ -23,21 +23,21 @@
   z-index: 1001; /* Set a z-index value higher than the overlay */
 }
 
-.deleteconfirmation-modal-content p{
+.confirmation-modal-content p{
   font-size: 30px;
   padding-top: 20px;
   margin-bottom: 30px;
 
 }
 
-.deleteconfirmation-modal-wrapper {
+.confirmation-modal-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 
-.deleteconfirmation-modal-wrapper-confirm-button, .storymodal-close-button {
+.confirmation-modal-wrapper-confirm-button, .storymodal-close-button {
   background-color: #FFFFFF;
   border: 1px solid #222222;
   border-radius: 8px;
@@ -62,25 +62,25 @@
   width: auto;
 }
 
-.deleteconfirmation-modal-wrapper-confirm-button:focus-visible {
+.confirmation-modal-wrapper-confirm-button:focus-visible {
   box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
   transition: box-shadow .2s;
 }
 
-.deleteconfirmation-modal-wrapper-confirm-button:active {
+.confirmation-modal-wrapper-confirm-button:active {
   background-color: #F7F7F7;
   border-color: #000000;
   transform: scale(.96);
 }
 
-.deleteconfirmation-modal-wrapper-confirm-button:disabled {
+.confirmation-modal-wrapper-confirm-button:disabled {
   border-color: #DDDDDD;
   color: #DDDDDD;
   cursor: not-allowed;
   opacity: 1;
 }
 
-.deleteconfirmation-modal-wrapper-decline-button {
+.confirmation-modal-wrapper-decline-button {
   background-color: #222222;
   border: 1px solid #FFFFFF;
   border-radius: 8px;
@@ -105,12 +105,12 @@
   width: auto;
 }
 
-.deleteconfirmation-modal-wrapper-decline-button:focus-visible {
+.confirmation-modal-wrapper-decline-button:focus-visible {
   box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
   transition: box-shadow .2s;
 }
 
-.deleteconfirmation-modal-wrapper-decline-button:active {
+.confirmation-modal-wrapper-decline-button:active {
   background-color: #222222;
   border-color: #000000;
   transform: scale(.96);

@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import DeleteConfirmationModal from "../../Components/DeleteConfirmationModal";
-import StoryModal from "../../Components/StoryModal"; // Import the new modal component
+import StoryModal from "./Dashboard Components/StoryModal"; // Import the new modal component
+import ConfirmationModal from "./Dashboard Components/ConfirmationModal"
 import { toast } from "react-hot-toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
@@ -166,7 +166,7 @@ const PrayerRequestContent = () => {
         </table>
       </div>
 
-      <DeleteConfirmationModal
+      <ConfirmationModal
         isOpen={isDeleteModalOpen}
         onCancel={handleDeleteCancel}
         onConfirm={handleDeleteConfirm}

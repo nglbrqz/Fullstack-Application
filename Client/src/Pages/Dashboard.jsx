@@ -14,11 +14,9 @@ import "../Pages/Page Styles/Dashboard.css";
 import logo from "../assets/siteimages/sitelogo/whitelogo.png";
 
 import EventsContent from "./Dashboard Contents/EventsContent";
-import CreateEvent from "./Dashboard Contents/CreateEvents"
 import ConnectGroupsContent from "./Dashboard Contents/ConnectGroupsContent";
 import PrayerRequestContent from "./Dashboard Contents/PrayerRequestContent";
 import VolunteersContent from "./Dashboard Contents/VolunteersContent";
-
 library.add(
   fab,
   faCalendarAlt,
@@ -79,17 +77,18 @@ function Dashboard() {
             </div>
             <div
               className="dashboard-menu-item"
-              onClick={() => handleMenuClick("createevent")}
+              onClick={() => handleMenuClick("connectGroups")}
             >
-              <FontAwesomeIcon icon={faCalendarAlt} />
-              <p>Create Event</p>
+              <FontAwesomeIcon icon={faUsersCog} />
+              <p>Connect Groups</p>
             </div>
+
             <div
               className="dashboard-menu-item"
               onClick={() => handleMenuClick("volunteers")}
             >
               <FontAwesomeIcon icon={faUsers} />
-              <p>Volunteers</p>
+              <p>Volunteers / Participants</p>
             </div>
             <div
               className="dashboard-menu-item"
@@ -98,13 +97,7 @@ function Dashboard() {
               <FontAwesomeIcon icon={faPrayingHands} />
               <p>Prayer Request</p>
             </div>
-            <div
-              className="dashboard-menu-item"
-              onClick={() => handleMenuClick("connectGroups")}
-            >
-              <FontAwesomeIcon icon={faUsersCog} />
-              <p>Connect Groups</p>
-            </div>
+
             <div
               className="dashboard-menu-item"
               id="dashboard-logout"
@@ -120,7 +113,6 @@ function Dashboard() {
       <div className="dashboard-container">
         <div className="main-content">
           {selectedMenu === "viewevents" && <EventsContent />}
-          {selectedMenu === "createevent" && <CreateEvent />}
           {selectedMenu === "volunteers" && <VolunteersContent />}
           {selectedMenu === "prayer" && <PrayerRequestContent />}
           {selectedMenu === "connectGroups" && <ConnectGroupsContent />}

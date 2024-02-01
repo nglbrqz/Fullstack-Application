@@ -1,6 +1,6 @@
 // StoryModal.js
 import PropTypes from "prop-types";
-import "./Component Styles/DeleteConfirmation.css";
+import "../Dashboard Component Styles/Confirmation.css";
  
 
 const StoryModal = ({ isOpen, onClose, storyText }) => {

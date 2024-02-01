@@ -2,8 +2,7 @@ const EventModel = require("../models/event");
 const path = require("path");
 const multer = require("multer");
 
-// Set up multer for handling file uploads
-// Multer storage configuration
+ 
 const storage = multer.diskStorage({
   destination: "./public/uploads/",
   filename: function (req, file, cb) {
@@ -60,9 +59,9 @@ const uploadThumbnail = (req, res) => {
   }
 };
 
+ 
 
-// Function to create a new event
-const createEvent = async (req, res) => {
+ const createEvent = async (req, res) => {
   try {
     // Extracting data from the request body
     const {
@@ -171,8 +170,132 @@ async function deleteEvent (req, res) {
     res.status(500).json({ error: "Internal Server Error" });
   }
 }
+
+const archiveEventById = async (eventId) => {
+  try {
+    const archivedEvent = await EventModel.findByIdAndUpdate(
+      eventId,
+      { isEventArchived: true },
+      { new: true }
+    );
+
+    if (!archivedEvent) {
+      throw new Error("Event not found");
+    }
+
+    return archivedEvent;
+  } catch (error) {
+    throw new Error(`Error archiving event: ${error.message}`);
+  }
+};
+
+const archiveEvent = async (req, res) => {
+  const eventId = req.params.eventId;
+
+  try {
+    const archivedEvent = await archiveEventById(eventId);
+
+    res.json({
+      success: true,
+      message: `Event '${archivedEvent.eventTitle}' archived successfully.`,
+      archivedEvent,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: "Error archiving event. Please try again.",
+    });
+  }
+};
+const editEvent = async (req, res) => {
+  const eventId = req.params.eventId;
+
+  try {
+    // Extracting data from the request body
+    const {
+      eventTitle,
+      eventDate,
+      eventStartTime,
+      eventEndTime,
+      eventCategory,
+      eventDescription,
+      eventHost,
+      eventLocation,
+      eventThumbnailImageUrl,
+    } = req.body;
+
+    // Check if required fields are present
+    const requiredFields = [
+      "eventTitle",
+      "eventDate",
+      "eventStartTime",
+      "eventEndTime",
+      "eventCategory",
+      "eventDescription",
+      "eventHost",
+      "eventLocation",
+    ];
+
+    const missingFields = requiredFields.filter(
+      (field) => !req.body[field] || req.body[field].trim() === ""
+    );
+
+    if (missingFields.length > 0) {
+      return res.status(400).json({
+        success: false,
+        message: `Please provide a value for the following fields: ${missingFields.join(", ")}`,
+      });
+    }
+
+    // Validate event date
+    const currentDate = new Date();
+    const inputDate = new Date(eventDate);
+
+    if (inputDate <= currentDate) {
+      return res.status(400).json({
+        success: false,
+        message: "Event date must be in the future",
+      });
+    }
+
+    // Find the event by ID and update its fields
+    const updatedEvent = await EventModel.findByIdAndUpdate(
+      eventId,
+      {
+        eventTitle,
+        eventDate,
+        eventStartTime,
+        eventEndTime,
+        eventCategory,
+        eventDescription,
+        eventHost,
+        eventLocation,
+        eventThumbnailImageUrl,
+      },
+      { new: true }
+    );
+
+    if (!updatedEvent) {
+      return res.status(404).json({ success: false, message: "Event not found" });
+    }
+
+    // Respond with success message and the updated event
+    return res.status(200).json({
+      success: true,
+      message: "Event updated successfully",
+      event: updatedEvent,
+    });
+  } catch (error) {
+    console.error("Error updating event:", error.message);
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
+};
  
 module.exports = {
   createEvent,
-  uploadThumbnail, getEvents, deleteEvent,
+  uploadThumbnail, getEvents, deleteEvent,  archiveEvent, editEvent,
 };

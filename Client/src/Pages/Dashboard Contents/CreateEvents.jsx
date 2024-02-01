@@ -1,10 +1,11 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import Dropzone from "react-dropzone";
-import "./Dashboard Style/CreateEvent.css";
+import "./Dashboard Component Styles/CreateEvent.css";
 
-const CreateEvents = () => {
+const CreateEvents = ({ onCloseModal, closeModal , onCreateEventSuccess }) => {
   const [eventDetails, setEventDetails] = useState({
     eventTitle: "",
     eventDate: "",
@@ -16,6 +17,7 @@ const CreateEvents = () => {
     eventLocation: "",
   });
   const [thumbnailFile, setThumbnailFile] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -81,6 +83,9 @@ const CreateEvents = () => {
 
       // Display success toast
       toast.success("Event created successfully!");
+      onCreateEventSuccess();
+      setIsModalOpen(false);
+      onCloseModal();
 
       // Clear the uploaded image and form fields
       setThumbnailFile(null);
@@ -95,6 +100,7 @@ const CreateEvents = () => {
         eventLocation: "",
       });
 
+ 
       // Optionally, you can log the response from the server
       console.log(response.data);
     } catch (error) {
@@ -104,119 +110,128 @@ const CreateEvents = () => {
   };
 
   return (
-    <div>
-      <h2>Create Events</h2>
-      <div className="create-event-form-container">
-        <form onSubmit={handleSubmit}>
-          <div className="create-event-form-container-wrapper">
-            <div className="create-event-form-container-column-wrapper">
-              {/* Thumbnail dropzone */}
-              <Dropzone onDrop={handleThumbnailDrop} accept="image/*">
-                {({ getRootProps, getInputProps }) => (
-                  <div
-                    {...getRootProps()}
-                    className="create-event-form-thumbnail-import"
+    <>
+      {isModalOpen && (
+        <div className="create-event-form-container">
+          <form onSubmit={handleSubmit}>
+            <div className="create-event-form-container-wrapper">
+              <div className="create-event-form-container-column-wrapper">
+                {/* Thumbnail dropzone */}
+                <Dropzone onDrop={handleThumbnailDrop} accept="image/*">
+                  {({ getRootProps, getInputProps }) => (
+                    <div
+                      {...getRootProps()}
+                      className="create-event-form-thumbnail-import"
+                    >
+                      <input {...getInputProps()} />
+                      <p>
+                        {thumbnailFile
+                          ? `File: ${thumbnailFile}`
+                          : "Drag and drop an event thumbnail image here, or click to select one"}
+                      </p>
+                    </div>
+                  )}
+                </Dropzone>
+
+                <div>
+                  <textarea
+                    placeholder="Description..."
+                    name="eventDescription"
+                    value={eventDetails.eventDescription}
+                    onChange={handleInputChange}
+                  ></textarea>
+                </div>
+              </div>
+
+              <div className="create-event-form-container-column-wrapper">
+                <div className="create-event-input-title">
+                  <label>Event Title:</label>
+                  <input
+                    type="text"
+                    name="eventTitle"
+                    id="create-event-title-input"
+                    value={eventDetails.eventTitle}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="create-event-input-wrapper">
+                  <label>Schedule:</label>
+                  <input
+                    type="date"
+                    name="eventDate"
+                    value={eventDetails.eventDate}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="create-event-input-wrapper">
+                  <label>Start Time:</label>
+                  <input
+                    type="time"
+                    name="eventStartTime"
+                    value={eventDetails.eventStartTime}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="create-event-input-wrapper">
+                  <label>End Time:</label>
+                  <input
+                    type="time"
+                    name="eventEndTime"
+                    value={eventDetails.eventEndTime}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="create-event-input-wrapper">
+                  <label>Category:</label>
+                  <select
+                    name="eventCategory"
+                    value={eventDetails.eventCategory}
+                    onChange={handleInputChange}
                   >
-                    <input {...getInputProps()} />
-                    <p>
-                      {thumbnailFile
-                        ? `File: ${thumbnailFile}`
-                        : "Drag and drop an event thumbnail image here, or click to select one"}
-                    </p>
-                  </div>
-                )}
-              </Dropzone>
-
-              <div>
-                <textarea
-                  placeholder="Description..."
-                  name="eventDescription"
-                  value={eventDetails.eventDescription}
-                  onChange={handleInputChange}
-                ></textarea>
+                    <option value="">Select Category</option>
+                    <option value="church">Church</option>
+                    <option value="outreach">Outreach</option>
+                  </select>
+                </div>
+                <div className="create-event-input-wrapper">
+                  <label>Event Host:</label>
+                  <input
+                    type="text"
+                    name="eventHost"
+                    value={eventDetails.eventHost}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="create-event-input-wrapper">
+                  <label>Event Location:</label>
+                  <input
+                    type="text"
+                    name="eventLocation"
+                    value={eventDetails.eventLocation}
+                    onChange={handleInputChange}
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="create-event-form-container-column-wrapper">
-              <div className="create-event-input-title">
-                <label>Event Title:</label>
-                <input
-                  type="text"
-                  name="eventTitle"
-                  id="create-event-title-input"
-                  value={eventDetails.eventTitle}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="create-event-input-wrapper">
-                <label>Schedule:</label>
-                <input
-                  type="date"
-                  name="eventDate"
-                  value={eventDetails.eventDate}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="create-event-input-wrapper">
-                <label>Start Time:</label>
-                <input
-                  type="time"
-                  name="eventStartTime"
-                  value={eventDetails.eventStartTime}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="create-event-input-wrapper">
-                <label>End Time:</label>
-                <input
-                  type="time"
-                  name="eventEndTime"
-                  value={eventDetails.eventEndTime}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="create-event-input-wrapper">
-                <label>Category:</label>
-                <select
-                  name="eventCategory"
-                  value={eventDetails.eventCategory}
-                  onChange={handleInputChange}
-                >
-                  <option value="">Select Category</option>
-                  <option value="church">Church</option>
-                  <option value="outreach">Outreach</option>
-                </select>
-              </div>
-              <div className="create-event-input-wrapper">
-                <label>Event Host:</label>
-                <input
-                  type="text"
-                  name="eventHost"
-                  value={eventDetails.eventHost}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="create-event-input-wrapper">
-                <label>Event Location:</label>
-                <input
-                  type="text"
-                  name="eventLocation"
-                  value={eventDetails.eventLocation}
-                  onChange={handleInputChange}
-                />
-              </div>
+            <div className="create-event-form-button-wrapper">
+              <button className="create-event-form-button" type="submit">
+                Create Event
+              </button>
+              <button className="create-event-form-button" onClick={closeModal}>
+                Cancel
+              </button>
             </div>
-          </div>
-
-          <div className="create-event-form-button-wrapper">
-            <button className="create-event-form-button" type="submit">
-              Create Event
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+          </form>
+        </div>
+      )}
+    </>
   );
+};
+CreateEvents.propTypes = {
+  onCloseModal: PropTypes.func.isRequired,
+  closeModal: PropTypes.func.isRequired,
+  onCreateEventSuccess: PropTypes.func.isRequired,
 };
 
 export default CreateEvents;
