@@ -36,25 +36,23 @@ function Main() {
         <div className="hero-container-founder-container">
           <div className="hero-container-founder-flex-wrapper" id="founder1">
             <div className="founder-flex-text-container">
-              <h1 className="founder-title">Info of Pastors</h1>
-              <h3 className="founder-description">Sus, Impostor</h3>
+              <h1 className="founder-title">Pastor James Magat</h1>
+              <h3 className="founder-description">Lead Pastor</h3>
               <p className="content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+                "Wow, how time flies!" Today, with hearts full of gratitude, we come together to celebrate the remarkable milestone 
+                of the fourth anniversary of New Life Southwoods FAMILY. Anniversaries, beyond being a mere passage of time, offer us a poignant opportunity 
+                to reflect on the incredible journey we've traversed, to assess our current standing, and to cast our collective vision towards the promising future that awaits.
               </p>
               <p className="content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              In these four years, the tapestry of our story has been woven with threads of unwavering faith and the evident hand of our gracious God. 
+              It brings to mind the profound words of JESUS in Matthew 16:18, assuring us that He will build His church. New Life Southwoods stands today as a 
+              living testament to this divine promise—a vibrant, thriving church that embraces and touches lives across generations. The tapestry is enriched by the collaborative 
+              efforts of a diverse and committed community, working harmoniously to manifest the vision that God has laid before us.
               </p>
               <p className="content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              This "heart for the harvest" is more than a concept; it's a shared passion for both God and people. It becomes the driving force behind all our actions and decisions. 
+              In expressing our gratitude, Pastor Grace and I extend our heartfelt thanks to the NLSW family—for your love, your prayers, and your generous contributions. 
+              We stand in this place today because of your commitment and dedication.
               </p>
             </div>
             <div className="founder-flex-image-container">
@@ -66,25 +64,23 @@ function Main() {
               <img className="founder-img" src="" alt="" />
             </div>
             <div className="founder-flex-text-container">
-              <h1 className="founder-title">Lorem Ipsum</h1>
-              <h3 className="founder-description">Sus, Impostor</h3>
+              <h1 className="founder-title">Pastora Grace Magat</h1>
+              <h3 className="founder-description">Co-Lead Pastor</h3>
               <p className="content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              As we continue our journey towards becoming the church God envisions—a giving church, a praying church, a non-religious church, and a church 
+              deeply rooted in God's Word with a Spirit of Faith—we set our gaze on a future where miracles are not just believed but expected, and a fervent passion for the
+               harvest propels our every endeavor.
               </p>
               <p className="content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              Special appreciation is extended to our elders, pastors, staff, and volunteer leaders who tirelessly work behind the scenes, meeting the diverse needs of our community.
+              Your efforts provide the necessary touch, words, and support that keep this church thriving. A special acknowledgment goes out to our dedicated prayer team. 
+              Your unwavering commitment to lifting up the church and its leaders in prayer is acknowledged and deeply appreciated. 
+              Indeed, as we often affirm, "Prayer is the backbone of the Ministry."
               </p>
               <p className="content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              In God's providence, we find ourselves strategically positioned with the right people, in the right place, and with hearts attuned to His 
+              calling as we brace ourselves for the growth that lies ahead. The greatest need of the church, as we anticipate this expansion, 
+              is for people to find their place and remain faithful.
               </p>
             </div>
           </div>
@@ -102,50 +98,59 @@ function Main() {
             </div>
             <div className="mission-flex-text-container">
               <h1 className="mission-title">Mission</h1>
-              <h3 className="mission-description">Sus, Impostor</h3>
+              <h3 className="mission-description">Maturing the BELIEVER</h3>
+              <h3 className="mission-description">Making DISCIPLES</h3>
+              <h3 className="mission-description">EXPANDING His Kingdom </h3>
               <p className="mission-content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+                In every service, our primary mission is to create an atmosphere where the divine presence and the anointing of God are not just felt
+                 but actively encountered. We aspire to foster an environment where the Spirit of God permeates every aspect of our worship, touching hearts, and transforming lives.
+                  
               </p>
+
               <p className="mission-content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              At the core of our mission lies the unwavering commitment to teach and uphold the authority of God's Word. 
+              In every sermon, lesson, and study, we aim to delve deep into the Scriptures, unveiling the timeless truths and principles that guide our lives. 
+              The Word is not merely taught but embraced as the foundation upon which we build our faith, understanding that it holds the power to transform minds, renew spirits, 
+              and shape our collective journey.
               </p>
+
               <p className="mission-content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              A central pillar of our mission revolves around the salvation of the lost and the intentional making of disciples.
+             We recognize the urgency and importance of reaching out to those who have yet to experience the life-transforming grace of Christ. 
+             Through evangelism, outreach programs, and a genuine concern for the well-being of others, we seek to bring the message of salvation to the lost. 
               </p>
+
+              <p className="mission-content__text">
+              Our mission is not confined to the walls of our church; it extends into the lives of individuals, families, and communities. 
+              We aspire to be a beacon of God's love, a place where encounters with His presence are commonplace, where the authority of His Word is upheld, and where lives 
+              are not only transformed but actively engaged in the mission of sharing the Good News and making disciples for the glory of God.
+              </p>
+
             </div>
           </div>
 
           <div className="hero-container-vision-flex-wrapper">
             <div className="vision-flex-text-container">
               <h1 className="vision-title">Vision</h1>
-              <h3 className="vision-description">Sus, Impostor</h3>
+              <h3 className="vision-description">A CITY TO TOUCH!</h3>
+              <h3 className="vision-description">A NATION TO REACH! </h3>
+              <h3 className="vision-description">A WORLD TO CHANGE!</h3>
               <p className="vision-content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              “I tell you this. You are called Peter, which means a rock. And I will build my church on this rock. Not even the power of hell will destroy my church.”
               </p>
               <p className="vision-content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              A Strong Local Church where people have a solid foundation in God’s WORD.
               </p>
               <p className="vision-content__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                soluta exercitationem, officiis architecto eaque quo quas
-                explicabo porro natus. Aliquid autem asperiores eligendi
-                repellat quaerat modi consectetur id non provident?
+              A Strong Local Church positioned for the Harvest, trusting in the leading of the HOLY SPIRIT to direct its purpose with passion and fire.
               </p>
+              <p className="vision-content__text">
+              A Strong Local Church where people are steadfast in PRAYER. Touching the heart of the Father, His glory bringing change to earth.
+              </p>
+              <p className="vision-content__text">
+              A Strong Local Church walking in the GREAT COMMANDMENT and fulfilling the GREAT COMMISSION.
+              </p>
+            
             </div>
             <div className="vision-flex-image-container">
               <img
@@ -178,9 +183,7 @@ function Main() {
           <div className="hero-container-about-section-description-container">
             <div className="hero-container-about-section-description-wrapper">
               <div className="hero-container-about-section-description-map-container">
-                <h1 className="hero-container-about-section-description-title">
-                  Lorem Ipsum
-                </h1>
+                <h1 className="hero-container-about-section-description-title"> Location</h1>
                 <iframe
                   title="Google Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.650186562484!2d121.047726475101!3d14.331740786123406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d7ab97796a8f%3A0xbb590b90a63ac105!2sNew%20Life!5e0!3m2!1sen!2sph!4v1705091247844!5m2!1sen!2sph"
@@ -195,10 +198,7 @@ function Main() {
 
               <div className="hero-container-about-section-description-text-container">
                 <p className="hero-container-about-section-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  soluta exercitationem, officiis architecto eaque quo quas
-                  explicabo porro natus. Aliquid autem asperiores eligendi
-                  repellat quaerat modi consectetur id non provident?
+                3rd Level, Southwoods Mall, Southwoods City 4024 Binan, Laguna, Philippines
                 </p>
                 <p className="hero-container-about-section-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
