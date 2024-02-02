@@ -347,7 +347,6 @@ body {
 
 
 
-
 .hero-container-founder-container {
   height: auto;
   background-color: #ffffff;
@@ -394,7 +393,7 @@ body {
 
 }
 
-/* Add some styles to the image if needed */
+
 .founder-img {
   object-fit: cover; 
   width: 100%;
@@ -476,7 +475,7 @@ body {
 
 .mission-flex-image-container,
 .vision-flex-image-container {
-  width: 500px;
+  width: 600px;
   height: 440px;
 }
 

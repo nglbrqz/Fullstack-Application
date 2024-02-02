@@ -11,6 +11,10 @@ import CoreValues from "../Components/CoreValues"
 
 import headpastor from "../assets/mainpageimages/headpastor.jpg";
 import coleadpastor from "../assets/mainpageimages/coleadpastor.jpg";
+import mission from "../assets/mainpageimages/mission.jpg";
+import vision from "../assets/mainpageimages/vision.jpg";
+import mjkbackground from "../assets/mainpageimages/mjkbackground.jpg";
+import gallery1 from "../assets/mainpageimages/gallery1.jpg";
 
 
 
@@ -96,7 +100,7 @@ function Main() {
             <div className="mission-flex-image-container">
               <img
                 className="mission-img"
-                src="https://via.placeholder.com/500x440"
+                src={mission}
                 alt="Mission Image Placeholder"
               />{" "}
             </div>
@@ -122,14 +126,8 @@ function Main() {
               A central pillar of our mission revolves around the salvation of the lost and the intentional making of disciples.
              We recognize the urgency and importance of reaching out to those who have yet to experience the life-transforming grace of Christ. 
              Through evangelism, outreach programs, and a genuine concern for the well-being of others, we seek to bring the message of salvation to the lost. 
+             Our mission is not confined to the walls of our church; it extends into the lives of individuals, families, and communities. 
               </p>
-
-              <p className="mission-content__text">
-              Our mission is not confined to the walls of our church; it extends into the lives of individuals, families, and communities. 
-              We aspire to be a beacon of God's love, a place where encounters with His presence are commonplace, where the authority of His Word is upheld, and where lives 
-              are not only transformed but actively engaged in the mission of sharing the Good News and making disciples for the glory of God.
-              </p>
-
             </div>
           </div>
 
@@ -159,7 +157,7 @@ function Main() {
             <div className="vision-flex-image-container">
               <img
                 className="vision-img"
-                src="https://via.placeholder.com/500x440"
+                src={vision}
                 alt="Vision Image Placeholder"
               />{" "}
             </div>
