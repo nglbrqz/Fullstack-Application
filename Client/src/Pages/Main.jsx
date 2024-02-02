@@ -9,6 +9,11 @@ import MinistryCard from "../Components/MinistryCard";
 import ministriesData from "../JSON Data/ministries.json";
 import CoreValues from "../Components/CoreValues"
 
+import headpastor from "../assets/mainpageimages/headpastor.jpg";
+import coleadpastor from "../assets/mainpageimages/coleadpastor.jpg";
+
+
+
 function Main() {
   // This is used for refering to the parent component by both nav and footer components
   const HomeRef = useRef();
@@ -55,12 +60,12 @@ function Main() {
               </p>
             </div>
             <div className="founder-flex-image-container">
-              <img className="founder-img" src="" alt="" />
+              <img className="founder-img fit-image" src={headpastor} alt="Founder Image 1" />
             </div>
           </div>
           <div className="hero-container-founder-flex-wrapper" id="founder2">
             <div className="founder-flex-image-container">
-              <img className="founder-img" src="" alt="" />
+              <img className="founder-img" src={coleadpastor} alt="Founder Image 2" />
             </div>
             <div className="founder-flex-text-container">
               <h1 className="founder-title">Pastora Grace Magat</h1>
