@@ -21,9 +21,6 @@ const ConnectGroupCard = ({ connectgroup }) => {
       </div>
       <div className="connect-group-card-info">
         <div className="connect-group-card-text">
-          <p className="connect-group-text-title">
-            {connectgroup.title || "Default Title"}
-          </p>
         </div>
         <div className="connect-group-card-icon">
           <svg
