@@ -497,6 +497,7 @@ body {
 .vision-flex-text-container h3 {
   font-size: 2em;
   margin-bottom: 0.4em;
+  line-height: 1em;
 }
 
 .mission-flex-text-container p,
