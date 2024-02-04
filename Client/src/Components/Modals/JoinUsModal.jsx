@@ -16,7 +16,7 @@ const JoinUsModal = ({ joinusmodal, closeModal, joinLink }) => {
             <h2>{joinusmodal.title || "Default Category Title"}</h2>
             <p>{joinusmodal.description || "Default Category Description"}</p>
           </div>
-          <Link to={joinLink+"?a="+joinusmodal.Volunteerid+"&b=" || "/default-join-page"}>
+          <Link to={joinLink+"?a="+joinusmodal.Volunteerid+"&b="+joinusmodal.title || "/default-join-page"}>
           <button className="modal-join-btn">Join Now</button>
         </Link>
         </div>

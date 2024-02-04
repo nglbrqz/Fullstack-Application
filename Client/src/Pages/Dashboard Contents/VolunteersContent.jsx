@@ -1,11 +1,61 @@
- 
+import "./Dashboard Style/VolunteersContent.css";
+import { useState } from "react";
+import EventCard from "../Dashboard Contents/Dashboard Components/VolunteerCard";
+
+
 const VolunteersContent = () => {
+
+  const hardcodedVolunteerActivities = [
+    { volunteerActivityId: 1, 
+      volunteerActivityName: "Music and Production",
+      volunteerActivityDescription: "With our Music and Production Team at New Life Southwoods, you may express your creative potential while also serving a greater purpose. We are looking for passionate individuals that are fond of playing and singing instruments like guitar, drums, keyboard, bass, and vocals. ",
+    },
+
+    { volunteerActivityId: 2, 
+      volunteerActivityName: "Media and Creatives",
+      volunteerActivityDescription: "Join our church's Media and Creatives Team to pursue your calling to serve the Lord. We are looking for people who are skilled in photography, camera operation, clicker mastery, OBS, and can manage social media using Photoshop and video editing.",
+    },
+
+    { volunteerActivityId: 3, 
+      volunteerActivityName: "Ushers",
+      volunteerActivityDescription: "Serve the Lord by greeting visitors with a warm smile, maintaining the peace of our church community, or providing your medical expertise to help those in need.",
+    },
+
+    { volunteerActivityId: 4, 
+      volunteerActivityName: "Security",
+      volunteerActivityDescription: "Serve the Lord by greeting visitors with a warm smile, maintaining the peace of our church community, or providing your medical expertise to help those in need.",
+    },
+    
+    { volunteerActivityId: 5, 
+      volunteerActivityName: "Medical Team",
+      volunteerActivityDescription: "Serve the Lord by greeting visitors with a warm smile, maintaining the peace of our church community, or providing your medical expertise to help those in need.",
+    },
+  ];
+
+  const [volunteerActivities] = useState(hardcodedVolunteerActivities);
+
   return (
-    <div>
-      <h2>Volunteers Content</h2>
-      {/* Add your CRUD operations and other content for Volunteers */}
-    </div>
+    <>
+      <div className="vp-header-container">
+        <h1 className="vp-header-title">VOLUNTEERS</h1>
+      </div>
+      <div className="vp-event-container">
+        <div className="vp-header-wrapper">
+          <h2 id="vp-events-heading">Choose an Event</h2>
+        </div>
+        <div className="vp-event-wrapper">
+          {volunteerActivities.map((volunteerActivity) => (
+              <EventCard key={volunteerActivity.volunteerActivityId} 
+              volunteerActivity={volunteerActivity}
+              volunteerActivities={volunteerActivities}
+              />
+          ))}
+        </div>
+      </div>
+
+    </>
   );
 };
+
 
 export default VolunteersContent;

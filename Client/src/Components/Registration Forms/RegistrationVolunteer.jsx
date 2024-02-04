@@ -9,10 +9,11 @@ import { toast } from "react-hot-toast";
 const RegistrationVolunteer = () => {
   const queryParameters = new URLSearchParams(window.location.search)
   const aydee = queryParameters.get("a")
-  // const volunteerName = queryParameters.get("b") 
+  const volunteerName = queryParameters.get("b") 
 
   const [volunteerData, setVolunteerData] = useState({
     volunteerId: aydee,
+    volunteerName: volunteerName,
     name: '',
     age: '',
     sex: '',
