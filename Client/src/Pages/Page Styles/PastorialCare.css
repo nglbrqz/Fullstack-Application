@@ -48,8 +48,10 @@
 
 
 .pastorial-care-section-container{
-    height: auto;
-    padding: 50px;
+  display: flex;
+  justify-content: center;
+   height: auto;
+   padding: 50px;
 }
 
 .pastorial-care-request-container{

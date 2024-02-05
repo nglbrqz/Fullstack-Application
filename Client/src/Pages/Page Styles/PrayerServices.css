@@ -32,9 +32,10 @@
 }
 
 .prayer-section-container{
-   
-    height: auto;
-    padding: 50px;
+  display: flex;
+  justify-content: center;
+   height: auto;
+   padding: 50px;
 }
 
 .prayer-request-container{
