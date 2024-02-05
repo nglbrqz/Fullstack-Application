@@ -32,7 +32,8 @@
 }
 
 .prayer-section-container{
-   
+   display: flex;
+   justify-content: center;
     height: auto;
     padding: 50px;
 }

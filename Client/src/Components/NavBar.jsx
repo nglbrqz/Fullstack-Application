@@ -62,8 +62,8 @@ function NavBar({ AboutRef, colorScheme }) {
               About
             </a>{" "}
           </Link>
-          <Link to="/">
-            <a style={{ color: textColor }} href="/events">
+          <Link to="/events">
+            <a style={{ color: textColor }} href="">
               Events
             </a>{" "}
           </Link>

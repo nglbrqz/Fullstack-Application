@@ -9,6 +9,7 @@ import JoinUs from "./Pages/JoinUs";
 import RegistrationEvent from "./Components/Registration Forms/RegistrationEvent";
 import RegistrationConnectGroup from "./Components/Registration Forms/RegisterConnectGroup";
 import RegistrationVolunteer from "./Components/Registration Forms/RegistrationVolunteer";
+import Events from "./Pages/Events";
 
 import RegisterAdmin from "./Pages/RegisterAdmin";
 import { Toaster } from "react-hot-toast";
@@ -75,6 +76,8 @@ function App() {
           <Route path="/registrationconnectgroup" element={<RegistrationConnectGroup />} />
           <Route path="/registrationvolunteer" element={<RegistrationVolunteer />} />
           <Route path="/registeradmin" element={<RegisterAdmin />} />
+          <Route path="/events" element={<Events />} />
+
         </Routes>
       </BrowserRouter>
     </>

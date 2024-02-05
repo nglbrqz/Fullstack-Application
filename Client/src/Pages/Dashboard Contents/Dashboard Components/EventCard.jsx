@@ -5,8 +5,7 @@ import axios from "axios";
 import {
   faEdit,
   faTrashAlt,
-  faArchive,
-} from "@fortawesome/free-solid-svg-icons";
+ } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 import { toast } from "react-hot-toast";
 import ConfirmationModal from "./ConfirmationModal";
@@ -16,6 +15,7 @@ import { customModalStyles } from "../Dashboard Style/DashboardModalStyle";
 import EditEvents from "./EditEvents";
 
 const EventCard = ({ event, onDelete, onEditSuccess  }) => {
+  
   const [selectedRequestId, setSelectedRequestId] = useState(null);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [isArchiveModalOpen, setArchiveModalOpen] = useState(false);
@@ -60,10 +60,7 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
     setDeleteModalOpen(true);
   };
 
-  const handleArchiveClick = (id) => {
-    setSelectedRequestId(id);
-    setArchiveModalOpen(true);
-  };
+ 
 
   const handleEventModalOpen = () => {
     setEventModalOpen(true);
@@ -139,12 +136,7 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
         >
           <FontAwesomeIcon icon={faTrashAlt} />
         </div>
-        <div
-          className="icon-container"
-          onClick={() => handleArchiveClick(event._id)}
-        >
-          <FontAwesomeIcon icon={faArchive} />
-        </div>
+     
       </div>
       <div className="event-card-info">
         <div className="event-card-text">

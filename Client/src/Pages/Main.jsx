@@ -9,6 +9,8 @@ import MinistryCard from "../Components/MinistryCard";
 import ministriesData from "../JSON Data/ministries.json";
 import CoreValues from "../Components/CoreValues"
 
+
+
 function Main() {
   // This is used for refering to the parent component by both nav and footer components
   const HomeRef = useRef();
