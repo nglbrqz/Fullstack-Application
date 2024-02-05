@@ -124,7 +124,7 @@ body {
 
 @media (min-width: 1024px) {
   .hero-title {
-    font-size: 80px; /* Adjust font size for larger screens */
+    font-size: 100px; /* Adjust font size for larger screens */
   }
 }
 
@@ -168,6 +168,8 @@ body {
   font-size: 8rem;
   font-weight: 100;
   text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 15px;
 }
 
 .hero-container-welcome-section h2 {
@@ -307,7 +309,8 @@ body {
 
 
 .hero-container-about-section-description-text-container p {
-  margin-bottom: 2em;
+  font-size: 18px;
+  margin-bottom: 0.8em;
 }
 
 @media (max-width: 768px) {
@@ -488,7 +491,8 @@ body {
 
 .mission-flex-text-container h1,
 .vision-flex-text-container h1 {
-  font-size: 3em;
+  font-size: 5em;
+  letter-spacing: 2px;
   font-family: "Anton", sans-serif;
   text-transform: uppercase;
 }
@@ -496,13 +500,14 @@ body {
 .mission-flex-text-container h3,
 .vision-flex-text-container h3 {
   font-size: 2em;
+  
   margin-bottom: 0.4em;
   line-height: 1em;
 }
 
 .mission-flex-text-container p,
 .vision-flex-text-container p {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 768px) {

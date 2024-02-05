@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import PropTypes from "prop-types";
 import "../Pages/Page Styles/Main.css";
 import NavBar from "../Components/navBar"; 
 import Footer from "../Components/Footer";
@@ -15,6 +16,7 @@ import mission from "../assets/mainpageimages/mission.jpg";
 import vision from "../assets/mainpageimages/vision.jpg";
 import mjkbackground from "../assets/mainpageimages/mjkbackground.jpg";
 import gallery1 from "../assets/mainpageimages/gallery1.jpg";
+import { Link } from "react-router-dom";
 
 
 
@@ -232,8 +234,10 @@ function Main() {
             ))}
           </div>
 
-          <div className="hero-container-ministry-button">
-            <button className="ministry-button">VIEW MORE</button>
+           <div className="hero-container-ministry-button">
+            <Link to={"/joinus"}>
+              <button className="ministry-button">VIEW MORE</button>
+            </Link>
           </div>
         </div>
 

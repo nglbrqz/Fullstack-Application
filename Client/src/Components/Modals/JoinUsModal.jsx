@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./Modals.css";
 
-const JoinUsModal = ({ joinusmodal, closeModal, joinLink }) => {
+const JoinUsModal = ({ joinusmodal, closeModal, joinLink, source }) => {
   const stopPropagation = (e) => {
     e.stopPropagation();
   };
@@ -10,7 +10,18 @@ const JoinUsModal = ({ joinusmodal, closeModal, joinLink }) => {
   return (
     <div className="modal-container" onClick={closeModal}>
       <div className="modal-video-container" onClick={stopPropagation}>
-        <video className="modal-video" src={joinusmodal.videoUrl || ""} controls></video>
+      {source === 'volunteer' ? (
+        <img src={joinusmodal.imageUrl || ""} alt="Volunteer Image" />
+      ) : (
+        <iframe
+          className="modal-video"
+          src={joinusmodal.videoUrl || ""}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      )}
         <div className="modal-overlay-wrapper">
           <div className="modal-text-block">
             <h2>{joinusmodal.title || "Default Category Title"}</h2>
@@ -28,6 +39,7 @@ const JoinUsModal = ({ joinusmodal, closeModal, joinLink }) => {
 JoinUsModal.propTypes = {
   joinusmodal: PropTypes.shape({
     videoUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
   }).isRequired,

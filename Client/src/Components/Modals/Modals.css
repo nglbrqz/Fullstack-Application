@@ -12,20 +12,28 @@
             z-index: 3;
         }
 
-        .modal-video {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 25px;
-        }
-
         .modal-video-container {
           position: relative;
           overflow: hidden;
           border-radius: 25px;
           width: 70%; /* Adjust the width as needed */
           margin: 0 auto; 
-          padding-bottom: 30px;
+          padding-bottom: 50px;
+        }
+
+        .modal-video {
+            width: 100%;
+            height: 700px;
+            display: block;
+            border-radius: 25px;
+        }
+
+        .modal-video-container img {
+            width: 100%;
+            height: 700px;
+            display: block;
+            object-fit: cover;
+            margin-bottom: -50px;
         }
 
         .modal-overlay-wrapper {
@@ -89,6 +97,7 @@
                 font-size: 20px;
                 width: 230px;
             }
+
         }
 
         @media only screen and (max-width: 768px) {
@@ -111,5 +120,9 @@
             .modal-join-btn {
                 font-size: 15px;
                 width: 150px;
+            }
+
+            .modal-video-container img {
+                height: 400px;
             }
         }
