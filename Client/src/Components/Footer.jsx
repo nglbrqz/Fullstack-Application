@@ -40,13 +40,13 @@ function Footer({ HomeRef, AboutRef, FaqRef, ShowCard }) {
                 Make a Difference Today
               </h2>
               <h3 className="charity-box-card-container-section-sub-heading">
-                <span>Volunteer for our</span> <strong>Charity Program</strong>
+                <span>Join our</span> <strong>Church Initiatives</strong>
                 <span> and </span> <strong>Change Lives</strong>
               </h3>
             </div>
             <Link to="/donate">
               <button href="#" className="charity-box-card-button">
-                Join the Charity Program
+                WAYS TO GIVE
               </button>{" "}
             </Link>
           </div>
