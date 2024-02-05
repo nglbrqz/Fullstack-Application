@@ -59,6 +59,7 @@
   }
   
    .connect-group-card:hover {
+    color: white;
     box-shadow: 0 10px 20px 4px rgba(35, 35, 35, .1);
   }
   
