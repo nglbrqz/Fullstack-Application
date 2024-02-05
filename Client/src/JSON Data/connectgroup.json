@@ -3,30 +3,35 @@
       "Volunteerid": 1,
       "videoUrl": "video.mkv",
       "imageUrl": "https://i.postimg.cc/s21wNHT5/yc.png",
+      "title": "Youth Connect",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1."
     },
     {
       "Volunteerid": 2,
       "videoUrl": "video.mkv",
       "imageUrl": "https://i.postimg.cc/br16RG3M/sc.png",
+      "title": "Jubilant Connect",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
     },
     {
       "Volunteerid": 3,
       "videoUrl": "video.mkv",
       "imageUrl": "https://i.postimg.cc/pLsskMJ2/yac.png",
+      "title": "Young Adults Connect",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
     },
     {
       "Volunteerid": 4,
       "videoUrl": "video.mkv",
       "imageUrl": "https://i.postimg.cc/4xf8zxtL/cc.png",
+      "title": "Couples Connect",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
     },
     {
       "Volunteerid": 5,
       "videoUrl": "video.mkv",
       "imageUrl": "https://i.postimg.cc/CLHPBqZn/bc.png",
+      "title": "Basketball",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
     }
   ]
