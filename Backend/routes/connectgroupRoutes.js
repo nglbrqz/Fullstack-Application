@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 
-const { volunteer, getVolunteer, deleteVolunteer } = require("../controllers/volunteerController");
+const { connectgroup, getConnectgroup, deleteConnectgroup } = require("../controllers/connectgroupController");
 
 // MIDDLEWARE FOR CONNECTING THE ENDPOINTS BETWEEN FRONT END AND BACK END
 router.use(
@@ -12,7 +12,7 @@ router.use(
     })
   );
 
-router.post("/addvolunteer", volunteer);
-router.get("/getvolunteer", getVolunteer);
-router.delete("/deletevolunteer/:id", deleteVolunteer);
+router.post("/addconnectgroup", connectgroup);
+router.get("/getconnectgroup", getConnectgroup);
+router.delete("/deleteconnectgroup/:id", deleteConnectgroup);
 module.exports = router;

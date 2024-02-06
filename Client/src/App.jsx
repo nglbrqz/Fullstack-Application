@@ -10,6 +10,8 @@ import RegistrationEvent from "./Components/Registration Forms/RegistrationEvent
 import RegistrationConnectGroup from "./Components/Registration Forms/RegisterConnectGroup";
 import RegistrationVolunteer from "./Components/Registration Forms/RegistrationVolunteer";
 
+import ViewParticipantsModal from "./Pages/Dashboard Contents/Dashboard Components/ViewParticipantsModal";
+import VolunteersList from "./Pages/Dashboard Contents/Attendees List/VolunteersList";
 import RegisterAdmin from "./Pages/RegisterAdmin";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
@@ -75,6 +77,9 @@ function App() {
           <Route path="/registrationconnectgroup" element={<RegistrationConnectGroup />} />
           <Route path="/registrationvolunteer" element={<RegistrationVolunteer />} />
           <Route path="/registeradmin" element={<RegisterAdmin />} />
+          
+          <Route path="/ViewParticipantsModal" element={<ViewParticipantsModal />} />
+          <Route path="/VolunteersList" element={<VolunteersList />} />
         </Routes>
       </BrowserRouter>
     </>

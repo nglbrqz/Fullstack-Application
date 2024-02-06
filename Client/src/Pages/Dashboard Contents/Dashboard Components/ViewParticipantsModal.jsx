@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import "../Dashboard Component Styles/ViewParticipantsModal.css";
+import { Link } from "react-router-dom";
 
-
-const ViewParticipantsModal = ({ isVPModalOpen, onEventClose, event, volunteerActivities  }) => {
+const ViewParticipantsModal = ({ isVPModalOpen, onEventClose, event  }) => {
   if (!isVPModalOpen || !event) {
     return null;
   }
@@ -35,12 +35,14 @@ const ViewParticipantsModal = ({ isVPModalOpen, onEventClose, event, volunteerAc
                   </p>
                 </div>
                 <div className="vp-modal-button-container">
-                  <button className="vp-modal-display-volunteers-button">
-                    <span className="vp-modal-display-volunteers-button-span">
-                      {" "}
-                      VIEW PARTICIPANTS
-                    </span>
-                  </button>
+                  {/* <Link to="/VolunteersList"> */}
+                  <Link 
+                    to={"/VolunteersList"}
+                    state={{ volunteerActivityName: volunteerActivityName }}>
+                    <button className="vp-modal-display-volunteers-button">
+                      <span className="vp-modal-display-volunteers-button-span">VIEW PARTICIPANTS</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

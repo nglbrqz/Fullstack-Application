@@ -24,5 +24,6 @@ app.use('/auth', require('./routes/authRoutes'))
 app.use('/prayerrequests', require('./routes/prayerRoutes'));
 app.use('/event', require('./routes/eventRoutes'));
 app.use('/volunteer', require('./routes/volunteerRoutes'));
+app.use('/connectgroup', require('./routes/connectgroupRoutes'));
 
 

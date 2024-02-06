@@ -2,7 +2,6 @@ import "./Dashboard Style/VolunteersContent.css";
 import { useState } from "react";
 import EventCard from "../Dashboard Contents/Dashboard Components/VolunteerCard";
 
-
 const VolunteersContent = () => {
 
   const hardcodedVolunteerActivities = [

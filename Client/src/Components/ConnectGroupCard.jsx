@@ -49,6 +49,7 @@ const ConnectGroupCard = ({ connectgroup }) => {
 
 ConnectGroupCard.propTypes = {
   connectgroup: PropTypes.shape({
+    ConnectgroupId: PropTypes.number.isRequired,
     imageUrl: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
