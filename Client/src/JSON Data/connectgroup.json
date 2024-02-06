@@ -4,35 +4,35 @@
       "videoUrl": "https://www.youtube.com/embed/1MDvKtRVnx4?si=kFdEooYwm01AybJ3",
       "imageUrl": "https://i.postimg.cc/s21wNHT5/yc.png",
       "title": "Youth Connect",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1."
+      "description": "Strengthen your friendships with other youth while deepening your connection with God."
     },
     {
       "Volunteerid": 2,
       "videoUrl": "https://www.youtube.com/embed/zwB6diyN7PM?si=XvEarhLowNwRJXVR",
       "imageUrl": "https://i.postimg.cc/br16RG3M/sc.png",
       "title": "Jubilant Connect",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+      "description": "Jubilant Connect promotes a cheerful atmosphere among its members, emphasizing that it is never too late to serve the Lord and discover fulfillment. "
     },
     {
       "Volunteerid": 3,
       "videoUrl": "https://www.youtube.com/embed/y-Xqda_7V9o?si=TfSEJCMKeSgxej7C",
-      "imageUrl": "https://i.postimg.cc/pLsskMJ2/yac.png",
+      "imageUrl": "https://i.postimg.cc/bNK97jSj/gc-1.png",
       "title": "Gatekeeper Connect",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+      "description": "Our major purpose is to build a close-knit community of like-minded people by offering a platform for connectivity, skills partnership, and professional development."
     },
     {
       "Volunteerid": 4,
       "videoUrl": "https://www.youtube.com/embed/mKtrppV9Jww?si=x7rOWvgkh8j0UwoM",
       "imageUrl": "https://i.postimg.cc/4xf8zxtL/cc.png",
       "title": "Couples Connect",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+      "description": "Couples Connect is committed to strengthening connections among couples, whether they are dating, engaged, or married."
     },
     {
       "Volunteerid": 5,
       "videoUrl": "video.mkv",
-      "imageUrl": "https://i.postimg.cc/pLsskMJ2/yac.png",
-      "title": "Young Adults Connect",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+      "imageUrl": "https://i.postimg.cc/nVSk1mHr/bc-1.png",
+      "title": "Basketball Connect",
+      "description": "Basketball Connect, an engaging connect group that fosters relationships amongst basketball aficionados in nearby communities. "
     }
   ]
   
