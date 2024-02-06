@@ -12,6 +12,7 @@ import RegistrationVolunteer from "./Components/Registration Forms/RegistrationV
 
 import ViewParticipantsModal from "./Pages/Dashboard Contents/Dashboard Components/ViewParticipantsModal";
 import VolunteersList from "./Pages/Dashboard Contents/Attendees List/VolunteersList";
+import ConnectgroupList from "./Pages/Dashboard Contents/Attendees List/ConnectgroupList";
 import RegisterAdmin from "./Pages/RegisterAdmin";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
@@ -80,6 +81,7 @@ function App() {
           
           <Route path="/ViewParticipantsModal" element={<ViewParticipantsModal />} />
           <Route path="/VolunteersList" element={<VolunteersList />} />
+          <Route path="/ConnectgroupList" element={<ConnectgroupList />} />
         </Routes>
       </BrowserRouter>
     </>

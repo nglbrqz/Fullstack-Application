@@ -1,7 +1,7 @@
 /* PrayerRequestContent.css */
 .vcg-header h1{
     font-size: 70px;
-    
+    margin-left: 25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -16,11 +16,12 @@
 
  .vcg-filter {
   border: 1px solid black;
-  font-size: 11px;
+  font-size: 18px;
   padding: 8px;
   box-sizing: border-box;
-  width: 200px;
+  width: 230px;
   background-color: transparent;
+  margin-left: 25px;
  }
 
 .vcg-table {
@@ -53,8 +54,8 @@
 
     td:nth-child(1) {
         /* Change the value below to your desired width */
-        width: 100px;
-        max-width: 300px;
+        width: 400px;
+        max-width: 500px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -63,7 +64,7 @@
       td:nth-child(2) {
         /* Change the value below to your desired width */
         width: 150px;
-        max-width: 300px;
+        max-width: 200px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -71,8 +72,8 @@
 
     td:nth-child(3) {
         /* Change the value below to your desired width */
-        width: 450px;
-        max-width: 550px;
+        width: 300px;
+        max-width: 350px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

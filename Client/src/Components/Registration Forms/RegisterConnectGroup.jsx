@@ -7,13 +7,8 @@ import { toast } from "react-hot-toast";
 import  { useState } from "react";
 
 const RegistrationConnectGroup = () => {
-  const queryParameters = new URLSearchParams(window.location.search)
-  const id = queryParameters.get("a")
-  const connectgroupName = queryParameters.get("b") 
-
   const [connectgroupData, setConnectgroupData] = useState({
-    connectgroupId: id,
-    connectgroupName: connectgroupName,
+    connectgroupId: '',
     name: '',
     age: '',
     email: '',
@@ -48,7 +43,7 @@ const RegistrationConnectGroup = () => {
         toast.success('Your submission has been sent!');
   
         setConnectgroupData({
-          connectgroupId: id,
+          connectgroupId: '',
           name: '',
           age: '',
           email: '',
