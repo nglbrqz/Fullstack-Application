@@ -5,6 +5,7 @@ import "./Component Styles/VolunteerCard.css"; // Import the stylesheet
 
 const VolunteerCard = ({ volunteer }) => {
   const [showModal, setShowModal] = useState(false);
+  const [source, setSource] = useState('volunteer');
 
   function handleButtonClick() {
     setShowModal(true);
@@ -23,7 +24,8 @@ const VolunteerCard = ({ volunteer }) => {
           <JoinUsModal
           joinusmodal={volunteer}
           closeModal={() => setShowModal(false)}
-          joinLink="/registrationvolunteer/"
+          joinLink="/registrationvolunteer"
+          source={source} 
         />
       )}
       </div>

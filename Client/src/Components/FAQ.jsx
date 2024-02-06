@@ -65,29 +65,29 @@ const FAQ = () => {
 
 const FAQData = [
   {
-    question: "Why is the moon sometimes out during the day?",
+    question: "How many services do you have??",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.",
+      "We have 10:30 am, 1:30 pm, 3:30 pm, and 5:30 pm services on Sundays. We also have Midweek services on Wednesdays every 6:30 pm and Youth services on Saturdays every 4:30 pm.",
   },
   {
-    question: "Why is the sky blue?",
+    question: "Who are your Pastors?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.",
+      "Our Lead Pastor is Pastor James Magat, and our Co-lead Pastor is Pastora Grace Magat. We also invite speakers and pastors from other New Life branches to share the Word.",
   },
   {
-    question: "Will we ever discover aliens?",
+    question: "Where is your church located?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.",
+      "Our church is located on the 3rd Level of Southwoods Mall in Southwoods City Binan, Laguna.",
   },
   {
-    question: "How much does the Earth weigh?",
+    question: "How can I get involved in the church community?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.",
+      "There are various ways to get involved, such as joining a connect groups, volunteering, or attending church events. Feel free to reach out to our welcoming community for more details.",
   },
   {
-    question: "How do airplanes stay up?",
+    question: "How can I stay updated on church events and announcements?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.",
+      "Stay connected by following our social media channels or checking our website regularly for the latest updates and announcements.",
   },
 ];
 

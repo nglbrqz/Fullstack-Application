@@ -88,8 +88,16 @@ function Dashboard() {
               onClick={() => handleMenuClick("volunteers")}
             >
               <FontAwesomeIcon icon={faUsers} />
-              <p>Volunteers / Participants</p>
+              <p>Volunteers</p>
             </div>
+            <div
+              className="dashboard-menu-item"
+              onClick={() => handleMenuClick("prayer")}
+            >
+              <FontAwesomeIcon icon={faPrayingHands} />
+              <p>Participant</p>
+            </div>
+
             <div
               className="dashboard-menu-item"
               onClick={() => handleMenuClick("prayer")}

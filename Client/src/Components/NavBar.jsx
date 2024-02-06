@@ -62,8 +62,8 @@ function NavBar({ AboutRef, colorScheme }) {
               About
             </a>{" "}
           </Link>
-          <Link to="/">
-            <a style={{ color: textColor }} href="/events">
+          <Link to="/events">
+            <a style={{ color: textColor }} href="">
               Events
             </a>{" "}
           </Link>
@@ -78,7 +78,7 @@ function NavBar({ AboutRef, colorScheme }) {
             </span>
             {joinDropdownOpen && (
               <ul className="nav-dropdown-content">
-                <Link to="/joinus#ministry"> {/*Aayusin ko pa tu RAR */}
+                <Link to="/joinus#ministry"> 
                   <li>
                     <a  >Ministry</a>
                   </li>
@@ -112,6 +112,11 @@ function NavBar({ AboutRef, colorScheme }) {
                   <Link to="/prayer">
                     <a>Prayer Services</a>
                   </Link>
+                  <li>
+                  <Link to="/pastorialcare">
+                    <a>Pastorial Care Services</a>
+                  </Link>
+                </li>
                 </li>
               </ul>
             )}

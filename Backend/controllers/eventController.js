@@ -294,7 +294,9 @@ const editEvent = async (req, res) => {
     });
   }
 };
- 
+
+
+
 module.exports = {
   createEvent,
   uploadThumbnail, getEvents, deleteEvent,  archiveEvent, editEvent,

@@ -2,46 +2,51 @@
     {
       "ministryid": "1",
       "category": "Pastoral Care",
-      "imageUrl": "https://source.unsplash.com/600x400/?creative",
+      "imageUrl": "https://i.postimg.cc/N0p7VvkB/pastoral-care1.png",
       "description": [
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit..."
+        "",
+        "The Pastoral Care Ministry offers important ceremonies such as weddings, child dedications, house dedications, business dedications, and car dedications, all of which are officiated by our beloved head pastor.",
+        "In addition, we provide heartfelt support by conducting wake services and interments. Our mission is to arrange these important life events with understanding, respect, and spiritual guidance for our community."
       ],
       "pastor": {
-        "name": "John Doe",
-        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
-        "quote": "Si vis pacem, para bellum",
-        "pastorImage": "https://source.unsplash.com/600x400/?pastor1"
+        "name": "Pastor James and Pastora Grace Magat",
+        "details": "Our mission is clear – to arrange these important life events with utmost understanding, profound respect, and unwavering spiritual guidance. We believe that every ceremony, every moment, is an opportunity to experience the divine in the midst of our human experiences. May the Pastoral Care Ministry be a source of comfort, guidance, and love as we navigate these sacred milestones together.",
+        "quote": "Therefore, as we have opportunity, let us do good to all people, especially to those who belong to the family of believers. -Galatians 6:10 ",
+        "pastorImage": "https://i.postimg.cc/HLp9Bk56/pastoral-care2.png"
       }
     },
     {
       "ministryid": "2",
       "category": "Outreach",
-      "imageUrl": "https://source.unsplash.com/600x400/?technology",
+      "imageUrl": "https://i.postimg.cc/J48wMbW0/outreach1.png",
       "description": [
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit..."
+        "",
+        "The Outreach Ministry, committed to surpassing our church walls, is a symbol of compassion, seeking to cater to the physical needs of people while also addressing their emotional and spiritual well-being. ",
+        "During disasters, pandemics, and other difficult circumstances, our devotion stays steadfast as we strive to aid people in need, regardless of the circumstances. ", 
+        "Beyond basic outreach, our purpose is to have a lasting impression by instilling hope and support, reaffirming the notion that we can make a good difference in the lives of others."
       ],
       "pastor": {
-        "name": "Jane Smith",
-        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
-        "quote": "Innovation distinguishes between a leader and a follower",
-        "pastorImage": "https://source.unsplash.com/600x400/?pastor2"
+        "name": "Pastor Carlo Antonio",
+        "details": "In the spirit of genuine compassion, the Outreach Ministry endeavors to not only meet the physical needs of individuals but also to address the intricate tapestry of their emotional and spiritual well-being. It serves as a symbol of our dedication to living out the teachings of Christ by actively reaching out to those in need.",
+        "quote": "And do not forget to do good and to share with others, for with such sacrifices God is pleased. -Hebrews 13:16",
+        "pastorImage": "https://i.postimg.cc/PfYGgS90/outreach2.png"
       }
     },
     {
       "ministryid": "3",
-      "category": "Kids & Junior YOuth",
-      "imageUrl": "https://source.unsplash.com/600x400/?community",
+      "category": "Kids & Junior Youth",
+      "imageUrl": "https://i.postimg.cc/W4wFYmjZ/kids1.png",
       "description": [
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit..."
+        "",
+        "Kids and Jr. Youth Ministry is dedicated to developing a deep relationship with God's Word from a young age. ",
+        "We want to help children develop a meaningful relationship with faith by encouraging continuous prayer, active participation in worship, and the embrace of principles that promote compassion and moral integrity. ",
+        "Our commitment is to provide the kids with the necessary tools to navigate life, based on faith, love, and a commitment to goodwill."
       ],
       "pastor": {
-        "name": "Sam Williams",
-        "details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit...",
-        "quote": "The best way to find yourself is to lose yourself in the service of others",
-        "pastorImage": "https://source.unsplash.com/600x400/?pastor3"
+        "name": "Pastora Yen Manalo-Antonio",
+        "details": "With a strong focus on developing a deep relationship with God's Word, we aim to lay a lasting foundation for their faith journey. Through continuous prayer, active participation in worship, and the instillation of principles that promote compassion and moral integrity, our ministry seeks to create a meaningful connection with faith from an early age",
+        "quote": "Let the little children come to me, and do not hinder them, for the kingdom of God belongs to such as these. -Mark 10:14",
+        "pastorImage": "https://i.postimg.cc/k5mRyYr9/kids2.png"
       }
     }
   ]

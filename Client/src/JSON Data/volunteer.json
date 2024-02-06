@@ -3,35 +3,31 @@
     "Volunteerid": 1,
     "videoUrl": "video.mkv",
     "imageUrl": "https://github.com/jmmarcuis/Fullstack-Application/blob/12/01/25/Fullstack%20Project/src/assets/siteimages/donationpage/volunteerimg/media%20and%20creatives.png",
-    "title": "Music and Production Team",
-    "description": "With our Music and Production Team at New Life Southwoods, you may express your creative potential while also serving a greater purpose. We are looking for passionate individuals that are fond of playing and singing instruments like guitar, drums, keyboard, bass, and vocals. Join us in worshiping the Lord on stage with your musical talents. Apply today and join an enthusiastic group devoted to excellence, worship, and service."
+    "title": "Volunteer Title 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1."
   },
   {
     "Volunteerid": 2,
-    "videoUrl": "video.mkv",
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Media and Creatives Team",
-    "description": "Join our church's Media and Creatives Team to pursue your calling to serve the Lord. We are looking for people who are skilled in photography, camera operation, clicker mastery, OBS, and can manage social media using Photoshop and video editing. If you have the desire to use your talents to contribute to the church's mission, we encourage you to apply and become a valuable member of our growing team."
+    "title": "Volunteer Title 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
   },
   {
     "Volunteerid": 3,
-    "videoUrl": "video.mkv",
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Usher",
+    "title": "Volunteer Title 2",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
   },
   {
     "Volunteerid": 4,
-    "videoUrl": "video.mkv",
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Security",
+    "title": "Volunteer Title 2",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
   },
   {
     "Volunteerid": 5,
-    "videoUrl": "video.mkv",
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Medical Team",
+    "title": "Volunteer Title 2",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
   }
 ]

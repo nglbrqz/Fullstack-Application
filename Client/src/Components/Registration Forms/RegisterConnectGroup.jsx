@@ -112,7 +112,7 @@ const RegistrationConnectGroup = () => {
               <option value="youth">Youth Connect</option>
               <option value="jubilant">Jubilant Connect</option>
               <option value="young-adults">Young Adults Connect</option>
-              <option value="couples">Couples Connect</option>\
+              <option value="couples">Couples Connect</option>
               <option value="basketball">Basketball Connect</option>
             </select>
           </div>

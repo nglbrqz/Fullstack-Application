@@ -5,10 +5,12 @@ import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import Donation from "./Pages/Donation";
 import PrayerService from "./Pages/PrayerService";
+import PastorialCareService from "./Pages/PastorialCare";
 import JoinUs from "./Pages/JoinUs";
 import RegistrationEvent from "./Components/Registration Forms/RegistrationEvent";
 import RegistrationConnectGroup from "./Components/Registration Forms/RegisterConnectGroup";
 import RegistrationVolunteer from "./Components/Registration Forms/RegistrationVolunteer";
+import Events from "./Pages/Events";
 
 import ViewParticipantsModal from "./Pages/Dashboard Contents/Dashboard Components/ViewParticipantsModal";
 import VolunteersList from "./Pages/Dashboard Contents/Attendees List/VolunteersList";
@@ -66,6 +68,7 @@ function App() {
           <Route path="/login" element={<Login handleLogin={handleLogin} />} />
           <Route path="/donate" element={<Donation />} />
           <Route path="/prayer" element={<PrayerService />} />
+          <Route path="/pastorialcare" element={<PastorialCareService />} />
           {/* Use a Route component for conditional rendering */}
           <Route
             path="/dashboard"

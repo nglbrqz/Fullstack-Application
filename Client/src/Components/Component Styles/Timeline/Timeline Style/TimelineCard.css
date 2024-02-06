@@ -1,0 +1,49 @@
+.timeline-card {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.timeline-card:hover {
+    background-color: #5EC3AB;
+}
+
+.timeline-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.timeline-date-container {
+    max-height: 100px;
+    max-width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: black;
+    margin-right: 20px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.timeline-date-container h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 1em;
+}
+
+.timeline-title {
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 7px;
+
+}
