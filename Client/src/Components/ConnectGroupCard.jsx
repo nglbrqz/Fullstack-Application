@@ -21,14 +21,12 @@ const ConnectGroupCard = ({ connectgroup }) => {
       </div>
       <div className="connect-group-card-info">
         <div className="connect-group-card-text">
-          <p className="connect-group-text-title">
-            {connectgroup.title || "Default Title"}
-          </p>
         </div>
         <div className="connect-group-card-icon">
           <svg
             viewBox="0 0 28 25"
             className="connect-group-icon"
+            fill="white"
             onClick={handleButtonClick}
           >
             <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>

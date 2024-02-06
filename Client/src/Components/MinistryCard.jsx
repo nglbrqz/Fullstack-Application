@@ -42,7 +42,7 @@ const MinistryCard = ({ data }) => {
                 className="ministry-category-close-button"
                 onClick={closeModal}
               >
-                X
+                x
               </div>
             </div>
             <div className="ministry-category-modal-wrapper" id="category">

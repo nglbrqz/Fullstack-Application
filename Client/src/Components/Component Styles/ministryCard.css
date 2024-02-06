@@ -63,8 +63,6 @@
 }
 
 
- 
-
 .ministry-category-modal-overlay {
   position: fixed;
   top: 0;
@@ -79,16 +77,16 @@
 }
 
 .ministry-category-modal-content {
-    z-index: 99;
+  z-index: 99;
   background: #ffffff;
-  padding: 30px;
-  border-radius: 5px;
-  height: 600px; /* You can adjust this height based on your preference */
+  padding: 20px 40px;
+  border-radius: 25px;
   max-height: 80vh; /* Set a maximum height */
-  width: 650px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   overflow-y: auto; /* Enable vertical scrolling */
+  gap: 20px;
 }
 
 .ministry-category-modal-wrapper {
@@ -99,9 +97,10 @@
 }
 
 .ministry-category-modal-image-container {
-  width: 230px;
+  width: 350px;
   height: 270px;
   border: 2px solid black;
+  margin-bottom: 10px;
 }
 
 .ministry-category-image-container img {
@@ -114,7 +113,7 @@
     flex-direction: column;
      align-items: flex-start; /* Align at the beginning horizontally */
     text-align: left;
-    width: 340px;
+    width: 100%;
 }
 
 .ministry-category-button-wrapper {
@@ -129,12 +128,16 @@
 }
 
 .ministry-pastor-name, .ministry-category-title{
-    font-size: 1em;
+    font-size: 2em;
     margin-bottom: -0.2rem;
 }
 
+.ministry-pastor-name {
+    margin-bottom: 5px;
+}
+
 .ministry-category-description, .ministry-pastor-details{
-    font-size: 0.8em;
+    font-size: 0.95em;
   
 }
 
@@ -149,19 +152,21 @@
 .ministry-pastor-quote{
     font-weight: 200;
     font-style: italic;
-    font-size: 0.65em;
+    font-size: 0.9em;
     margin-top: 10px;
 }
 
 .ministry-category-modal-header {
     display: flex;
-    justify-content: flex-end;  }
+    justify-content: flex-end; 
+    margin: -10px; 
+  }
   
   .ministry-category-close-button {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bolder;
     color: #000000; /* Adjust the color as needed */
-    margin-right: 10px;
   }
   
 
@@ -175,7 +180,7 @@
 
 @media (max-width: 768px) {
   .ministry-category-modal-content {
-    width: 100%;
+    width: 90%;
     /* Make it take full width on smaller screens */
     height: auto;
   }
@@ -191,8 +196,12 @@
    }
 
    .ministry-category-modal-image-container{
-    margin-bottom: -70px;
+      margin-bottom: -70px;
    }
+   .ministry-pastor-name, .ministry-category-title {
+      color: white;
+   }
+
 
   .ministry-category-button-wrapper {
     flex: 0 0 auto;

@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import PropTypes from "prop-types";
 import "../Pages/Page Styles/Main.css";
 import NavBar from "../Components/navBar"; 
 import Footer from "../Components/Footer";
@@ -8,6 +9,14 @@ import EventGallery from "../Components/EventGallery";
 import MinistryCard from "../Components/MinistryCard";
 import ministriesData from "../JSON Data/ministries.json";
 import CoreValues from "../Components/CoreValues"
+
+import headpastor from "../assets/mainpageimages/headpastor.jpg";
+import coleadpastor from "../assets/mainpageimages/coleadpastor.jpg";
+import mission from "../assets/mainpageimages/mission.jpg";
+import vision from "../assets/mainpageimages/vision.jpg";
+import mjkbackground from "../assets/mainpageimages/mjkbackground.jpg";
+import gallery1 from "../assets/mainpageimages/gallery1.jpg";
+import { Link } from "react-router-dom";
 
 
 
@@ -22,15 +31,24 @@ function Main() {
      
         <div ref={HomeRef} className="hero-header-container">
           <NavBar  AboutRef={AboutRef}/>
-          <div className="header-text-container">
-            <h1 className="hero-title">MAKING JESUS KNOWN</h1>
+          <div
+            className="header-text-container"
+            style={{
+              background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${mjkbackground}) center center/cover no-repeat`,
+            }}
+          >  
+        <h1 className="hero-title">MAKING JESUS KNOWN</h1>
           </div>
         </div>
 
         {/*Welcome part */}
         <div className="hero-container-welcome-section">
           <h1>Be a part of the New Life Southwoods Family</h1>
-          <div className="video-placeholder"></div>
+          <iframe className="video-placeholder" 
+          src="https://www.youtube.com/embed/dfRqYHLanU4?si=KXMR46y-613oQjcc" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+          gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         {/*Info of pastors */}
@@ -57,12 +75,12 @@ function Main() {
               </p>
             </div>
             <div className="founder-flex-image-container">
-              <img className="founder-img" src="" alt="" />
+              <img className="founder-img fit-image" src={headpastor} alt="Founder Image 1" />
             </div>
           </div>
           <div className="hero-container-founder-flex-wrapper" id="founder2">
             <div className="founder-flex-image-container">
-              <img className="founder-img" src="" alt="" />
+              <img className="founder-img" src={coleadpastor} alt="Founder Image 2" />
             </div>
             <div className="founder-flex-text-container">
               <h1 className="founder-title">Pastora Grace Magat</h1>
@@ -93,7 +111,7 @@ function Main() {
             <div className="mission-flex-image-container">
               <img
                 className="mission-img"
-                src="https://via.placeholder.com/500x440"
+                src={mission}
                 alt="Mission Image Placeholder"
               />{" "}
             </div>
@@ -119,14 +137,8 @@ function Main() {
               A central pillar of our mission revolves around the salvation of the lost and the intentional making of disciples.
              We recognize the urgency and importance of reaching out to those who have yet to experience the life-transforming grace of Christ. 
              Through evangelism, outreach programs, and a genuine concern for the well-being of others, we seek to bring the message of salvation to the lost. 
+             Our mission is not confined to the walls of our church; it extends into the lives of individuals, families, and communities. 
               </p>
-
-              <p className="mission-content__text">
-              Our mission is not confined to the walls of our church; it extends into the lives of individuals, families, and communities. 
-              We aspire to be a beacon of God's love, a place where encounters with His presence are commonplace, where the authority of His Word is upheld, and where lives 
-              are not only transformed but actively engaged in the mission of sharing the Good News and making disciples for the glory of God.
-              </p>
-
             </div>
           </div>
 
@@ -156,7 +168,7 @@ function Main() {
             <div className="vision-flex-image-container">
               <img
                 className="vision-img"
-                src="https://via.placeholder.com/500x440"
+                src={vision}
                 alt="Vision Image Placeholder"
               />{" "}
             </div>
@@ -231,8 +243,10 @@ function Main() {
             ))}
           </div>
 
-          <div className="hero-container-ministry-button">
-            <button className="ministry-button">VIEW MORE</button>
+           <div className="hero-container-ministry-button">
+            <Link to={"/joinus"}>
+              <button className="ministry-button">VIEW MORE</button>
+            </Link>
           </div>
         </div>
 
