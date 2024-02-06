@@ -2,31 +2,31 @@
   {
     "Volunteerid": 1,
     "imageUrl": "https://i.postimg.cc/nVSk1mHr/bc-1.png",
-    "title": "Volunteer Title 1",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1."
+    "title": "Music and Production Team",
+    "description": "Join us in worshiping the Lord on stage with your musical talents. Apply today and join an enthusiastic group devoted to excellence, worship, and service."
   },
   {
     "Volunteerid": 2,
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Volunteer Title 2",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+    "title": "Media and Creatives Team",
+    "description": "We are looking for people who are skilled in photography, camera operation, clicker mastery, OBS, and can manage social media using Photoshop and video editing. If you have the desire to use your talents to contribute to the church's mission, we encourage you to apply and become a valuable member of our growing team."
   },
   {
     "Volunteerid": 3,
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Volunteer Title 2",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+    "title": "Usher Team",
+    "description": "Serve the Lord by greeting visitors with a warm smile."
   },
   {
     "Volunteerid": 4,
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Volunteer Title 2",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+    "title": "Security Team",
+    "description": "Join our team and help maintain the peace of our church community."
   },
   {
     "Volunteerid": 5,
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Volunteer Title 2",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+    "title": "Medical Team",
+    "description": "If you're interested in providing your medical expertise to help those in need, make a significant contribution with us today."
   }
 ]
