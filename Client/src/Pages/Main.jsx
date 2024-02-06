@@ -31,15 +31,24 @@ function Main() {
      
         <div ref={HomeRef} className="hero-header-container">
           <NavBar  AboutRef={AboutRef}/>
-          <div className="header-text-container">
-            <h1 className="hero-title">MAKING JESUS KNOWN</h1>
+          <div
+            className="header-text-container"
+            style={{
+              background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${mjkbackground}) center center/cover no-repeat`,
+            }}
+          >  
+        <h1 className="hero-title">MAKING JESUS KNOWN</h1>
           </div>
         </div>
 
         {/*Welcome part */}
         <div className="hero-container-welcome-section">
           <h1>Be a part of the New Life Southwoods Family</h1>
-          <div className="video-placeholder"></div>
+          <iframe className="video-placeholder" 
+          src="https://www.youtube.com/embed/dfRqYHLanU4?si=KXMR46y-613oQjcc" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+          gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         {/*Info of pastors */}

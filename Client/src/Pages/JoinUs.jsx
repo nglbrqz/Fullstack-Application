@@ -7,6 +7,7 @@ import joinusministryData from "../JSON Data/joinusministries.json";
 import VolunteerCard from "../Components/VolunteerCard";
 import ConnectGroupCard from "../Components/ConnectGroupCard";
 import MinistryCard from "../Components/JoinUsMinistryCard";
+import joinus from "../assets/siteimages/donationpage/joinus.jpg";
 const JoinUs = () => {
   return (
     <>
@@ -20,7 +21,7 @@ const JoinUs = () => {
             <h1>Join Us</h1>
           </div>
           <div className="main-section-image-container">
-            <img src="" alt="" />
+            <img src={joinus} alt="" />
           </div>
         </div>
       </div>

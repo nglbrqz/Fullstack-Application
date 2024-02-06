@@ -67,7 +67,11 @@ const pastorialcareService = () => {
         <div className="pastorial-care-text-container">
           <div className="pastorial-care-text-wrapper">
             <div className="pastorial-video-container">
-              <video className="pastorial-video" src="" placeholder="Video" controls></video>
+              <iframe className="pastorial-video"w 
+              src="https://www.youtube.com/embed/gKcxpNsaZRg?si=O8H92gZTc5BKDtTC" 
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+              gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <h1 className="pastorial-care-title">Pastorial Care REQUEST</h1>
           </div>
