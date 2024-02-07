@@ -59,14 +59,14 @@ function Footer({ HomeRef, AboutRef, FaqRef, ShowCard }) {
             </div>
             <div className="footer-social-icons">
               <a
-                href="https://www.facebook.com/your-facebook-page"
+                href="https://www.facebook.com/Nlsouthwoods/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
               </a>
               <a
-                href="https://www.instagram.com/your-instagram-account"
+                href="https://www.instagram.com/newlifesouthwoods/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
               >

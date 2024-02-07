@@ -3,7 +3,7 @@ const router = express.Router();
 const cors = require("cors");
 
 const {
-    registerVolunteer, getAllVolunteersForEvent 
+    registerVolunteer, getAllVolunteersForEvent, deleteVolunteer
 } = require("../controllers/registerEventController")
 
 router.use(
@@ -14,7 +14,7 @@ router.use(
   );
  
 router.post("/registervolunteer", registerVolunteer);
-router.get("/volunteers/:eventId", getAllVolunteersForEvent);
-
+ router.get("/volunteers/:eventId", getAllVolunteersForEvent);
+ router.delete("/deleteEventVolunteer/:id", deleteVolunteer);
   
 module.exports = router;

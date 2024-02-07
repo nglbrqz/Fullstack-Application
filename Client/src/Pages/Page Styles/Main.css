@@ -560,6 +560,7 @@ body {
 
 .hero-container-faq-section, .hero-container-ministry-container {
   padding: 50px;
+  margin-bottom: 40px;
   height: auto;
 }
 

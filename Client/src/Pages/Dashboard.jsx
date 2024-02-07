@@ -19,6 +19,7 @@ import ConnectGroupsContent from "./Dashboard Contents/ConnectGroupsContent";
 import PrayerRequestContent from "./Dashboard Contents/PrayerRequestContent";
 import VolunteersContent from "./Dashboard Contents/VolunteersContent";
 
+import EventList from "./Dashboard Contents/Attendees List/EventList";
 import ConnectgroupList from"./Dashboard Contents/Attendees List/ConnectgroupList"
 import VolunteersList from "./Dashboard Contents/Attendees List/VolunteersList"
 
@@ -202,7 +203,7 @@ function Dashboard() {
           {selectedMenu === "connectGroups" && <ConnectGroupsContent />}
           {selectedMenu === "volunteerlist" && <VolunteersList />}
           {selectedMenu === "connectgrouplist" && <ConnectgroupList />}
-          {selectedMenu === "eventslist" && <ConnectgroupList />}
+          {selectedMenu === "eventslist" && <EventList />}
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Component Styles/eventGallery.css";
 import jsonData from "../JSON Data/gallery.json";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,10 +29,12 @@ const Gallery = () => {
                 alt={`Gallery Image ${currentIndex + 1}`}
               />
             </div>
-
+            <Link to="/events">
             <button className="link-button" role="button">
               VIEW MORE
             </button>
+            </Link>
+
           </div>
         </div>
         <div className="event-gallery-carousel-indicator">

@@ -6,6 +6,8 @@
 .faq-container{
   max-width: 600px;
   margin: 0 auto;
+  margin-bottom: 140px;
+
 }
 
 .faq{
@@ -17,7 +19,9 @@
   position: relative;
   overflow: hidden;
   transition: all .4s ease;
+
 }
+
 
 .faq.active{
   background-color: #5EC3AB;

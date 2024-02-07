@@ -11,6 +11,8 @@ const eventVolunteerSchema = new Schema({
         required: true
     },
     name: String,
+        sex: String,
+
     age: {
         type: Number,
         required: true // Make age required

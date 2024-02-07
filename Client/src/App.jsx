@@ -14,6 +14,8 @@ import RegistrationConnectGroup from "./Components/Registration Forms/RegisterCo
 import RegistrationVolunteer from "./Components/Registration Forms/RegistrationVolunteer";
 import Events from "./Pages/Events";
 
+import EventList from "./Pages/Dashboard Contents/Attendees List/EventList";
+
 import ViewParticipantsModal from "./Pages/Dashboard Contents/Dashboard Components/ViewParticipantsModal";
 import VolunteersList from "./Pages/Dashboard Contents/Attendees List/VolunteersList";
 import ConnectgroupList from "./Pages/Dashboard Contents/Attendees List/ConnectgroupList";
@@ -88,7 +90,9 @@ function App() {
 
           <Route path="/ViewParticipantsModal" element={<ViewParticipantsModal />} />
           <Route path="/VolunteersList" element={<VolunteersList />} />
-          <Route path="/ConnectgroupList" element={<ConnectgroupList />} />
+          <Route path="/ConnectgroupList" element={<ConnectgroupList />} />          
+          <Route path="/EventVolunteerList" element={<EventList />} />
+
         </Routes>
       </BrowserRouter>
     </>

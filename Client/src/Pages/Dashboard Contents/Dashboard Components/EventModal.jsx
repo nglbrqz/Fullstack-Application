@@ -1,16 +1,14 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
-import { toast } from "react-hot-toast";
-import { faEdit, faTrashAlt, faClose } from "@fortawesome/free-solid-svg-icons";
+
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
 import "../Dashboard Component Styles/EventModal.css";
-import ConfirmationModal from "./ConfirmationModal";
+import EventList from "../Attendees List/EventList";
 
-const EventModal = ({ isEventOpen, onClose, event, onDelete }) => {
-  const [selectedRequestId, setSelectedRequestId] = useState(null);
-  const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
+const EventModal = ({ onClose, event, eventId }) => {
+  const [isEventListOpen, setIsEventListOpen] = useState(false); // State to control EventList modal visibility
 
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -26,32 +24,9 @@ const EventModal = ({ isEventOpen, onClose, event, onDelete }) => {
     };
   }, [onClose]);
 
-  const handleDeleteClick = (id) => {
-    setSelectedRequestId(id);
-    setDeleteModalOpen(true);
+  const toggleEventListModal = () => {
+    setIsEventListOpen(!isEventListOpen);
   };
-
-  const handleDeleteCancel = () => {
-    setSelectedRequestId(null);
-    setDeleteModalOpen(false);
-  };
-
-
-  
-  const handleDeleteConfirm = async () => {
-    try {
-      const response = await axios.delete(
-        `/event/deleteeventid/${selectedRequestId}`
-      );
-      toast.success(response.data.message);
-      onDelete(selectedRequestId);
-      setDeleteModalOpen(false);
-    } catch (error) {
-      toast.error("Error deleting event");
-    }
-  };
-
-  
 
   return (
     <>
@@ -67,15 +42,6 @@ const EventModal = ({ isEventOpen, onClose, event, onDelete }) => {
           <div className="event-modal-content-container">
             <div className="event-modal-content-container-wrapper">
               <div className="event-modal-icons">
-                <div className="icon-container">
-                  <FontAwesomeIcon icon={faEdit} />
-                </div>
-                <div
-                  className="icon-container"
-                  onClick={() => handleDeleteClick(event._id)}
-                >
-                  <FontAwesomeIcon icon={faTrashAlt} />
-                </div>
                 <div className="icon-container" onClick={onClose}>
                   <FontAwesomeIcon icon={faClose} />
                 </div>
@@ -96,7 +62,10 @@ const EventModal = ({ isEventOpen, onClose, event, onDelete }) => {
                   {event.eventDescription}
                 </p>
                 <div className="event-modal-button-container">
-                  <button className="event-modal-display-volunteers-button">
+                  <button
+                    className="event-modal-display-volunteers-button"
+                    onClick={toggleEventListModal}
+                  >
                     <span className="event-modal-display-volunteers-button-span">
                       {" "}
                       VIEW PARTICIPANTS
@@ -108,15 +77,12 @@ const EventModal = ({ isEventOpen, onClose, event, onDelete }) => {
           </div>
         </div>
       </div>
-      <Modal
-        isOpen={isEventOpen}
-        onRequestClose={onClose}
-        contentLabel="Event Modal"
-      >
-        <ConfirmationModal
-          isOpen={isDeleteModalOpen}
-          onCancel={handleDeleteCancel}
-          onConfirm={handleDeleteConfirm}
+
+      <Modal isOpen={isEventListOpen} onRequestClose={toggleEventListModal}>
+        <EventList
+          event={event}
+          eventId={eventId}
+          onClose={toggleEventListModal}
         />
       </Modal>
     </>
@@ -137,6 +103,7 @@ EventModal.propTypes = {
     eventHost: PropTypes.string.isRequired,
     eventLocation: PropTypes.string.isRequired,
   }).isRequired,
+  eventId: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
 

@@ -127,16 +127,20 @@ function NavBar({ AboutRef, colorScheme }) {
             <button className="navbar-donate-button">Donate</button>
           </Link>
           <div className="nav-social-icons" style={{ color: textColor }}>
-            <FontAwesomeIcon
-              style={{ color: textColor }}
-              icon={faFacebook}
-              className="facebook-icon"
-            />
-            <FontAwesomeIcon
-              style={{ color: textColor }}
-              icon={faInstagram}
-              className="instagram-icon"
-            />
+             <a href="https://www.facebook.com/Nlsouthwoods/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon
+                style={{ color: textColor }}
+                icon={faFacebook}
+                className="facebook-icon"
+              />
+            </a>
+            <a href="https://www.instagram.com/newlifesouthwoods/?hl=en" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon
+                style={{ color: textColor }}
+                icon={faInstagram}
+                className="instagram-icon"
+              />
+            </a>
           </div>
         </div>
       </nav>

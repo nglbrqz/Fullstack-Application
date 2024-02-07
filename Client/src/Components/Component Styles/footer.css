@@ -101,11 +101,11 @@
   width: 100%;
   position: relative;
   background: #1e6353;
-  padding: 150px 25px 50px 25px;
+  padding: 70px 25px 50px 25px;
 }
 
 .footer-logo-container img {
-  margin-bottom: -20px;
+  margin-bottom: 10px;
   width: 180px;
   height: auto;
 }

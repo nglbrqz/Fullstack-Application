@@ -92,7 +92,7 @@ const EventCard = ({ event, onDelete, onEditSuccess }) => {
     event.eventDate.substring(0, 4);
 
   return (
-    <div className="event-card">
+    <div className="event-card" >
       <div className="event-card-img">
         <img
           src={event.eventThumbnailImageUrl}
@@ -162,7 +162,11 @@ const EventCard = ({ event, onDelete, onEditSuccess }) => {
         contentLabel="Event Details"
         style={customModalStyles}
       >
-        <EventModal event={event} onClose={handleEventModalClose} />
+        <EventModal
+          event={event}
+          eventId={event._id}
+          onClose={handleEventModalClose}
+        />
       </Modal>
     </div>
   );

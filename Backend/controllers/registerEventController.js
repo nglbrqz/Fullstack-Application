@@ -61,4 +61,21 @@ const getAllVolunteersForEvent = async (req, res) => {
   }
 };
 
-module.exports = { registerVolunteer, getAllVolunteersForEvent };
+const deleteVolunteer = async (req, res) => {
+  try {
+    const { id } = req.params;
+    // Find the volunteer by ID and delete it
+    await EventVolunteer.findByIdAndDelete(id);
+    res.json({ message: "Volunteer deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting volunteer:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+ 
+
+module.exports = { registerVolunteer, getAllVolunteersForEvent, deleteVolunteer };
+
+
+ 
