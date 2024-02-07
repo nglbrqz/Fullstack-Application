@@ -183,9 +183,9 @@ const EventCard = ({ event, onDelete, onEditSuccess }) => {
         <div>
           <EditEvents
             onCloseModal={closeModal}
-            closeModal={closeModal}
-            eventId={event._id}
+             eventId={event._id}
             formData={formData}
+            isOpen={modalIsOpen}
             onEditSuccess={onEditSuccess}
           />
         </div>
