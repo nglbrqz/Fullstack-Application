@@ -41,27 +41,6 @@ const ConnectgroupList = () => {
   }, [connectgroupActivityName, connectgroups]);
 
 
-
-  // useEffect(() => {
-  //   const fetchConnectgroups = async () => {
-  //     try {
-  //       const response = await axios.get("/connectgroup/getconnectgroup");
-  //       setConnectgroups(response.data);
-  //       setfilteredConnectgroups(response.data); // Set filtered volunteers initially to all volunteers
-  //     } catch (error) {
-  //       console.error("Error fetching connectgroups:", error);
-  //     }
-  //   };
-    
-  //   fetchConnectgroups();
-  // }, []); // Fetch connectgroups only once when the component mounts
-
-  // useEffect(() => {
-  //   // Trigger filter change when component mounts to display volunteer list based on initial filter
-  //   handleFilterChange(connectgroupActivityName);
-  // }, [connectgroupActivityName]);
-
-
   
 
   const handleFilterChange = (filter) => {
