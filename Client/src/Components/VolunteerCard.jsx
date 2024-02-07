@@ -16,8 +16,8 @@ const VolunteerCard = ({ volunteer }) => {
       <div className="volunteer-card-container">
         <img
           onClick={handleButtonClick}
-          src="{volunteer.imageUrl}"
-           className="volunteer-card-image"
+          src={volunteer.thumbnail}
+          className="volunteer-card-image"
         />
 
         {showModal && (
@@ -36,6 +36,7 @@ const VolunteerCard = ({ volunteer }) => {
 VolunteerCard.propTypes = {
   volunteer: PropTypes.shape({
     VolunteerId: PropTypes.number.isRequired,
+    thumbnail: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
