@@ -6,6 +6,7 @@ import Modal from "react-modal";
 import EventTimelineModal from "./EventTimelineModal";
 import { customModalStyles } from "../../../Pages/Dashboard Contents/Dashboard Style/DashboardModalStyle";
 
+
 const ChurchEventContainer = () => {
   const [allEvents, setAllEvents] = useState([]);
   const [nearestEvent, setNearestEvent] = useState(null);
@@ -60,7 +61,8 @@ const ChurchEventContainer = () => {
     return date.toLocaleDateString("en-US", options);
   };
 
-  const openModal = () => {
+  const openModal = (event) => {
+    setSelectedEvent(event);
     setModalIsOpen(true);
   };
 
