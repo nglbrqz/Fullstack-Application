@@ -4,7 +4,7 @@ import axios from "axios";
 import "../Dashboard Component Styles/CreateEvent.css";
 import { toast } from "react-hot-toast";
 
-const EditEvents = ({ closeModal, formData, eventId, onEditSuccess   }) => {
+const EditEvents = ({ closeModal, formData, eventId, onEditSuccess }) => {
   const [editFormData, setEditFormData] = useState({
     eventTitle: "",
     eventDate: "",
@@ -14,7 +14,6 @@ const EditEvents = ({ closeModal, formData, eventId, onEditSuccess   }) => {
     eventDescription: "",
     eventHost: "",
     eventLocation: "",
- 
   });
 
   useEffect(() => {
@@ -34,14 +33,13 @@ const EditEvents = ({ closeModal, formData, eventId, onEditSuccess   }) => {
 
       // Notify success
       toast.success('Event edited successfully');
-      
+
       // Call the onEditSuccess callback if provided
       if (onEditSuccess) {
         onEditSuccess();
       }
 
-      setIsModalOpen(false);
-      closeModal();
+      closeModal(); // Close modal after successful edit
     } catch (error) {
       console.error('Error updating event:', error);
 
@@ -50,14 +48,11 @@ const EditEvents = ({ closeModal, formData, eventId, onEditSuccess   }) => {
     }
   };
   
-  
 
-
-  const [isModalOpen, setIsModalOpen] = useState(true);
-
+ 
   return (
     <>
-      {isModalOpen && (
+ 
         <div className="create-event-form-container">
           <form onSubmit={handleSubmit}>
             <div className="create-event-form-container-wrapper">
@@ -184,24 +179,22 @@ const EditEvents = ({ closeModal, formData, eventId, onEditSuccess   }) => {
             </div>
 
             <div className="create-event-form-button-wrapper">
-              <button className="create-event-form-button" type="submit">
-                Edit Event
-              </button>
-              <button className="create-event-form-button" onClick={closeModal}>
-                Cancel
-              </button>
-            </div>
+            <button className="create-event-form-button" type="submit">
+              Edit Event
+            </button>
+            <button className="create-event-form-button" onClick={closeModal}>
+              Cancel
+            </button>
+          </div>
           </form>
         </div>
-      )}
+   
     </>
   );
 };
 
 EditEvents.propTypes = {
-  onCloseModal: PropTypes.func.isRequired,
   closeModal: PropTypes.func.isRequired,
-  eventId: PropTypes.string.isRequired,
   formData: PropTypes.shape({
     eventTitle: PropTypes.string,
     eventDate: PropTypes.string,
@@ -211,8 +204,8 @@ EditEvents.propTypes = {
     eventDescription: PropTypes.string,
     eventHost: PropTypes.string,
     eventLocation: PropTypes.string,
-   
   }),
+  eventId: PropTypes.string.isRequired,
   onEditSuccess: PropTypes.func,
 };
 

@@ -14,7 +14,7 @@ const RegistrationEvent = () => {
   const [age, setAge] = useState("");
   const [sex, setSex] = useState("");
   const [email, setEmail] = useState("");
-  const [contact, setContact] = useState("");
+  const [contactNo, setContact] = useState("");
 
   const resetForm = () => {
     setName("");
@@ -33,7 +33,7 @@ const RegistrationEvent = () => {
       age,
       sex,
       email,
-      contact,
+      contactNo,
     };
 
 
@@ -113,6 +113,7 @@ const RegistrationEvent = () => {
               onChange={(e) => setAge(e.target.value)}
               placeholder="Enter Age..."
               required
+
             />
           </div>
           <div className="registration-aligned-fields">
@@ -146,7 +147,7 @@ const RegistrationEvent = () => {
             <input
               type="tel"
               name="contact"
-              value={contact}
+              value={ contactNo }
               onChange={(e) => setContact(e.target.value)}
               placeholder="Enter Contact Number..."
               required

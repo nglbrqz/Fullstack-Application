@@ -3,23 +3,19 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import {
-  faEdit,
-  faTrashAlt,
-  faClose,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faTrashAlt, faClose } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
 import "../Dashboard Component Styles/EventModal.css";
 import ConfirmationModal from "./ConfirmationModal";
 
-const EventModal = ({ isEventOpen, onEventClose, event, onDelete }) => {
+const EventModal = ({ isEventOpen, onClose, event, onDelete }) => {
   const [selectedRequestId, setSelectedRequestId] = useState(null);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
 
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === "Escape") {
-        onEventClose();
+        onClose();
       }
     };
 
@@ -28,7 +24,7 @@ const EventModal = ({ isEventOpen, onEventClose, event, onDelete }) => {
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
     };
-  }, [onEventClose]);
+  }, [onClose]);
 
   const handleDeleteClick = (id) => {
     setSelectedRequestId(id);
@@ -40,6 +36,8 @@ const EventModal = ({ isEventOpen, onEventClose, event, onDelete }) => {
     setDeleteModalOpen(false);
   };
 
+
+  
   const handleDeleteConfirm = async () => {
     try {
       const response = await axios.delete(
@@ -53,12 +51,10 @@ const EventModal = ({ isEventOpen, onEventClose, event, onDelete }) => {
     }
   };
 
+  
+
   return (
-    <Modal
-      isOpen={isEventOpen}
-      onRequestClose={onEventClose}
-      contentLabel="Event Modal"
-    >
+    <>
       <div className="event-modal-content">
         <div className="event-modal-content-wrapper">
           <div className="event-modal-image-container">
@@ -80,7 +76,7 @@ const EventModal = ({ isEventOpen, onEventClose, event, onDelete }) => {
                 >
                   <FontAwesomeIcon icon={faTrashAlt} />
                 </div>
-                <div className="icon-container" onClick={onEventClose}>
+                <div className="icon-container" onClick={onClose}>
                   <FontAwesomeIcon icon={faClose} />
                 </div>
               </div>
@@ -112,18 +108,24 @@ const EventModal = ({ isEventOpen, onEventClose, event, onDelete }) => {
           </div>
         </div>
       </div>
-      <ConfirmationModal
-        isOpen={isDeleteModalOpen}
-        onCancel={handleDeleteCancel}
-        onConfirm={handleDeleteConfirm}
-      />
-    </Modal>
+      <Modal
+        isOpen={isEventOpen}
+        onRequestClose={onClose}
+        contentLabel="Event Modal"
+      >
+        <ConfirmationModal
+          isOpen={isDeleteModalOpen}
+          onCancel={handleDeleteCancel}
+          onConfirm={handleDeleteConfirm}
+        />
+      </Modal>
+    </>
   );
 };
 
 EventModal.propTypes = {
   isEventOpen: PropTypes.bool.isRequired,
-  onEventClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
   event: PropTypes.shape({
     _id: PropTypes.string.isRequired,
     eventThumbnailImageUrl: PropTypes.string.isRequired,
