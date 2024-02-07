@@ -16,7 +16,6 @@ const ConnectGroupCard = ({ connectgroup }) => {
         <img
           src={connectgroup.imageUrl || "https://via.placeholder.com/550x250"}
           alt="Placeholder"
-          className="connect-group-image"
         />
       </div>
       <div className="connect-group-card-info">
