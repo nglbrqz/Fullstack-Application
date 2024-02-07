@@ -244,7 +244,7 @@ function Main() {
           </div>
 
            <div className="hero-container-ministry-button">
-            <Link to={"/"}>
+            <Link to={"/joinus"}>
               <button className="ministry-button">VIEW MORE</button>
             </Link>
           </div>

@@ -33,7 +33,7 @@ function App() {
     // Check for the presence of the token in localStorage
     const token = localStorage.getItem("token");
     if (token) {
-      setIsAuthenticated(true);
+      setIsAuthenticated(true); // Change: Set isAuthenticated to true if token exists
     }
   }, []); // Run this effect only once on component mount
 
