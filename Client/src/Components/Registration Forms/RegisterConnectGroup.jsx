@@ -86,12 +86,16 @@ const RegistrationConnectGroup = () => {
           <div className="registration-aligned-fields">
             <label htmlFor="age">AGE:</label>
             <input 
-              type="text" 
+              type="number" 
               name="connectgroupage" 
               id="volunteername"
               value={connectgroupData.age}
               onChange={(e) => setConnectgroupData({ ...connectgroupData, age: e.target.value })}
-              placeholder="Enter Age..." required />
+              placeholder="Enter Age..." 
+              required
+              min="1"
+              max="100"
+            />
           </div>
           <div className="registration-aligned-fields">
             <label htmlFor="connect-group">
@@ -124,7 +128,10 @@ const RegistrationConnectGroup = () => {
               id="connectgroupemail"
               value={connectgroupData.email}
               onChange={(e) => setConnectgroupData({ ...connectgroupData, email: e.target.value })}
-              placeholder="Enter Email..." required />
+              placeholder="Enter Email..." 
+              required 
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+            />
           </div>
           <div className="registration-aligned-fields">
             <label htmlFor="contact">CONTACT NO:</label>
@@ -134,7 +141,10 @@ const RegistrationConnectGroup = () => {
               id="connectgroupemail"
               value={connectgroupData.contactNo}
               onChange={(e) => setConnectgroupData({ ...connectgroupData, contactNo: e.target.value })}
-              placeholder="Enter Contact Number..." className="other-style" required />
+              placeholder="Enter Contact Number..." className="other-style" 
+              required
+              pattern="^(09|\+639)\d{9}$"
+            />
           </div>
           <div className="registration-button-container">
             <button type="reset" className="registration-button">

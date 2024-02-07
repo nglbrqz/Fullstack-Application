@@ -8,7 +8,7 @@ const ViewParticipantsModal = ({ isVPModalOpen, onEventClose, event  }) => {
   }
 
   const {
-    volunteerActivityId,
+    // volunteerActivityId,
     volunteerActivityName,
     volunteerActivityDescription,
   } = event;
