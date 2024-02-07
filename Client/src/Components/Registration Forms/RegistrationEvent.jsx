@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import axios from 'axios';
 import NavBar from "../navBar";
 import Footer from "../Footer";
+import { toast } from "react-hot-toast";
 
 const RegistrationEvent = () => {
   const location = useLocation();
@@ -14,6 +15,14 @@ const RegistrationEvent = () => {
   const [sex, setSex] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
+
+  const resetForm = () => {
+    setName("");
+    setAge("");
+    setSex("");
+    setEmail("");
+    setContact("");
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,15 +36,47 @@ const RegistrationEvent = () => {
       contact,
     };
 
+
+
     try {
       const response = await axios.post("/eventvolunteer/registervolunteer", registrationData);
       console.log(response.data.message); // Log the response message
-      // You can handle success, for example, show a success message or redirect the user
+      toast.success('Volunteer registered successfully');
+      // Clear form fields
+      setName("");
+      setAge("");
+      setSex("");
+      setEmail("");
+      setContact("");
     } catch (error) {
-      console.error("Error registering volunteer:", error.response.data.message);
-      // Handle errors here, for example, show an error message to the user
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        if (error.response.status === 400) {
+          // Check for specific error messages
+          if (error.response.data.message === 'Age must be a number') {
+            toast.error('Age must be a number');
+          } else if (error.response.data.message === 'Volunteer already registered') {
+            toast.error('Volunteer already registered');
+          } else if (error.response.data.message === 'Event ID is required') {
+            toast.error('Event ID is required');
+          } else {
+            toast.error('Error registering volunteer');
+          }
+        } else {
+          // Handle other status codes
+          toast.error('Error registering volunteer');
+        }
+      } else if (error.request) {
+        // The request was made but no response was received
+        toast.error('No response from server');
+      } else {
+        // Something happened in setting up the request that triggered an error
+        console.error('Error:', error.message);
+        toast.error('Error registering volunteer');
+      }
     }
   };
+
 
   return (
     <>
@@ -97,21 +138,23 @@ const RegistrationEvent = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter Email..."
               required
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
             />
           </div>
           <div className="registration-aligned-fields">
             <label htmlFor="contact">CONTACT NO:</label>
             <input
-              type="text"
+              type="tel"
               name="contact"
               value={contact}
               onChange={(e) => setContact(e.target.value)}
               placeholder="Enter Contact Number..."
               required
+              pattern="^(09|\+639)\d{9}$"
             />
           </div>
           <div className="registration-button-container">
-            <button type="reset" className="registration-button">
+          <button type="reset" className="registration-button" onClick={resetForm}>
               <span className="registration-button-span">Reset</span>
             </button>
             <button type="submit" className="registration-button">
