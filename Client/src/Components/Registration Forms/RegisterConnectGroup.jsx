@@ -109,11 +109,11 @@ const RegistrationConnectGroup = () => {
               required
             >
               <option value="" disabled hidden></option>
-              <option value="youth">Youth Connect</option>
-              <option value="jubilant">Jubilant Connect</option>
-              <option value="young-adults">Young Adults Connect</option>
-              <option value="couples">Couples Connect</option>
-              <option value="basketball">Basketball Connect</option>
+              <option value="Youth">Youth Connect</option>
+              <option value="Jubilant">Jubilant Connect</option>
+              <option value="Gatekeeper">Gatekeeper Connect</option>
+              <option value="Couples">Couples Connect</option>
+              <option value="Basketball">Basketball Connect</option>
             </select>
           </div>
           <div className="registration-aligned-fields">

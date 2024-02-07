@@ -3,31 +3,31 @@
     "Volunteerid": 1,
     "videoUrl": "video.mkv",
     "imageUrl": "https://github.com/jmmarcuis/Fullstack-Application/blob/12/01/25/Fullstack%20Project/src/assets/siteimages/donationpage/volunteerimg/media%20and%20creatives.png",
-    "title": "Volunteer Title 1",
+    "title": "Music and Production",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1."
   },
   {
     "Volunteerid": 2,
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Volunteer Title 2",
+    "title": "Media and Creatives",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
   },
   {
     "Volunteerid": 3,
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Volunteer Title 2",
+    "title": "Ushers",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
   },
   {
     "Volunteerid": 4,
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Volunteer Title 2",
+    "title": "Security",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
   },
   {
     "Volunteerid": 5,
     "imageUrl": "https://example.com/image2.jpg",
-    "title": "Volunteer Title 2",
+    "title": "Medical Team",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
   }
 ]
