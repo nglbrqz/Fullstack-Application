@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./Registration.css";
 import NavBar from "../navBar";
 import Footer from "../Footer";

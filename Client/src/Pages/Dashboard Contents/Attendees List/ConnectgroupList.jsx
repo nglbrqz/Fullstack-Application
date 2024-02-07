@@ -15,25 +15,66 @@ const ConnectgroupList = () => {
   const [connectgroups, setConnectgroups] = useState([]);
   const [filteredConnectgroups, setfilteredConnectgroups] = useState([]);
 
-  useEffect(() => {
-    const fetchConnectgroups = async () => {
-      try {
-        const response = await axios.get("/connectgroup/getconnectgroup");
-        setConnectgroups(response.data);
-        setfilteredConnectgroups(response.data); // Set filtered volunteers initially to all volunteers
-      } catch (error) {
-        console.error("Error fetching connectgroups:", error);
-      }
-    };
-    
-    fetchConnectgroups();
-  }, []); // Fetch connectgroups only once when the component mounts
+  // Function to fetch volunteers from the server
+  const fetchConnectgroups = async () => {
+    try {
+      const response = await axios.get("/connectgroup/getconnectgroup");
+      setConnectgroups(response.data);
+      
+    } catch (error) {
+      console.error("Error fetching connectgroups:", error);
+    }
+  };
 
   useEffect(() => {
-    // Trigger filter change when component mounts to display volunteer list based on initial filter
+    fetchConnectgroups(); // Fetch volunteers only once when the component mounts
+  }, []);
+
+  useEffect(() => {
+    // Filter volunteers based on volunteerActivityName when component mounts
     handleFilterChange(connectgroupActivityName);
-  }, [connectgroupActivityName]);
+  }, []);
 
+  useEffect(() => {
+    // Filter volunteers based on volunteerActivityName
+    handleFilterChange(connectgroupActivityName);
+  }, [connectgroupActivityName, connectgroups]);
+
+
+  
+
+  const handleFilterChange = (filter) => {
+    let filteredConnectgroups = [];
+    
+    // Filter volunteers based on connectgroupId
+    switch (filter) {
+      case "Youth Connect":
+        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "Youth");
+        break;
+      case "Jubilant Connect":
+        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "Jubilant");
+        break;
+      case "Young Adults Connect":
+        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "Gatekeeper");
+        break;
+      case "Couples Connect":
+        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "Couples");
+        break;
+      case "Basketball":
+        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "Basketball");
+        break;
+      default:
+        // If no filter is applied, show all connectgroups
+        filteredConnectgroups = connectgroups;
+    }
+  
+    // Update the state with filtered connectgroups
+    setfilteredConnectgroups(filteredConnectgroups);
+  };
+
+  const getFilteredConnectgroups  = () => {
+    return filteredConnectgroups;
+  };
 
   const handleDeleteClick = (id) => {
     setSelectedRequestId(id);
@@ -56,43 +97,11 @@ const ConnectgroupList = () => {
       setSelectedRequestId(null);
       setDeleteModalOpen(false);
       toast.success("Attendee deleted successfully");
+      fetchConnectgroups();
     } catch (error) {
       toast.error("Error deleting Attendee");
       console.error("Error deleting Attendee:", error);
     }
-  };
-
-  const handleFilterChange = (filter) => {
-    let filteredConnectgroups = [];
-    
-    // Filter volunteers based on connectgroupId
-    switch (filter) {
-      case "Youth Connect":
-        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "youth");
-        break;
-      case "Jubilant Connect":
-        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "jubilant");
-        break;
-      case "Young Adults Connect":
-        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "young-adults");
-        break;
-      case "Couples Connect":
-        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "couples");
-        break;
-      case "Basketball":
-        filteredConnectgroups = connectgroups.filter((connectgroup) => connectgroup.connectgroupId == "basketball");
-        break;
-      default:
-        // If no filter is applied, show all connectgroups
-        filteredConnectgroups = connectgroups;
-    }
-  
-    // Update the state with filtered connectgroups
-    setfilteredConnectgroups(filteredConnectgroups);
-  };
-
-  const getFilteredConnectgroups  = () => {
-    return filteredConnectgroups;
   };
 
   return (
@@ -102,9 +111,8 @@ const ConnectgroupList = () => {
         <select
           className="vcg-filter"
           name="vcg-filter"
-          onChange={(e) => handleFilterChange(e.target.value)}
           defaultValue={connectgroupActivityName}
-          
+          onChange={(e) => handleFilterChange(e.target.value)} 
         >
           <option value="Default">Default</option>
           <option value="Youth Connect">Youth Connect</option>
@@ -115,7 +123,7 @@ const ConnectgroupList = () => {
         </select>
       </div>
 
-      <div className="vcg-table">
+      <div className="connectgroups-table">
         <table>
           <thead>
             <tr>
@@ -123,6 +131,7 @@ const ConnectgroupList = () => {
               <th>Age</th>
               <th>Email</th>
               <th>Contact Number</th>
+              <th>Category</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -133,6 +142,7 @@ const ConnectgroupList = () => {
                 <td>{connectgroup.age}</td>
                 <td>{connectgroup.email}</td>
                 <td>{connectgroup.contactNo}</td>
+                <td>{connectgroup.connectgroupId}</td>
                 <td>
                   <div
                     className="dashboard-table-icon"
