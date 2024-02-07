@@ -1,6 +1,8 @@
 import "../Pages/Page Styles/Donation.css";
 import NavBar from "../Components/navBar";
 import Footer from "../Components/Footer";
+import securitybank from "../assets/siteimages/donationpage/Security Bank.png"
+
 
 const Donation = () => {
   return (
@@ -17,7 +19,7 @@ const Donation = () => {
         <h1>BANK TRANSFER</h1>
         <h2>Your giving may be electronically transferred, deposited <br/>online, or over-the-counter to any of our banks</h2>
         <div className="donation-card-containerr">
-          <img className="donation-card" src="random.png" placeholder="Bank Account"/>
+          <img className="donation-card" src={securitybank} placeholder="Bank Account"/>
           <img className="donation-card" src="random.png" placeholder="Bank Account"/>
         </div>
       
