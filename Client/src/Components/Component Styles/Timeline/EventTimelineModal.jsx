@@ -3,9 +3,8 @@ import "./Timeline Style/TimelineModal.css";
 import PropTypes from "prop-types";
 
 const EventTimelineModal = ({ event, isOpen, closeModal }) => {
-  const navigate = useNavigate(); // Initialize navigate function
+  const navigate = useNavigate(); 
 
-  // Return null if modal is not open or event is not available
   if (!isOpen || !event) return null;
 
   const formatEventDate = (fullDate) => {
@@ -32,11 +31,9 @@ const EventTimelineModal = ({ event, isOpen, closeModal }) => {
   };
 
   const handleJoinClick = () => {
-    // Close the modal
     closeModal();
-
-    // Redirect to the registration page
-    navigate("/registrationevent", { state: { event: event } });
+    navigate("/registrationevent", { state: { event: event, eventId: event._id } }); 
+  
   };
 
   return (
@@ -70,7 +67,6 @@ const EventTimelineModal = ({ event, isOpen, closeModal }) => {
 EventTimelineModal.propTypes = {
   event: PropTypes.shape({
     eventThumbnailImageUrl: PropTypes.string.isRequired,
-    eventid: PropTypes.string.isRequired,
     eventTitle: PropTypes.string.isRequired,
     eventHost: PropTypes.string.isRequired,
     eventCategory: PropTypes.string.isRequired,
@@ -78,9 +74,12 @@ EventTimelineModal.propTypes = {
     eventStartTime: PropTypes.string.isRequired,
     eventEndTime: PropTypes.string.isRequired,
     eventDescription: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired, // Include _id in event propTypes
   }).isRequired,
+  eventId: PropTypes.string.isRequired, // Add eventId prop type
   isOpen: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
 };
+
 
 export default EventTimelineModal;

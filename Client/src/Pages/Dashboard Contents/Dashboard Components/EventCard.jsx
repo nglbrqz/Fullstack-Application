@@ -2,10 +2,7 @@ import { useState } from "react";
 import "../Dashboard Component Styles/EventCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-import {
-  faEdit,
-  faTrashAlt,
- } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 import { toast } from "react-hot-toast";
 import ConfirmationModal from "./ConfirmationModal";
@@ -14,8 +11,7 @@ import Modal from "react-modal";
 import { customModalStyles } from "../Dashboard Style/DashboardModalStyle";
 import EditEvents from "./EditEvents";
 
-const EventCard = ({ event, onDelete, onEditSuccess  }) => {
-  
+const EventCard = ({ event, onDelete, onEditSuccess }) => {
   const [selectedRequestId, setSelectedRequestId] = useState(null);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [isArchiveModalOpen, setArchiveModalOpen] = useState(false);
@@ -32,8 +28,6 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
     eventLocation: "",
     thumbnailFile: null,
   });
-
- 
 
   //OPEN EDIT MODAL
 
@@ -61,8 +55,6 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
     setSelectedRequestId(id);
     setDeleteModalOpen(true);
   };
-
- 
 
   const handleEventModalOpen = () => {
     setEventModalOpen(true);
@@ -120,7 +112,7 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
     event.eventDate.substring(0, 4);
 
   return (
-    <div className="event-card" onClick={handleEventModalOpen}>
+    <div className="event-card"  >
       <div className="event-card-img">
         <img
           src={event.eventThumbnailImageUrl}
@@ -129,16 +121,23 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
         />
       </div>
       <div className="event-icons">
-        <div className="icon-container" onClick={openModal}>
+        <div
+          className="icon-container"
+          onClick={(e) => {
+            e.stopPropagation();
+            openModal();
+          }}
+        >
           <FontAwesomeIcon icon={faEdit} />
         </div>
         <div
           className="icon-container"
-          onClick={() => handleDeleteClick(event._id)}
+          onClick={(event) => {
+            handleDeleteClick(event._id);
+          }}
         >
           <FontAwesomeIcon icon={faTrashAlt} />
         </div>
-     
       </div>
       <div className="event-card-info">
         <div className="event-card-text">
@@ -171,6 +170,7 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
       <EventModal
         isEventOpen={isEventModalOpen}
         onEventClose={handleEventModalClose}
+        onDelete={handleDeleteConfirm}
         event={event}
       />
 
@@ -211,6 +211,5 @@ EventCard.propTypes = {
   onArchive: PropTypes.func.isRequired,
   onEditSuccess: PropTypes.func, // Add this line for onEditSuccess
 };
-
 
 export default EventCard;
