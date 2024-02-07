@@ -36,7 +36,7 @@ const VolunteerCard = ({ volunteer }) => {
 VolunteerCard.propTypes = {
   volunteer: PropTypes.shape({
     VolunteerId: PropTypes.number.isRequired,
-    thumbnail: PropTypes.string.isRequired,
+    background: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
