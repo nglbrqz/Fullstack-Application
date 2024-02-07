@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
+// Import the event volunteer model
+const EventVolunteer = require("./eventVolunteers");
+
 const eventSchema = new Schema({
   eventThumbnailImageUrl: {
     type: String,
@@ -20,11 +23,11 @@ const eventSchema = new Schema({
       message: "Event date must be in the future",
     },
   },
-  eventStartTime: {  // Updated field name
+  eventStartTime: {
     type: String,
     required: true,
   },
-  eventEndTime: {  // Updated field name
+  eventEndTime: {
     type: String,
     required: true,
   },
@@ -58,10 +61,12 @@ const eventSchema = new Schema({
     type: Date,
     default: null,
   },
+
+  // Reference the EventVolunteer model
+  volunteers: [{ type: Schema.Types.ObjectId, ref: 'eventVolunteers' }]
 });
 
 eventSchema.pre('save', function (next) {
-  // Set updatedAt timestamp before saving if the document is being modified
   if (this.isModified()) {
     this.updatedAt = Date.now();
   }

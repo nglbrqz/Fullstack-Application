@@ -21,6 +21,7 @@ app.listen(port, () => console.log(`Server is running on port ${port}`));
  
 
 app.use('/auth', require('./routes/authRoutes'))
+app.use('/eventvolunteer', require('./routes/eventVolunteer'))
 app.use('/prayerrequests', require('./routes/prayerRoutes'));
 app.use('/event', require('./routes/eventRoutes'));
 app.use('/volunteer', require('./routes/volunteerRoutes'));

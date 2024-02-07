@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+
 import Main from "./Pages/Main";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
@@ -7,6 +8,7 @@ import Donation from "./Pages/Donation";
 import PrayerService from "./Pages/PrayerService";
 import PastorialCareService from "./Pages/PastorialCare";
 import JoinUs from "./Pages/JoinUs";
+
 import RegistrationEvent from "./Components/Registration Forms/RegistrationEvent";
 import RegistrationConnectGroup from "./Components/Registration Forms/RegisterConnectGroup";
 import RegistrationVolunteer from "./Components/Registration Forms/RegistrationVolunteer";
@@ -82,6 +84,8 @@ function App() {
           <Route path="/registrationvolunteer" element={<RegistrationVolunteer />} />
           <Route path="/registeradmin" element={<RegisterAdmin />} />
           <Route path="/events" element={<Events />} />
+
+
           <Route path="/ViewParticipantsModal" element={<ViewParticipantsModal />} />
           <Route path="/VolunteersList" element={<VolunteersList />} />
           <Route path="/ConnectgroupList" element={<ConnectgroupList />} />

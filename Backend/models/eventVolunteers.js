@@ -1,20 +1,27 @@
-//SCHEMA MODEL FOR CONNECT GROUP
+// SCHEMA MODEL FOR EVENT VOLUNTEERS
 // FOLLOW SIMILAR MODEL FOR OTHER DATABASES
 
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const eventVolunteersSchema = new Schema ({
-    connectgroupId: String,
+const eventVolunteerSchema = new Schema({
+    eventId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Event', // Assuming the event model is named 'Event'
+        required: true
+    },
     name: String,
-    age: Number,
+    age: {
+        type: Number,
+        required: true // Make age required
+    },
     email: {
-        type:String,
+        type: String,
         unique: true
     },
     contactNo: String
-})
+});
 
-const connectgroupModel = mongoose.model('eventVolunteers', eventVolunteerSchema)
+const eventVolunteer = mongoose.model('EventVolunteer', eventVolunteerSchema); // Correct model name
 
-module.exports = connectgroupModel
+module.exports = eventVolunteer;

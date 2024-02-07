@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./Timeline Style/TimelineModal.css";
 import PropTypes from "prop-types";
 
-const EventTimelineModal = ({ event, isOpen  }) => {
+const EventTimelineModal = ({ event, isOpen, closeModal }) => {
+  const navigate = useNavigate(); // Initialize navigate function
+
   // Return null if modal is not open or event is not available
   if (!isOpen || !event) return null;
 
@@ -28,6 +31,14 @@ const EventTimelineModal = ({ event, isOpen  }) => {
     return date.toLocaleTimeString("en-US", options);
   };
 
+  const handleJoinClick = () => {
+    // Close the modal
+    closeModal();
+
+    // Redirect to the registration page
+    navigate("/registrationevent", { state: { event: event } });
+  };
+
   return (
     <div className="event-timeline-modal-container">
       <div className="event-timeline-modal-wrapper">
@@ -48,7 +59,8 @@ const EventTimelineModal = ({ event, isOpen  }) => {
           <p id="event-desc">{event.eventDescription}</p>
         </div>
         <div className="event-timeline-button-container">
-          <button>Join</button>
+          <button onClick={closeModal}>Close</button>
+          <button onClick={handleJoinClick}>Join</button>
         </div>
       </div>
     </div>
@@ -58,6 +70,7 @@ const EventTimelineModal = ({ event, isOpen  }) => {
 EventTimelineModal.propTypes = {
   event: PropTypes.shape({
     eventThumbnailImageUrl: PropTypes.string.isRequired,
+    eventid: PropTypes.string.isRequired,
     eventTitle: PropTypes.string.isRequired,
     eventHost: PropTypes.string.isRequired,
     eventCategory: PropTypes.string.isRequired,

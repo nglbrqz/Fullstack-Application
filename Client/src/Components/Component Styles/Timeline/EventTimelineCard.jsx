@@ -1,6 +1,7 @@
 import "./Timeline Style/TimelineCard.css";
 import PropTypes from "prop-types";
 
+
 const EventTimelineCard = ({ event, onClick }) => {
   const handleClick = () => {
     onClick(event); // Pass the clicked event to the onClick function
