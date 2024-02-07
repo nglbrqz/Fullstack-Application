@@ -113,6 +113,8 @@ const RegistrationEvent = () => {
               onChange={(e) => setAge(e.target.value)}
               placeholder="Enter Age..."
               required
+              min="1"
+              max="100"
             />
           </div>
           <div className="registration-aligned-fields">

@@ -86,19 +86,23 @@ const RegistrationVolunteer = () => {
               value={volunteerData.name}
               onChange={(e) => setVolunteerData({ ...volunteerData, name: e.target.value })}
               name="name"
-              placeholder="Enter Name..." required 
+              placeholder="Enter Name..." 
+              required 
               />
           </div>
           
           <div className="registration-aligned-fields">
             <label htmlFor="age">AGE:</label>
             <input  
-              type="text" 
+              type="number" 
               id="volunteerage"
               value={volunteerData.age}
               onChange={(e) => setVolunteerData({ ...volunteerData, age: e.target.value })}
               name="age" 
-              placeholder="Enter Age..." required 
+              placeholder="Enter Age..." 
+              required 
+              min="1"
+              max="100"
               />
           </div>
 
@@ -125,7 +129,9 @@ const RegistrationVolunteer = () => {
               value={volunteerData.email}
               onChange={(e) => setVolunteerData({ ...volunteerData, email: e.target.value })}
               name="email" 
-              placeholder="Enter Email..." required 
+              placeholder="Enter Email..." 
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+              required 
               />
           </div>
           <div className="registration-aligned-fields">
@@ -137,7 +143,9 @@ const RegistrationVolunteer = () => {
               onChange={(e) => setVolunteerData({ ...volunteerData, contactNo: e.target.value })}
               name="contact" 
               placeholder="Enter Contact Number..." 
-              className="other-style" required 
+              className="other-style" 
+              required 
+              pattern="^(09|\+639)\d{9}$"
               />
           </div>
           <div className="registration-button-container">
