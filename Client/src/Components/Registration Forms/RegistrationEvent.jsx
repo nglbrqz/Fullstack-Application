@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState,   } from "react";
 import { useLocation } from "react-router-dom";
-import axios from 'axios'; // Import Axios
+import axios from 'axios';
 import NavBar from "../navBar";
 import Footer from "../Footer";
 
 const RegistrationEvent = () => {
   const location = useLocation();
-  const { event } = location.state;
+  const { event, eventId } = location.state;
 
   // State variables to manage form data
   const [name, setName] = useState("");
@@ -15,21 +15,11 @@ const RegistrationEvent = () => {
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
 
-  // Reset form fields when event changes
-  useEffect(() => {
-    setName("");
-    setAge("");
-    setSex("");
-    setEmail("");
-    setContact("");
-  }, [event]);
-
-  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const registrationData = {
-      eventId: event._id,
+      eventId: eventId,
       name,
       age,
       sex,
@@ -38,13 +28,12 @@ const RegistrationEvent = () => {
     };
 
     try {
-       await axios.post('/eventvolunteer/registervolunteer', registrationData);
-
-      console.log('Volunteer registered successfully');
-      // You can redirect the user or display a success message here
+      const response = await axios.post("/eventvolunteer/registervolunteer", registrationData);
+      console.log(response.data.message); // Log the response message
+      // You can handle success, for example, show a success message or redirect the user
     } catch (error) {
-      console.error('Error registering volunteer:', error.message);
-      // Handle errors here
+      console.error("Error registering volunteer:", error.response.data.message);
+      // Handle errors here, for example, show an error message to the user
     }
   };
 
@@ -94,9 +83,7 @@ const RegistrationEvent = () => {
               onChange={(e) => setSex(e.target.value)}
               required
             >
-              <option value="" disabled hidden>
-                Select Gender
-              </option>
+              <option value="" disabled hidden>Select Gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
@@ -133,7 +120,6 @@ const RegistrationEvent = () => {
           </div>
         </form>
       </div>
-
       <div className="registration-footer-container">
         <Footer />
       </div>
