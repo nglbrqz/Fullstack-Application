@@ -35,6 +35,10 @@ library.add(
 function Dashboard() {
   const [userData, setUserData] = useState(null);
   const [selectedMenu, setSelectedMenu] = useState(null);
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [isListOfParticipantsHovered, setIsListOfParticipantsHovered] = useState(false);
+  const [submenuTimeout, setSubmenuTimeout] = useState(null);
+
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -57,6 +61,42 @@ function Dashboard() {
 
   const handleMenuClick = (menu) => {
     setSelectedMenu(menu);
+  };
+
+  const handleSubMenuClick = (submenuItem) => {
+    setSelectedMenu(submenuItem);
+    setShowSubMenu(false); 
+    setIsListOfParticipantsHovered(false);
+  };
+
+  const handleListOfParticipantsHoverEnter = () => {
+    clearTimeout(submenuTimeout);
+    setShowSubMenu(true);
+    setIsListOfParticipantsHovered(true);
+  };
+
+  const handleListOfParticipantsHoverLeave = () => {
+    const timeout = setTimeout(() => {
+      setShowSubMenu(false);
+      setIsListOfParticipantsHovered(false);
+    }, 500); 
+    setSubmenuTimeout(timeout);
+  };
+
+  // Function to handle mouse enter on the submenu
+  const handleSubMenuMouseEnter = () => {
+    clearTimeout(submenuTimeout);
+    setShowSubMenu(true);
+    setIsListOfParticipantsHovered(true);
+  };
+
+  // Function to handle mouse leave from the submenu
+  const handleSubMenuMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setShowSubMenu(false);
+      setIsListOfParticipantsHovered(false);
+    }, 300);
+    setSubmenuTimeout(timeout);
   };
 
   return (
@@ -98,15 +138,45 @@ function Dashboard() {
             </div>
             <div
               className="dashboard-menu-item"
-              onClick={() => handleMenuClick("volunteerlist")}
+              onMouseEnter={handleListOfParticipantsHoverEnter}
+              onMouseLeave={handleListOfParticipantsHoverLeave}
+              style={{ 
+                opacity: isListOfParticipantsHovered || showSubMenu ? 0.6 : 1,
+                transition: "opacity 0.25s"
+               }}
             >
               <FontAwesomeIcon icon={faBook} />
               <p>List of Participants</p>
             </div>
+            {showSubMenu && (
+                <div className="submenu"
+                onMouseEnter={handleSubMenuMouseEnter}
+                onMouseLeave={handleSubMenuMouseLeave}>
+                  <div
+                    className="submenu-item"
+                    onClick={() => handleSubMenuClick("volunteerlist")}
+                  >
+                    Volunteers
+                  </div>
+                  <div
+                    className="submenu-item"
+                    onClick={() => handleSubMenuClick("connectgrouplist")}
+                  >
+                    Connect Groups
+                  </div>
+                  <div
+                    className="submenu-item"
+                    onClick={() => handleSubMenuClick("eventslist")} //pls change not sure sa name
+                  >
+                    Events
+                  </div>
+                </div>
+              )}
 
             <div
               className="dashboard-menu-item"
               onClick={() => handleMenuClick("prayer")}
+              style={{ marginTop: isListOfParticipantsHovered ? "140px" : "0px" }}
             >
               <FontAwesomeIcon icon={faPrayingHands} />
               <p>Prayer Request</p>
@@ -131,6 +201,8 @@ function Dashboard() {
           {selectedMenu === "prayer" && <PrayerRequestContent />}
           {selectedMenu === "connectGroups" && <ConnectGroupsContent />}
           {selectedMenu === "volunteerlist" && <VolunteersList />}
+          {selectedMenu === "connectgrouplist" && <ConnectgroupList />}
+          {selectedMenu === "eventslist" && <ConnectgroupList />}
         </div>
       </div>
     </>
