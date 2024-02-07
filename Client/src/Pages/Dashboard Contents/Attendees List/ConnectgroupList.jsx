@@ -14,12 +14,13 @@ const ConnectgroupList = () => {
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [connectgroups, setConnectgroups] = useState([]);
   const [filteredConnectgroups, setfilteredConnectgroups] = useState([]);
-    console.log("connectgroupActivityName:", connectgroupActivityName);
+
   useEffect(() => {
     const fetchConnectgroups = async () => {
       try {
         const response = await axios.get("/connectgroup/getconnectgroup");
         setConnectgroups(response.data);
+        setfilteredConnectgroups(response.data); // Set filtered volunteers initially to all volunteers
       } catch (error) {
         console.error("Error fetching connectgroups:", error);
       }
@@ -49,8 +50,8 @@ const ConnectgroupList = () => {
       await axios.delete(
         `/connectgroup/deleteconnectgroup/${selectedRequestId}`
       );
-      setConnectgroups((preVolunteer) =>
-      preVolunteer.filter((connectgroup) => connectgroup._id !== selectedRequestId)
+      setConnectgroups((prevConnectgroup) =>
+      prevConnectgroup.filter((connectgroup) => connectgroup._id !== selectedRequestId)
       );
       setSelectedRequestId(null);
       setDeleteModalOpen(false);
@@ -126,7 +127,7 @@ const ConnectgroupList = () => {
             </tr>
           </thead>
           <tbody>
-            {getFilteredConnectgroups ().map((connectgroup) => (
+            {getFilteredConnectgroups().map((connectgroup) => (
               <tr key={connectgroup._id}>
                 <td>{connectgroup.name}</td>
                 <td>{connectgroup.age}</td>
