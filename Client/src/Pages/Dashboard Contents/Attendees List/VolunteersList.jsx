@@ -13,13 +13,14 @@ const VolunteersList = () => {
   const [selectedRequestId, setSelectedRequestId] = useState(null);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [volunteers, setVolunteers] = useState([]);
-  const [filteredVolunteers, setFilteredVolunteers] = useState([]);
+  const [filteredVolunteers, setFilteredVolunteers] = useState([]); // Initialize with an empty array
 
   useEffect(() => {
     const fetchVolunteers = async () => {
       try {
         const response = await axios.get("/volunteer/getvolunteer");
         setVolunteers(response.data);
+        setFilteredVolunteers(response.data); // Set filtered volunteers initially to all volunteers
       } catch (error) {
         console.error("Error fetching volunteers:", error);
       }
@@ -127,7 +128,7 @@ const VolunteersList = () => {
             </tr>
           </thead>
           <tbody>
-            {getFilteredVolunteers ().map((volunteer) => (
+            {getFilteredVolunteers().map((volunteer) => (
               <tr key={volunteer._id}>
                 <td>{volunteer.name}</td>
                 <td>{volunteer.age}</td>

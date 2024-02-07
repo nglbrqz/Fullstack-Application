@@ -8,14 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 200;
+  z-index: 9999;
 }
 
 .event-modal-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
 
   text-align: left;
@@ -46,10 +46,8 @@
 
 .event-modal-description-container {
   max-height: 200px;
-  /* Set a maximum height for the description container */
-  overflow-y: auto;
-  /* Enable vertical scrolling if the content exceeds the container height */
-  margin-top: 20px;
+   overflow-y: auto;
+   margin-top: 20px;
 }
 
 .event-modal-date {
@@ -82,12 +80,10 @@
 .event-modal-image-container {
   border: 2px solid black;
   width: 100%;
-  /* Make the image container take full width */
-  max-height: 320px;
-  /* Set a maximum height for the image container */
-  overflow: hidden;
-  /* Hide overflow content if the image is larger than the container */
-}
+   max-height: 350px;
+   max-width: 410px;
+   overflow: hidden;
+ }
 
 .event-modal-content-container {
   width: 100%;
@@ -95,7 +91,8 @@
 }
 
 .event-information {
-  max-height: 260px;
+  max-height: 320px;
+  max-width: 490px;
   overflow-y: auto;
   /* Enable vertical scrolling if the content exceeds the container height */
 }
@@ -103,10 +100,8 @@
 .event-modal-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
- }
+ 
+  }
 
 .event-modal-content-wrapper {
   display: flex;

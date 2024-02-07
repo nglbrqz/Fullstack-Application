@@ -8,7 +8,7 @@ const {
   deleteEvent,
   archiveEvent,
   editEvent,
-  getChurchEvents,
+  getAllEvents,
 } = require("../controllers/eventController");
 
 router.use(
@@ -19,6 +19,7 @@ router.use(
 );
 
 router.post("/createevent", createEvent);
+router.get("/getallevents", getAllEvents);
 router.get("/getevents", getEvents);
  router.delete("/deleteeventid/:id", deleteEvent);
 router.put("/archiveEvent/:eventId", archiveEvent);

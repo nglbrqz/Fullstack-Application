@@ -33,6 +33,8 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
     thumbnailFile: null,
   });
 
+ 
+
   //OPEN EDIT MODAL
 
   const openModal = () => {
@@ -118,7 +120,7 @@ const EventCard = ({ event, onDelete, onEditSuccess  }) => {
     event.eventDate.substring(0, 4);
 
   return (
-    <div className="event-card">
+    <div className="event-card" onClick={handleEventModalOpen}>
       <div className="event-card-img">
         <img
           src={event.eventThumbnailImageUrl}

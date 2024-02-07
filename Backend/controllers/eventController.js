@@ -151,6 +151,15 @@ const getEvents = async (req, res) => {
   }
 };
 
+const getAllEvents = async (req, res) => {
+  try {
+    const allEvents = await EventModel.find().lean();
+    res.json({ allEvents });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to retrieve events" });
+  }
+};
 
 
 async function deleteEvent (req, res) {
@@ -299,5 +308,5 @@ const editEvent = async (req, res) => {
 
 module.exports = {
   createEvent,
-  uploadThumbnail, getEvents, deleteEvent,  archiveEvent, editEvent,
+  uploadThumbnail, getEvents, deleteEvent,  archiveEvent, editEvent, getAllEvents
 };

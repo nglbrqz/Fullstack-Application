@@ -8,6 +8,7 @@ import {
   faPrayingHands,
   faUsersCog,
   faSignOutAlt,
+  faBook,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Pages/Page Styles/Dashboard.css";
@@ -17,13 +18,18 @@ import EventsContent from "./Dashboard Contents/EventsContent";
 import ConnectGroupsContent from "./Dashboard Contents/ConnectGroupsContent";
 import PrayerRequestContent from "./Dashboard Contents/PrayerRequestContent";
 import VolunteersContent from "./Dashboard Contents/VolunteersContent";
+
+import ConnectgroupList from"./Dashboard Contents/Attendees List/ConnectgroupList"
+import VolunteersList from "./Dashboard Contents/Attendees List/VolunteersList"
+
 library.add(
   fab,
   faCalendarAlt,
   faUsers,
   faPrayingHands,
   faUsersCog,
-  faSignOutAlt
+  faSignOutAlt,
+  faBook
 );
 
 function Dashboard() {
@@ -92,10 +98,10 @@ function Dashboard() {
             </div>
             <div
               className="dashboard-menu-item"
-              onClick={() => handleMenuClick("prayer")}
+              onClick={() => handleMenuClick("volunteerlist")}
             >
-              <FontAwesomeIcon icon={faPrayingHands} />
-              <p>Participant</p>
+              <FontAwesomeIcon icon={faBook} />
+              <p>List of Participants</p>
             </div>
 
             <div
@@ -124,6 +130,7 @@ function Dashboard() {
           {selectedMenu === "volunteers" && <VolunteersContent />}
           {selectedMenu === "prayer" && <PrayerRequestContent />}
           {selectedMenu === "connectGroups" && <ConnectGroupsContent />}
+          {selectedMenu === "volunteerlist" && <VolunteersList />}
         </div>
       </div>
     </>

@@ -1,0 +1,64 @@
+.event-timeline-modal-container {
+    width: 700px;
+    height: 700px;
+    background-color: #50a09c;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.event-timeline-modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-timeline-image-container {
+    width: 500px;
+    height: 290px;
+    border: 2px rgb(255, 255, 255) solid;
+    margin-bottom: 20px;
+}
+
+.event-timeline-header-container {
+    line-height: 1.4em;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform:capitalize;
+}
+
+.event-timeline-description-container {
+    text-align: left;
+}
+
+#event-desc {
+    font-style: italic;
+    max-height: 140px;  
+    overflow-y: auto; 
+}
+
+.event-timeline-button-container button{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    background-color: #5EC3AB;
+    padding: 2px;
+    border: 2px #5EC3AB solid;
+    border-radius: 36px;
+    width: 120px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.event-timeline-button-container button:hover {
+    background-color: #2b6255;
+    border: 2px #2b6255 solid;
+
+}

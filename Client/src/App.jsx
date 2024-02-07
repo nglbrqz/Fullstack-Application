@@ -81,7 +81,7 @@ function App() {
           <Route path="/registrationconnectgroup" element={<RegistrationConnectGroup />} />
           <Route path="/registrationvolunteer" element={<RegistrationVolunteer />} />
           <Route path="/registeradmin" element={<RegisterAdmin />} />
-          
+          <Route path="/events" element={<Events />} />
           <Route path="/ViewParticipantsModal" element={<ViewParticipantsModal />} />
           <Route path="/VolunteersList" element={<VolunteersList />} />
           <Route path="/ConnectgroupList" element={<ConnectgroupList />} />

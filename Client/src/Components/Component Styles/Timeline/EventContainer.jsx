@@ -4,32 +4,36 @@ import "./Timeline Style/ChurchEventContainer.css";
 import axios from "axios";
 import Modal from "react-modal";
 import EventTimelineModal from "./EventTimelineModal";
+import { customModalStyles } from "../../../Pages/Dashboard Contents/Dashboard Style/DashboardModalStyle";
 
 const ChurchEventContainer = () => {
-  const [churchEvents, setChurchEvents] = useState([]);
+  const [allEvents, setAllEvents] = useState([]);
   const [nearestEvent, setNearestEvent] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
-  useEffect(() => {
+  const handleCardClick = (event) => {
+    setSelectedEvent(event); // Set the selected event
+    setModalIsOpen(true); // Open the modal
+  };
+
+  const fetchEvents = () => {
     axios
-      .get("/event/getevents")
+      .get("/event/getallevents") // Using the new API endpoint
       .then((response) => {
-        if (
-          response.data &&
-          response.data.churchEvents &&
-          Array.isArray(response.data.churchEvents)
-        ) {
-          const unarchivedEvents = response.data.churchEvents.filter(
+        if (response.data && Array.isArray(response.data.allEvents)) {
+          const unarchivedEvents = response.data.allEvents.filter(
             (event) => !event.isEventArchived
           );
 
-          setChurchEvents(unarchivedEvents);
+          setAllEvents(unarchivedEvents);
 
           // Find the nearest event
           const now = new Date().getTime();
           const nearest = unarchivedEvents.reduce((nearest, event) => {
             const eventDate = new Date(event.date).getTime();
-            return eventDate >= now && eventDate < new Date(nearest.date).getTime()
+            return eventDate >= now &&
+              eventDate < new Date(nearest.date).getTime()
               ? event
               : nearest;
           }, unarchivedEvents[0]);
@@ -40,6 +44,14 @@ const ChurchEventContainer = () => {
         }
       })
       .catch((error) => console.error(error));
+  };
+
+  useEffect(() => {
+    fetchEvents(); // Initial fetch
+
+    const interval = setInterval(fetchEvents, 60000); // Fetch every 60 seconds
+
+    return () => clearInterval(interval); // Cleanup function to clear interval
   }, []);
 
   const formatEventDate = (fullDate) => {
@@ -72,29 +84,39 @@ const ChurchEventContainer = () => {
                   alt={nearestEvent.eventTitle}
                 />
 
-                <button onClick={openModal}>View Details</button>
-
-              
+                <button onClick={() => openModal(nearestEvent)}>
+                  View Details
+                </button>
               </div>
             )}
           </div>
 
           <div className="Church-event-timeline-card-container">
-            {churchEvents.map((event) => (
-              <EventTimelineCard key={event._id} event={event} onClick={openModal} />
+            {allEvents.map((event) => (
+              <EventTimelineCard
+                key={event._id}
+                event={event}
+                onClick={handleCardClick}
+              />
             ))}
           </div>
         </div>
       </div>
 
-        {/* Modal for event details */}
-        <Modal
-                  isOpen={modalIsOpen}
-                  onRequestClose={closeModal}
-                  contentLabel="Event Details"
-                >
-                  <EventTimelineModal event={nearestEvent} closeModal={closeModal} />
-                </Modal>
+      {/* Modal for event details */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Event Details"
+        style={customModalStyles}
+      >
+        {/* Pass selectedEvent and modalIsOpen as props */}
+        <EventTimelineModal
+          event={selectedEvent}
+          closeModal={closeModal}
+          isOpen={modalIsOpen}
+        />
+      </Modal>
     </>
   );
 };

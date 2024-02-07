@@ -1,11 +1,10 @@
-import { useEffect } from "react";
 import "./Timeline Style/TimelineCard.css";
 import PropTypes from "prop-types";
 
-const EventTimelineCard = ({ event }) => {
-  useEffect(() => {
-    return () => {};
-  }, []);
+const EventTimelineCard = ({ event, onClick }) => {
+  const handleClick = () => {
+    onClick(event); // Pass the clicked event to the onClick function
+  };
 
   const formatEventDate = (fullDate) => {
     const date = new Date(fullDate);
@@ -21,23 +20,19 @@ const EventTimelineCard = ({ event }) => {
  
 
   return (
-    <>
-      <div className="timeline-card">
-        <div className="timeline-wrapper">
-          <div className="timeline-date-container">
-            <h2>{formatEventDate(event.eventDate)}</h2>
-          </div>
-          <div className="timeline-text">
-            <div className="timeline-title">{event.eventTitle}</div>
-            <div className="timeline-description">
-      
-            {limitDescription(event.eventDescription, 40)}            
-          
-            </div>
+    <div className="timeline-card" onClick={handleClick}> 
+      <div className="timeline-wrapper">
+        <div className="timeline-date-container">
+          <h2>{formatEventDate(event.eventDate)}</h2>
+        </div>
+        <div className="timeline-text">
+          <div className="timeline-title">{event.eventTitle}</div>
+          <div className="timeline-description">
+            {limitDescription(event.eventDescription, 40)}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -54,6 +49,7 @@ EventTimelineCard.propTypes = {
     eventHost: PropTypes.string.isRequired,
     eventLocation: PropTypes.string.isRequired,
   }).isRequired,
+  onClick: PropTypes.func.isRequired, // onClick event handler function is required
 };
 
 export default EventTimelineCard;
