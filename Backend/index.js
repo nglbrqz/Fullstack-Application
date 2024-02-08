@@ -6,7 +6,7 @@ const{mongoose} = require('mongoose')
 const app = express();
 app.use(cors(
     {
-        origin: ["https://fullstack-application-frontend.vercel.app/"],
+        origin: ["https://fullstack-application-frontend.vercel.app"],
         methods: ["POST", "GET"],
         //origin: 'http://localhost:5173',
         credentials: true
