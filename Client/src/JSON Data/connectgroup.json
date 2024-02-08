@@ -1,0 +1,38 @@
+[
+    {
+      "Volunteerid": 1,
+      "videoUrl": "https://www.youtube.com/embed/1MDvKtRVnx4?si=kFdEooYwm01AybJ3",
+      "imageUrl": "../src/assets/siteimages/donationpage/connectimg/yc.png",
+      "title": "Youth Connect",
+      "description": "Strengthen your friendships with other youth while deepening your connection with God."
+    },
+    {
+      "Volunteerid": 2,
+      "videoUrl": "https://www.youtube.com/embed/zwB6diyN7PM?si=XvEarhLowNwRJXVR",
+      "imageUrl": "../src/assets/siteimages/donationpage/connectimg/jc.png",
+      "title": "Jubilant Connect",
+      "description": "Jubilant Connect promotes a cheerful atmosphere among its members, emphasizing that it is never too late to serve the Lord and discover fulfillment. "
+    },
+    {
+      "Volunteerid": 3,
+      "videoUrl": "https://www.youtube.com/embed/y-Xqda_7V9o?si=TfSEJCMKeSgxej7C",
+      "imageUrl": "../src/assets/siteimages/donationpage/connectimg/gc.png",
+      "title": "Gatekeeper Connect",
+      "description": "Our major purpose is to build a close-knit community of like-minded people by offering a platform for connectivity, skills partnership, and professional development."
+    },
+    {
+      "Volunteerid": 4,
+      "videoUrl": "https://www.youtube.com/embed/mKtrppV9Jww?si=x7rOWvgkh8j0UwoM",
+      "imageUrl": "../src/assets/siteimages/donationpage/connectimg/cc.png",
+      "title": "Couples Connect",
+      "description": "Couples Connect is committed to strengthening connections among couples, whether they are dating, engaged, or married."
+    },
+    {
+      "Volunteerid": 5,
+      "videoUrl": "video.mkv",
+      "imageUrl": "../src/assets/siteimages/donationpage/connectimg/bc.png",
+      "title": "Basketball Connect",
+      "description": "Basketball Connect, an engaging connect group that fosters relationships amongst basketball aficionados in nearby communities. "
+    }
+  ]
+  

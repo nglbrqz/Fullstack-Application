@@ -1,0 +1,58 @@
+{
+  "images": [
+    {
+      "accomplishmentId": 1,
+      "accomplishmentTitle": "Water Baptism",
+      "accomplishmentUrl": "https://i.postimg.cc/DZxKMSvp/pic1.png",
+      "accomplishmentDescription": "The church conducts water baptism for the purpose of leading more believers to publicly declare that they accept Jesus as their Lord and Savior."
+    },
+    {
+      "accomplishmentId": 2,
+      "accomplishmentTitle": "Bulacan Outreach",
+      "accomplishmentUrl": "https://i.postimg.cc/4yhH4kSG/pic2.png",
+      "accomplishmentDescription": "Touching souls in Bulacan through successful outreach initiatives that provide love and faith beyond the walls of our church."
+    },
+    {
+      "accomplishmentId": 3,
+      "accomplishmentTitle": "School of Discipleship Graduates",
+      "accomplishmentUrl": "https://i.postimg.cc/N09KkwQH/pic3.png",
+      "accomplishmentDescription": "Showcasing our School of Discipleship graduates, exemplifying faith, knowledge, and service in their mission to spread the light of God's word."
+    },
+    {
+      "accomplishmentId": 4,
+      "accomplishmentTitle": "Basketball Connect Tournament",
+      "accomplishmentUrl": "https://i.postimg.cc/Gh6t35F3/pic4.png",
+      "accomplishmentDescription": "Experience the joy of community and sportsmanship at our church! Celebrating the success of our recent basketball tournament, where teamwork, faith, and fellowship unite on the court."
+    },
+    {
+      "accomplishmentId": 5,
+      "accomplishmentTitle": "Campus Crusade",
+      "accomplishmentUrl": "https://i.postimg.cc/DZskgxW6/pic5.png",
+      "accomplishmentDescription": "Look into our church's active Campus Crusade activities as we spread the Word to campuses, promoting spiritual development and engagement in the community."
+    },
+    {
+      "accomplishmentId": 6,
+      "accomplishmentTitle": "New Life Conference",
+      "accomplishmentUrl": "https://i.postimg.cc/7YZtPBxR/pic6.png",
+      "accomplishmentDescription": "Our New Life Southwoods Team participated in the transformative New Life Conference, where they've enriched their skills and knowledge in music, media, pastoral roles, and more!"
+    },
+    {
+      "accomplishmentId": 7,
+      "accomplishmentTitle": "Pampanga Outreach",
+      "accomplishmentUrl": "https://i.postimg.cc/JnhHHBGR/pic7.png",
+      "accomplishmentDescription": "Our church not only helps the communities nearby but also those in need in other provinces like Pampanga. This effort is to ensure that no one is left behind and that we accomplish our mission and vision."
+    },
+    {
+      "accomplishmentId": 8,
+      "accomplishmentTitle": "Pampanga Outreach Kids",
+      "accomplishmentUrl": "https://i.postimg.cc/J7vPNjZ6/pic8.png",
+      "accomplishmentDescription":  "Highlighting the heartwarming accomplishment of our Pampanga Outreach Kids program, where compassion meets transformation. This is the positive impact of our church's dedication to nurturing and empowering the future generation."
+    },
+    {
+      "accomplishmentId": 9,
+      "accomplishmentTitle": "Pandemic Relief Operation",
+      "accomplishmentUrl": "https://i.postimg.cc/44mWHW7H/pic9.png",
+      "accomplishmentDescription": "The impactful Pandemic Relief Operations undertaken by our church, highlighting our unwavering commitment to serving the community with compassion and resilience during challenging times."
+    }
+  ]
+}

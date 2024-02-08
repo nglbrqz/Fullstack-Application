@@ -1,0 +1,160 @@
+
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1000; /* Ensure it's above other content */
+  padding: 20px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.create-event-form-container {
+  width: 700px;
+  padding: 40px;
+  border: none; 
+}
+
+.create-event-form-container-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+
+.create-event-form-container-column-wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.create-event-form-thumbnail-import {
+  border: 2px dashed #cccccc;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 330px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
+
+}
+
+.create-event-form-thumbnail-import p {
+  max-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.create-event-form-thumbnail-import p {
+  max-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+}
+
+
+
+.create-event-form-thumbnail-import p {
+  margin: 0;
+}
+
+.create-event-form-thumbnail-import:hover {
+  border: 2px dashed #000000;
+  transform: scale(.96);
+}
+
+
+
+
+.create-event-input-title {
+  margin-bottom: -30px;
+}
+
+#create-event-title-input {
+  width: 100%
+}
+
+.create-event-form-container-column-wrapper label {
+  font-size: 12px;
+}
+
+.create-event-form-container input,
+.create-event-form-container select {
+  border: 1px solid black;
+  font-size: 11px;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 200px;
+}
+
+.create-event-input-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: -30px;
+
+}
+
+.create-event-form-container textarea {
+  height: 120px;
+  width: 330px;
+  resize: none;
+  font-size: 11px;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.create-event-form-button-wrapper {
+  display: flex;
+  justify-content: end;
+  gap :10px;
+}
+
+.create-event-form-button {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+
+.create-event-form-button:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.create-event-form-button:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}

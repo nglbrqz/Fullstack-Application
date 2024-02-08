@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Lato&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,800;0,900;1,100;1,200;1,700;1,900&family=Poppins&family=Roboto+Condensed:wght@400;500&family=Roboto:ital,wght@0,500;0,900;1,400&display=swap');
+
+.hero-container-core-values-container {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.titlepage {
+    margin-left: 20px;
+    font-size: 70px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 4px 4px 4px 4px solid #5EC3AB;
+}
+
+.overlap-title {
+  font-size: 70px;
+  font-weight: bold;
+  margin-left: 24px;
+  position: absolute;
+  color: #5EC3AB;
+}
+
+.description {
+  font-weight: bold;
+  margin-top: -10px;
+  margin-left: 30px;
+  font-size: 20px;
+  color: gray;
+}
+
+.scroll-container {
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+  cursor: grab;
+  user-select: none;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Change cursor appearance while grabbing and dragging */
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+.scroll-item {
+  margin: 10px;
+  background-color: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 25px;
+}
+
+/* Hide the scrollbar */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.core-number {
+  font-size: 80px;
+  margin-right: 20px;
+  text-shadow: 4px 4px 4px #5EC3AB;
+}
+
+.core-title {
+  font-size: 34px;
+  font-weight: bolder;
+}
+
+.core-description {
+  font-weight: bold;
+  color: #006260;
+  font-size: 28px;
+  margin-top: -10px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-container-core-values-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .titlepage {
+    font-size: 50px;
+  }
+
+  .overlap-title {
+    font-size: 50px;
+    margin-left: 24px;
+  }
+
+  .description {
+    margin-left: 20px;
+  }
+
+  .scroll-item {
+    padding: 0 10px;
+    margin: 5px;
+  }
+
+  .core-number {
+    font-size: 60px;
+    margin-right: 10px;
+  }
+
+  .core-title {
+    font-size: 24px;
+  }
+
+  .core-description {
+    font-size: 18px;
+  }
+}
