@@ -9,7 +9,7 @@
     cursor: pointer;
   }
   
-  .connect-group-card-img {
+  .connect-group-image {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -66,4 +66,16 @@
   .connect-group-card:hover .connect-group-card-icon {
     opacity: 1;
     transform: translateX(20%);
+  }
+
+  @media only screen and (max-width: 1500px) {
+    .connect-group-card {
+      height: 200px;
+    }
+   }
+
+  @media only screen and (max-width: 768px) { 
+    .connect-group-card {
+      height: 250px;
+    }
   }

@@ -17,8 +17,7 @@
           overflow: hidden;
           border-radius: 25px;
           width: 70%; /* Adjust the width as needed */
-          margin: 0 auto; 
-          padding-bottom: 50px;
+          padding-bottom: 70px;
         }
 
         .modal-video {
@@ -77,9 +76,19 @@
 
         @media only screen and (max-width: 1500px) {
             .modal-video-container {
-                padding-bottom: 20px;
-                width: 90%;
+                width: 70%;
             }
+            
+            .modal-video {
+                padding-bottom: 50px;
+                height: 400px;
+            }
+
+            .modal-video-container img {
+                height: 500px;
+            }
+
+
             .modal-text-block {
                 width: 65%;
             }
@@ -94,16 +103,28 @@
             }
 
             .modal-join-btn {
-                font-size: 20px;
-                width: 230px;
+                font-size: 18px;
+                width: 170px;
             }
 
         }
 
         @media only screen and (max-width: 768px) {
             .modal-video-container {
-                padding-bottom: 20px;;
+                width: 90%;
+                padding-bottom: 20px;
             }
+
+            .modal-video {
+                padding-bottom: 48px;
+                height: 400px;
+            }
+
+            .modal-video-container img {
+                
+                height: 400px;
+            }
+
             .modal-text-block {
                 width: 65%;
             }

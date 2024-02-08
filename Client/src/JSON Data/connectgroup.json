@@ -2,14 +2,14 @@
     {
       "Volunteerid": 1,
       "videoUrl": "https://www.youtube.com/embed/1MDvKtRVnx4?si=kFdEooYwm01AybJ3",
-      "imageUrl": "https://i.postimg.cc/s21wNHT5/yc.png",
+      "imageUrl": "../src/assets/siteimages/donationpage/connectimg/yc.png",
       "title": "Youth Connect",
       "description": "Strengthen your friendships with other youth while deepening your connection with God."
     },
     {
       "Volunteerid": 2,
       "videoUrl": "https://www.youtube.com/embed/zwB6diyN7PM?si=XvEarhLowNwRJXVR",
-      "imageUrl": "https://i.postimg.cc/br16RG3M/sc.png",
+      "imageUrl": "../src/assets/siteimages/donationpage/connectimg/jc.png",
       "title": "Jubilant Connect",
       "description": "Jubilant Connect promotes a cheerful atmosphere among its members, emphasizing that it is never too late to serve the Lord and discover fulfillment. "
     },
