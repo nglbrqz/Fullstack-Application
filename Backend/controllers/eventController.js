@@ -23,8 +23,8 @@ const upload = multer({ storage: storage }).single("thumbnail");
 //   return memoryStorage;
 // };
 
-// Initialize multer with memory storage for file upload
-const upload = multer({ storage: storage }).single("thumbnail");
+// // Initialize multer with memory storage for file upload
+// const upload = multer({ storage: storage }).single("thumbnail");
 
 const uploadThumbnail = (req, res) => {
   try {
