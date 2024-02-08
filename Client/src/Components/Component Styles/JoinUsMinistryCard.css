@@ -22,31 +22,6 @@
     cursor: pointer;
 }
 
-.joinus-ministry-card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.1);
-    transition: font-size 0.5s ease;
-}
-
-.joinus-ministry-card-overlay h1 {
-    font-size: 90px;
-    color: #006260;
-}
-
-.joinus-ministry-card-container:hover .joinus-ministry-card-overlay h1{
-    font-size: 95px;
-}
 
 @media (max-width: 1000px) {
     .joinus-ministry-container {

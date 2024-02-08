@@ -15,17 +15,19 @@ const JoinUsMinistryCard = ({ joinusministrycard }) => {
     return (
         <div className="joinus-ministry-container">
             <div className="joinus-ministry-card-container">
-                <img  className="joinus-ministry-card-photo" />
-                <div onClick={handleButtonClick} className="joinus-ministry-card-overlay">
-                    <h1>{joinusministrycard.title}</h1>
-                </div>
+                <img  
+                className="joinus-ministry-card-photo" 
+                onClick={handleButtonClick}
+                src={joinusministrycard.imageUrl}
+                />
+                
             </div>
 
             {showModal && (
                 <JoinUsModal
                     joinusmodal={joinusministrycard}
                     closeModal={() => setShowModal(false)}
-                    joinLink={selectedMinistry === "outreach" ? "/registrationevent" : "/registrationvolunteer"}
+                    joinLink={selectedMinistry === "outreach" ? "/events" : "/registrationvolunteer"}
                 />
             )}
         </div>

@@ -8,6 +8,11 @@ const Events = () => {
     return () => {};
   }, []);
 
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="prayer-header-container">

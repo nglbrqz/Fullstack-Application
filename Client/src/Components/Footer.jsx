@@ -6,7 +6,7 @@ import logo from "../assets/siteimages/sitelogo/whitelogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-function Footer({ HomeRef, AboutRef, FaqRef, ShowCard }) {
+function Footer({ HomeRef, AboutRef, FaqRef, VolunteerRef, ShowCard }) {
   const handleLogoClick = () => {
     HomeRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -17,6 +17,10 @@ function Footer({ HomeRef, AboutRef, FaqRef, ShowCard }) {
 
   const handleFaqClick = () => {
     FaqRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleVolunteerClick = () => {
+    VolunteerRef.scrollIntoView({ behavior: "smooth" });
   };
 
   const ShowCharityCard = ShowCard === "show" ? "block" : "none";
@@ -78,7 +82,7 @@ function Footer({ HomeRef, AboutRef, FaqRef, ShowCard }) {
             </div>
             <div className="footer-links">
             <Link to="/"><a onClick={handleAboutClick}>ABOUT US</a></Link>
-              <Link to="/joinus">VOLUNTEER</Link>
+              <Link to="/joinus"><a onClick={handleVolunteerClick}>VOLUNTEER</a></Link>
               <Link to="/events">EVENTS</Link>
               <Link to="/registeradmin">GIVE</Link>
               <Link to="/"> <a onClick={handleFaqClick}>FAQS</a></Link>

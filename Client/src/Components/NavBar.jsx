@@ -80,7 +80,7 @@ function NavBar({ AboutRef, colorScheme }) {
               <ul className="nav-dropdown-content">
                 <Link to="/joinus#ministry"> 
                   <li>
-                    <a  >Ministry</a>
+                    <a >Ministry</a>
                   </li>
                 </Link>
                 <Link to="/joinus#volunteer">
@@ -149,6 +149,7 @@ function NavBar({ AboutRef, colorScheme }) {
         <FontAwesomeIcon icon={faBars} style={{ color: textColor }} />
       </div>
 
+      
       <div
         className="nav-overlay"
         id="nav-overlay"
@@ -170,8 +171,8 @@ function NavBar({ AboutRef, colorScheme }) {
             <Link to="/">
               <a onClick={[handleAboutClick, toggleMobileMenu]}>About</a>{" "}
             </Link>
-            <Link to="/">
-              <a href="/events" onClick={toggleMobileMenu}>
+            <Link to="/events">
+              <a href="" onClick={toggleMobileMenu}>
                 Events
               </a>{" "}
             </Link>
@@ -184,9 +185,21 @@ function NavBar({ AboutRef, colorScheme }) {
             </span>
             {joinDropdownOpen && (
               <ul className="nav-dropdown-content">
-                <li>
-                  <a href="/service1">Prayer Service</a>
-                </li>
+                <Link to="/joinus#ministry"> 
+                  <li>
+                    <a  >Ministry</a>
+                  </li>
+                </Link>
+                <Link to="/joinus#volunteer">
+                  <li>
+                    <a >Volunteer</a>
+                  </li>
+                </Link>
+                <Link to="/joinus">
+                  <li>
+                    <a >Connect Groups</a>
+                  </li>
+                </Link>
               </ul>
             )}
           </div>
@@ -198,12 +211,17 @@ function NavBar({ AboutRef, colorScheme }) {
             </span>
             {servicesDropdownOpen && (
               <ul className="nav-dropdown-content">
+              <li>
+                <Link to="/prayer">
+                  <a>Prayer Services</a>
+                </Link>
                 <li>
-                  <Link to="prayer">
-                    <a>Prayer Services</a>
-                  </Link>
-                </li>
-              </ul>
+                <Link to="/pastorialcare">
+                  <a>Pastorial Care Services</a>
+                </Link>
+              </li>
+              </li>
+            </ul>
             )}
           </div>
 

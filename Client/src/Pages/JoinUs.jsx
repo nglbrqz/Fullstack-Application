@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useRef } from "react";
 import "../Pages/Page Styles/JoinUs.css";
 import NavBar from "../Components/navBar";
 import Footer from "../Components/Footer";
@@ -8,11 +10,23 @@ import VolunteerCard from "../Components/VolunteerCard";
 import ConnectGroupCard from "../Components/ConnectGroupCard";
 import MinistryCard from "../Components/JoinUsMinistryCard";
 import joinus from "../assets/siteimages/donationpage/joinus.jpg";
+
 const JoinUs = () => {
+  const MinistryRef = useRef();
+  const VolunteerRef = useRef();
+  const ConnectRef = useRef();
+
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="join-us-header-container">
-      <NavBar colorScheme="dark"/>
+      <NavBar colorScheme="dark" 
+      MinistryRef={MinistryRef} 
+      VolunteerRef={VolunteerRef} 
+      ConnectRef={ConnectRef}/>
             </div>
 
       <div className="join-us-main-section">
@@ -27,8 +41,8 @@ const JoinUs = () => {
       </div>
       
       <div className="join-us-ministry-section" id="ministry">
-        <div className="ministry-title-container">
-          <h1>Ministries</h1>
+        <div  className="ministry-title-container">
+          <h1 ref={MinistryRef}>Ministries</h1>
         </div>
 
         <div className="ministry-wrapper">
@@ -40,7 +54,7 @@ const JoinUs = () => {
 
       <div className="join-us-volunteer-section" id="volunteer">
         <div className="volunteer-title-container">
-          <h1>Volunteers</h1>
+          <h1 ref={VolunteerRef}>Volunteers</h1>
         </div>
 
         <div className="volunteer-wrapper">
@@ -51,7 +65,7 @@ const JoinUs = () => {
       </div>
 
       <div className="join-us-connect-group-section" id="connect">
-        <div className="connect-group-title-container">
+        <div ref={ConnectRef} className="connect-group-title-container">
           <h1>Connect Group</h1>
         </div>
 
@@ -66,7 +80,7 @@ const JoinUs = () => {
       </div>
 
       <div className="prayer-footer-container">
-        <Footer />
+        <Footer VolunteerRef={VolunteerRef}/>
       </div>
     </>
   );
