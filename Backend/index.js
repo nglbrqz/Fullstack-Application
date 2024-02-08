@@ -1,17 +1,16 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
-const{mongoose} = require('mongoose')
+//const{mongoose} = require('mongoose')
+const mongoose = require('mongoose'); 
 
 const app = express();
-app.use(cors(
-    {
+app.use(cors({
         origin: ["https://fullstack-application-frontend.vercel.app"],
         methods: ["POST", "GET"],
         //origin: 'http://localhost:5173',
         credentials: true
-    }
-))
+    }));
 app.use(express.json());
 
 // mongoose.connect('mongodb+srv://nlswadmin01:NLSWdb1977@cluster0.o3qtadl.mongodb.net/test?retryWrites=true&w=majority')
