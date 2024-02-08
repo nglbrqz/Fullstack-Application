@@ -3,16 +3,22 @@ const path = require("path");
 const multer = require("multer");
 
  
-const storage = multer.diskStorage({
-  destination: "./public/uploads/",
-  filename: function (req, file, cb) {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: "./public/uploads/",
+//   filename: function (req, file, cb) {
+//     cb(
+//       null,
+//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+//     );
+//   },
+// });
 
+// const upload = multer({ storage: storage }).single("thumbnail");
+
+// Create memory storage for multer
+const storage = multer.memoryStorage();
+
+// Initialize multer with memory storage for file upload
 const upload = multer({ storage: storage }).single("thumbnail");
 
 const uploadThumbnail = (req, res) => {
