@@ -4,8 +4,16 @@ const cors = require('cors');
 const{mongoose} = require('mongoose')
 
 const app = express();
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-1whq.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+))
 app.use(express.json());
 
+// mongoose.connect('mongodb+srv://nlswadmin01:NLSWdb1977@cluster0.o3qtadl.mongodb.net/test?retryWrites=true&w=majority')
 
 
 // Connecting Mongoose :3
