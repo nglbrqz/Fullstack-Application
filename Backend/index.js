@@ -3,18 +3,29 @@ const dotenv = require('dotenv').config();
 const cors = require('cors');
 //const{mongoose} = require('mongoose')
 const mongoose = require('mongoose'); 
+const multer = require('multer');
 
+// Create Express app
 const app = express();
+
+// Set up CORS
 app.use(cors({
         origin: ["https://fullstack-application-frontend.vercel.app"],
         methods: ["POST", "GET"],
         //origin: 'http://localhost:5173',
         credentials: true
     }));
+
+// Parse JSON bodies
 app.use(express.json());
 
 // mongoose.connect('mongodb+srv://nlswadmin01:NLSWdb1977@cluster0.o3qtadl.mongodb.net/test?retryWrites=true&w=majority')
 
+// Create memory storage for multer
+const storage = multer.memoryStorage();
+
+// Initialize multer with memory storage
+const upload = multer({ storage: storage });
 
 // Connecting Mongoose :3
 mongoose.connect(process.env.MONGO_URL)
