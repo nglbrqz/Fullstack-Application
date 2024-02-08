@@ -11,7 +11,7 @@ const app = express();
 // Set up CORS
 app.use(cors({
         origin: ["https://fullstack-application-frontend.vercel.app"],
-        methods: ["POST", "GET"],
+        methods: ["POST", "GET", "PUT", "DELETE"],
         //origin: 'http://localhost:5173',
         credentials: true
     }));
