@@ -27,40 +27,30 @@ axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    localStorage.getItem("token") ? true : false
+  );
 
   useEffect(() => {
-    // Check for the presence of the token in localStorage
     const token = localStorage.getItem("token");
     if (token) {
-      setIsAuthenticated(true); // Change: Set isAuthenticated to true if token exists
+      setIsAuthenticated(true);
+      console.log("Token retrieved from local storage:", token);
     }
-  }, []); // Run this effect only once on component mount
+  }, []);
+  
+  
+    
 
-  axios.interceptors.request.use((config) => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-  });
+  const handleLogin = (token) => {
+    localStorage.setItem("token", token);
+    setIsAuthenticated(true);
+    console.log("Token retrieved from local storage:", token);
+  };
 
-  const handleLogin = async (credentials) => {
-    try {
-      const response = await axios.post("/login", credentials);
-
-      if (response.data.token) {
-        // Store the token in localStorage
-        localStorage.setItem("token", response.data.token);
-        // Set isAuthenticated to true upon successful login
-        setIsAuthenticated(true);
-      }
-
-      // Handle other responses or errors as needed
-    } catch (error) {
-      console.error("Login error:", error);
-      // Handle login error
-    }
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsAuthenticated(false);
   };
 
   return (
@@ -69,7 +59,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/login" element={<Login handleLogin={handleLogin} />} />
+          <Route
+            path="/login"
+            element={<Login handleLogin={handleLogin} />}
+          />
           <Route path="/donate" element={<Donation />} />
           <Route path="/prayer" element={<PrayerService />} />
           <Route path="/pastorialcare" element={<PastorialCareService />} />
@@ -77,9 +70,14 @@ function App() {
           <Route
             path="/dashboard"
             element={
-              isAuthenticated ? <Dashboard /> : <Navigate to="/login" />
+              isAuthenticated ? (
+                <Dashboard handleLogout={handleLogout} />
+              ) : (
+                <Navigate to="/login" />
+              )
             }
           />
+        
           <Route path="/joinus" element={<JoinUs />} />
           <Route path="/registrationevent" element={<RegistrationEvent />} />
           <Route path="/registrationconnectgroup" element={<RegistrationConnectGroup />} />

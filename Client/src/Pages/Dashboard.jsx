@@ -13,6 +13,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Pages/Page Styles/Dashboard.css";
 import logo from "../assets/siteimages/sitelogo/whitelogo.png";
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types"; 
+import { toast } from "react-hot-toast";
+
 
 import EventsContent from "./Dashboard Contents/EventsContent";
 import ConnectGroupsContent from "./Dashboard Contents/ConnectGroupsContent";
@@ -34,7 +38,7 @@ library.add(
 );
 
 
-function Dashboard() {
+function Dashboard({ handleLogout }) {
   const [userData, setUserData] = useState(null);
   const [selectedMenu, setSelectedMenu] = useState(null);
   const [showSubMenu, setShowSubMenu] = useState(false);
@@ -51,15 +55,29 @@ function Dashboard() {
             Authorization: `Bearer ${token}`,
           },
         });
-        setUserData(response.data);
+        setUserData({ email: response.data.email }); // Assuming the email is in response.data.email
       } catch (error) {
         console.error("Error fetching user data:", error);
         console.log("Error details:", error.response?.data);
       }
     };
-
+  
     fetchUserData();
   }, []);
+
+  const navigate = useNavigate();
+
+  const handleLogoutClick = async () => {
+    try {
+      await axios.post("/auth/logout");
+      localStorage.removeItem("token");
+      handleLogout(); // Call handleLogout function provided as a prop
+      navigate("/login"); // Redirect to the login page
+      toast.success("Successfully logged out");
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
 
   const handleMenuClick = (menu) => {
     setSelectedMenu(menu);
@@ -187,7 +205,7 @@ function Dashboard() {
             <div
               className="dashboard-menu-item"
               id="dashboard-logout"
-              onClick={() => handleMenuClick("logout")}
+              onClick={() => handleLogoutClick( )}
             >
               <FontAwesomeIcon icon={faSignOutAlt} />
               <p>Log Out</p>
@@ -209,6 +227,11 @@ function Dashboard() {
       </div>
     </>
   );
+}
+
+Dashboard.propTypes={
+  handleLogout: PropTypes.func.isRequired,
+
 }
 
 export default Dashboard;

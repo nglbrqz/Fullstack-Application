@@ -1,18 +1,14 @@
-import "../Pages/Page Styles/Login.css";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-
 import logo from "../assets/siteimages/sitelogo/whitelogo.png";
-
-
-function Login() {
+import PropTypes from "prop-types"; 
+function Login({ handleLogin }) {
   const [data, setData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
-
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -20,18 +16,17 @@ function Login() {
     const { email, password } = data;
 
     try {
-      const response = await axios.post('/auth/login', {
+      const response = await axios.post("/auth/login", {
         email,
         password,
       });
 
-      if (response.data.error) {
-        toast.error(response.data.error);
-      } else {
-        const token = response.data.token; // Assuming your server returns a token
-        localStorage.setItem('token', token);
-        toast.success('Login successful');
+      if (response.data.token) {
+        toast.success("Login successful");
+        handleLogin(response.data.token); // Call handleLogin function with token
         navigate("/dashboard");
+      } else {
+        toast.error("Login failed");
       }
     } catch (error) {
       console.error("Login failed:", error);
@@ -41,7 +36,7 @@ function Login() {
   return (
     <div className="login-main-cont">
       <div className="login-container">
-        <img src={logo} alt="Logo" className="login-logo"   />
+        <img src={logo} alt="Logo" className="login-logo" />
 
         <h2 className="login-title">Admin Login</h2>
         <form onSubmit={handleSubmit}>
@@ -50,8 +45,10 @@ function Login() {
               className="email-form"
               type="email"
               id="email"
-              value={data.email} // Access email from the state
-              onChange={(e) => setData({ ...data, email: e.target.value })}
+              value={data.email}
+              onChange={(e) =>
+                setData({ ...data, email: e.target.value })
+              }
               placeholder="Email"
             />
           </div>
@@ -61,22 +58,26 @@ function Login() {
               className="login-password-form"
               type="password"
               id="password"
-              value={data.password} // Access password from the state
-              onChange={(e) => setData({ ...data, password: e.target.value })}
+              value={data.password}
+              onChange={(e) =>
+                setData({ ...data, password: e.target.value })
+              }
               placeholder="Password"
             />
           </div>
 
-          {/* Use Link to navigate to the dashboard */}
-          {/* <Link to="/dashboard"> */}
           <button className="login-sign-button" type="submit">
             Log in
           </button>
-          {/* </Link> */}
         </form>
       </div>
     </div>
   );
 }
+
+Login.propTypes = {
+  handleLogin: PropTypes.func.isRequired,
+};
+
 
 export default Login;

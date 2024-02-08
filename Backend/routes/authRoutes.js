@@ -6,7 +6,7 @@ const {
   test,
   registerUser,
   loginUser,
-  isAuthenticatedMiddleware,
+  isAuthenticatedMiddleware,logoutUser, validateToken
 } = require("../controllers/authController");
 
   
@@ -25,5 +25,6 @@ router.get("/dashboard", isAuthenticatedMiddleware, (req, res) => {
   const { name, email } = req.user;  
   res.json({ name, email });
 });
-
+router.get("/validate-token", validateToken); // Add route for validateToken function
+router.post("/logout", logoutUser); 
 module.exports = router;

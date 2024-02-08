@@ -106,10 +106,47 @@ const isAuthenticatedMiddleware = (req, res, next) => {
   });
 };
 
+const logoutUser = (req, res) => {
+  try {
+    
+    return res.json({ success: "Logout successful" });
+  } catch (error) {
+    console.error("Logout error:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
 
+const validateToken = (req, res) => {
+  try {
+    const token = req.headers.authorization;
+    if (!token) {
+      return res.status(401).json({ error: "Unauthorized" });
+    }
+
+    const secretKey = process.env.JWT_SECRET;
+    if (!secretKey) {
+      console.error("JWT secret key not configured");
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+
+    jwt.verify(token.split(" ")[1], secretKey, (err, decoded) => {
+      if (err) {
+        return res.status(401).json({ error: "Token invalid or expired" });
+      }
+
+      // Token is valid
+      res.json({ success: true });
+    });
+  } catch (error) {
+    console.error("Token validation error:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+ 
 module.exports = {
  
   registerUser,
   loginUser,
-  isAuthenticatedMiddleware,
+  isAuthenticatedMiddleware, logoutUser,validateToken
 };
