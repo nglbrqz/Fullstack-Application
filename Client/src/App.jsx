@@ -23,7 +23,8 @@ import RegisterAdmin from "./Pages/RegisterAdmin";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://newlife-southwoods.vercel.app";
+//axios.defaults.baseURL = "https://newlife-southwoods.vercel.app";
+axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
 
 function App() {
