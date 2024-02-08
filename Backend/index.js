@@ -19,11 +19,11 @@ app.use(cors({
 // Parse JSON bodies
 app.use(express.json());
 
-// Create memory storage for multer
-const storage = multer.memoryStorage();
+// // Create memory storage for multer
+// const storage = multer.memoryStorage();
 
-// Initialize multer with memory storage
-const upload = multer({ storage: storage });
+// // Initialize multer with memory storage
+// const upload = multer({ storage: storage });
 
 // Connecting Mongoose :3
 mongoose.connect(process.env.MONGO_URL)
