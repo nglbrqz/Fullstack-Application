@@ -1,5 +1,5 @@
 const EventModel = require("../models/event");
-const path = require("path");
+// const path = require("path");
 const multer = require("multer");
 
  
@@ -17,6 +17,11 @@ const multer = require("multer");
 
 // Create memory storage for multer
 const storage = multer.memoryStorage();
+
+// Override the diskStorage function provided by multer with memoryStorage
+multer.diskStorage = function () {
+  return memoryStorage;
+};
 
 // Initialize multer with memory storage for file upload
 const upload = multer({ storage: storage }).single("thumbnail");
