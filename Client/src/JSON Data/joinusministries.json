@@ -2,7 +2,7 @@
     {
         "joinusministryid": 1,
         "videoUrl": "https://www.youtube.com/embed/JYTXWtqMY5Q?si=cYKFBXe8t-xowA36",
-        "imageUrl": "https://i.postimg.cc/bJW8YYtq/om.png",
+        "imageUrl": "../src/assets/siteimages/donationpage/ministryimg/otm.png",
         "select": "outreach",
         "title": "OUTREACH",
         "description": "The Outreach Ministry, committed to surpassing our church walls, is a symbol of compassion, seeking to cater to the physical needs of people while also addressing their emotional and spiritual well-being. "
@@ -10,7 +10,7 @@
     {
         "joinusministryid": 2,
         "videoUrl": "https://www.youtube.com/embed/Iq1PF_RHMCY?si=Cs6h--_7685goX3_",
-        "imageUrl": "https://example.com/image2.jpg",
+        "imageUrl": "./src/assets/siteimages/donationpage/ministryimg/kjym.png",
         "select": "youth",
         "title": "KIDS & JUNIOR YOUTH",
         "description": "Kids and Jr. Youth Ministry is dedicated to developing a deep relationship with God's Word from a young age. Our commitment is to provide the kids with the necessary tools to navigate life, based on faith, love, and a commitment to goodwill."

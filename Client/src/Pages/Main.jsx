@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import PropTypes from "prop-types";
 import "../Pages/Page Styles/Main.css";
 import NavBar from "../Components/navBar"; 
 import Footer from "../Components/Footer";
@@ -15,7 +14,6 @@ import coleadpastor from "../assets/mainpageimages/coleadpastor.jpg";
 import mission from "../assets/mainpageimages/mission.jpg";
 import vision from "../assets/mainpageimages/vision.jpg";
 import mjkbackground from "../assets/mainpageimages/mjkbackground.jpg";
-import gallery1 from "../assets/mainpageimages/gallery1.jpg";
 import { Link } from "react-router-dom";
 
 

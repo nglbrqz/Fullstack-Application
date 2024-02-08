@@ -1,37 +1,37 @@
 [
   {
     "Volunteerid": 1,
-    "thumbnail": "../src/assets/siteimages/donationpage/volunteerimg/mediaandcreatives.png",
+    "thumbnail": "../src/assets/siteimages/donationpage/volunteerimg/musicandproduction.png",
     "imageUrl": "../src/assets/siteimages/donationpage/volunteermodalimg/mapmodal.jpg",
     "title": "Music and Production",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 1."
+    "description": "We are looking for passionate individuals that are fond of playing and singing instruments like guitar, drums, keyboard, bass, and vocals. Join us in worshiping the Lord on stage with your musical talents."
   },
   {
     "Volunteerid": 2,
     "thumbnail": "../src/assets/siteimages/donationpage/volunteerimg/mediaandcreatives.png",
     "imageUrl": "../src/assets/siteimages/donationpage/volunteermodalimg/macmodal.jpg",
     "title": "Media and Creatives",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+    "description": "Join our church's Media and Creatives Team to pursue your calling to serve the Lord. We are looking for people who are skilled in photography, camera operation, clicker mastery, OBS, and can manage social media using Photoshop and video editing. "
   },
   {
     "Volunteerid": 3,
     "thumbnail": "../src/assets/siteimages/donationpage/volunteerimg/usher.png",
     "imageUrl": "../src/assets/siteimages/donationpage/volunteermodalimg/ushmodal.jpg",
     "title": "Ushers",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+    "description": "Join our growing team and serve the Lord by greeting visitors with a warm smile. "
   },
   {
     "Volunteerid": 4,
     "thumbnail": "../src/assets/siteimages/donationpage/volunteerimg/securityteam.png",
     "imageUrl": "../src/assets/siteimages/donationpage/volunteermodalimg/secmodal.jpg",
     "title": "Security",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+    "description": "Take part and help maintain the peace of our church community."
   },
   {
     "Volunteerid": 5,
     "thumbnail": "../src/assets/siteimages/donationpage/volunteerimg/medicalteam.png",
     "imageUrl": "../src/assets/siteimages/donationpage/volunteermodalimg/mtmodal.jpg",
     "title": "Medical Team",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 2."
+    "description": "If you are eager to provide your medical expertise to help those in need, make a significant contribution with us today."
   }
 ]

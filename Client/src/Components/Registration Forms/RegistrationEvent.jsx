@@ -1,5 +1,6 @@
 import { useState,   } from "react";
 import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import axios from 'axios';
 import NavBar from "../navBar";
 import Footer from "../Footer";
@@ -8,6 +9,11 @@ import { toast } from "react-hot-toast";
 const RegistrationEvent = () => {
   const location = useLocation();
   const { event, eventId } = location.state;
+
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   // State variables to manage form data
   const [name, setName] = useState("");

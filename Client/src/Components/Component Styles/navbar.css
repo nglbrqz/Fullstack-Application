@@ -33,6 +33,7 @@
 
 .navbar-middle a,
 .dropbtn {
+  font-size: 1.09em;
   text-decoration: none;
    display: inline-block;
    text-align: center;
@@ -55,7 +56,7 @@
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .navbar-middle {
-    gap: 1.5rem; /* Adjust the gap for medium-sized screens */
+    gap: 1rem; /* Adjust the gap for medium-sized screens */
   }
 }
 
