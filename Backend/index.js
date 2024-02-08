@@ -19,8 +19,6 @@ app.use(cors({
 // Parse JSON bodies
 app.use(express.json());
 
-// mongoose.connect('mongodb+srv://nlswadmin01:NLSWdb1977@cluster0.o3qtadl.mongodb.net/test?retryWrites=true&w=majority')
-
 // Create memory storage for multer
 const storage = multer.memoryStorage();
 
@@ -32,12 +30,9 @@ mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log('Database Connected'))
 .catch((err) => console.log('Database not Connected :(' , err))
 
- 
-
 const port = 8000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
 
- 
 
 app.use('/auth', require('./routes/authRoutes'))
 app.use('/eventvolunteer', require('./routes/eventVolunteer'))
